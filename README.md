@@ -298,4 +298,4 @@ docs/evidence/    结果索引与解释
 
 公开范围排除本机密钥、账号、数据库、依赖目录、开发计划和私人验收记录；必要公开历史报告保持原路径及字节，失败不被成功重跑覆盖。
 
-GitHub Actions 已定义零模型独立复现，当前远端尚未运行。源码发布与本地运行不能当成公网应用已部署。
+2026-10-07 首次发布提交 `2069964` 的 [GitHub Actions 零模型独立复现](https://github.com/Yang200OK/SupportOps/actions/runs/37574743684) 已通过：后端与真实 PostgreSQL、前端格式 / 测试 / 构建、独立 HTTP、真实 Chromium、API 重启及存储证据读回。后续提交状态见 [Actions](https://github.com/Yang200OK/SupportOps/actions)。源码发布和零模型工程检查不代表公网应用部署或在线模型质量通过。

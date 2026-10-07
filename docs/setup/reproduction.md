@@ -57,4 +57,4 @@ Smoke 验证真实 HTTP：新工单 / blocked 输入检查、1.1 的五份 Markd
 
 .github/workflows/ci.yaml 配置 push / pull_request / workflow_dispatch，contents: read，checkout 固定提交、persist-credentials=false；创建新配置、启动独立 Compose、执行同入口回归 / HTTP / Chromium、重启读回和仅停止该 CI 项目。没有模型密钥、部署或上传私有目录步骤。固定提交和最小权限依据 [GitHub 官方安全说明](https://docs.github.com/en/actions/reference/security/secure-use)，checkout 对应 [官方 v4.3.1 版本](https://github.com/actions/checkout/releases/tag/v4.3.1)。
 
-本地 actionlint 与同入口实际执行验证定义及工程行为。公开候选源码也需在独立环境核对，当前远端 GitHub Actions 尚未执行，不能将本地通过称为远端 CI 通过。实际远端状态以仓库 Actions 页面为准。
+本地 actionlint 与同入口实际执行验证定义及工程行为。2026-10-07 首次发布提交 `2069964` 的 [远端 GitHub Actions](https://github.com/Yang200OK/SupportOps/actions/runs/37574743684) 已全部通过：新配置与 Compose 构建、后端 / 真实 PostgreSQL、前端格式 / 测试 / 构建、HTTP、Chromium、API 重启读回及项目停止。该结果属于 GitHub Ubuntu runner 上的零模型工程验证；当前提交状态见 [Actions 页面](https://github.com/Yang200OK/SupportOps/actions)，不据此证明在线模型质量或生产部署。
