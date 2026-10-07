@@ -1,0 +1,28 @@
+{
+  "name": "supportops-workbench",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5173 --strictPort",
+    "build": "vue-tsc --noEmit && vite build",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "test:reproduction": "playwright test --config playwright.reproduction.config.ts",
+    "test:e2e:ui": "playwright test e2e/ui-refinement.spec.ts e2e/workbench.spec.ts e2e/documents.spec.ts e2e/chunks.spec.ts e2e/experiments.spec.ts e2e/answers-evaluation.spec.ts e2e/actions.spec.ts e2e/hypotheses.spec.ts e2e/skills.spec.ts e2e/memory.spec.ts e2e/publications.spec.ts e2e/memory-pairs.spec.ts e2e/memory-pairs-live.spec.ts e2e/publication-toggle.spec.ts e2e/publication-snapshot-live.spec.ts --grep-invert \"REQ-1308|真实像素识别\"",
+    "format:check": "prettier --check src tests e2e *.ts *.json index.html"
+  },
+  "dependencies": {
+    "vue": "3.5.43",
+    "element-plus": "2.14.7"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "6.0.9",
+    "vite": "8.3.2",
+    "typescript": "6.0.3",
+    "vue-tsc": "3.3.12",
+    "vitest": "5.0.3",
+    "prettier": "3.9.9",
+    "@playwright/test": "1.63.0"
+  }
+}

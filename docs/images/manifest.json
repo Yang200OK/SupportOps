@@ -1,0 +1,294 @@
+{
+  "images": [
+    {
+      "file": "actions-history.png",
+      "sha256": "d7a381baad254e2b874932727d9381c2947bc679d1abc67f9b4b3634fe3dc83f",
+      "bytes": 93944,
+      "source": "docs/verification/phase-5-round-3/actions-real-desktop.png",
+      "historical": true,
+      "image_edited": false,
+      "scope": "Historical image, not a current-model rerun"
+    },
+    {
+      "file": "answer-history.png",
+      "sha256": "4aecc73172ab607cb383f074ce09695dfde268a435c2970b6653e8f8129b1c73",
+      "bytes": 287989,
+      "source": "docs/verification/phase-4-round-1/answer-desktop.png",
+      "historical": true,
+      "image_edited": false,
+      "scope": "Historical image, not a current-model rerun"
+    },
+    {
+      "file": "chunks-history.png",
+      "sha256": "9966e62330006d4963922fad8d67dee03691d4ca5c05c9affd61aaa62c7b06b0",
+      "bytes": 42992,
+      "source": "Current browser, retained r1 of synthetic structural-parser test document, 2026-10-07",
+      "historical": true,
+      "image_edited": false,
+      "scope": "Read-only original database or historical report display; no model dispatched for capture"
+    },
+    {
+      "file": "citation-history.png",
+      "sha256": "aaeb5951fbdf80f91de207f651c41e879e9f3cb9b09f41bf21d8f09f2aa9e9c7",
+      "bytes": 96205,
+      "source": "docs/verification/ui-refinement-before-phase-7/citation-desktop.png",
+      "historical": true,
+      "image_edited": false,
+      "scope": "Historical image, not a current-model rerun"
+    },
+    {
+      "file": "coordination-board.png",
+      "sha256": "ce3a48c37e32dd2d7e3094ea579c3c8f4d8970be9ac176f0be006d000e6fcd61",
+      "bytes": 58699,
+      "source": "local browser screenshot, 2026-10-07, original demo database",
+      "historical": false,
+      "image_edited": false,
+      "scope": "Read-only original database or historical report display; no model dispatched for capture"
+    },
+    {
+      "file": "coordination-comparison.png",
+      "sha256": "75047eeffa758616375bacc98557cb027b288b6f98889cae8f37bc39b2ea1736",
+      "bytes": 65507,
+      "source": "local browser screenshot, 2026-10-07, original demo database",
+      "historical": false,
+      "image_edited": false,
+      "scope": "Read-only original database or historical report display; no model dispatched for capture"
+    },
+    {
+      "file": "coordination-evidence.png",
+      "sha256": "d010f32b145d02f60a188022cd140502b9002740f23c1930c9c833430f064c25",
+      "bytes": 67722,
+      "source": "local browser screenshot, 2026-10-07, original demo database",
+      "historical": false,
+      "image_edited": false,
+      "scope": "Read-only original database or historical report display; no model dispatched for capture"
+    },
+    {
+      "file": "coordination-execution.png",
+      "sha256": "cb4256830c88020256cba87c2cfb77ae89504e240e9104024d74388c05020b70",
+      "bytes": 50261,
+      "source": "local browser screenshot, 2026-10-07, original demo database",
+      "historical": false,
+      "image_edited": false,
+      "scope": "Read-only original database or historical report display; no model dispatched for capture"
+    },
+    {
+      "file": "coordination-package.png",
+      "sha256": "ea118a9a9fa0972df6f51ee311b09334e78e716e77fe8717a30730a6a764c88f",
+      "bytes": 42781,
+      "source": "local browser screenshot, 2026-10-07, original demo database",
+      "historical": false,
+      "image_edited": false,
+      "scope": "Read-only original database or historical report display; no model dispatched for capture"
+    },
+    {
+      "file": "coordination-report.png",
+      "sha256": "b07605598a7f345d44d5cbf88444de9e63254c4ece6e701c85b83a1071901158",
+      "bytes": 74836,
+      "source": "local browser screenshot, 2026-10-07, original demo database",
+      "historical": false,
+      "image_edited": false,
+      "scope": "Read-only original database or historical report display; no model dispatched for capture"
+    },
+    {
+      "file": "document-revisions.png",
+      "sha256": "4b795ca5d13d32363871db14b1848161ae86a07e80b540cd49a795f707d40e89",
+      "bytes": 40699,
+      "source": "local browser screenshot, 2026-10-07, original demo database",
+      "historical": false,
+      "image_edited": false,
+      "scope": "Read-only original database or historical report display; no model dispatched for capture"
+    },
+    {
+      "file": "documents.png",
+      "sha256": "0c2d80680a20304ac86450922b0efed62d5e8630cee69393d49558fbab1bf99a",
+      "bytes": 54780,
+      "source": "local browser screenshot, 2026-10-07, original demo database",
+      "historical": false,
+      "image_edited": false,
+      "scope": "Read-only original database or historical report display; no model dispatched for capture"
+    },
+    {
+      "file": "evaluation-history.png",
+      "sha256": "d52971764a60cd34c70b80396db64d77252750b4a0684ab238618cdc91ca993e",
+      "bytes": 73285,
+      "source": "docs/verification/phase-4-round-3/answer-report-v2-corrected-rules.json, displayed in current UI on 2026-10-07",
+      "historical": true,
+      "image_edited": false,
+      "scope": "Read-only original database or historical report display; no model dispatched for capture",
+      "model": "qwen3.8-max-0902"
+    },
+    {
+      "file": "evaluation.png",
+      "sha256": "cba3062ed51a2cb2850309e84e2ca3917f4e10731f0424094411e4a8748f7c60",
+      "bytes": 42176,
+      "source": "local browser screenshot, 2026-10-07, original demo database",
+      "historical": false,
+      "image_edited": false,
+      "scope": "Read-only original database or historical report display; no model dispatched for capture"
+    },
+    {
+      "file": "experiment-details.png",
+      "sha256": "791fd048e6c8eb0f7a2b4e2b0d841ef20047458de6658c26e49a5cb26fc7c261",
+      "bytes": 45946,
+      "source": "local browser screenshot, 2026-10-07, original demo database",
+      "historical": false,
+      "image_edited": false,
+      "scope": "Read-only original database or historical report display; no model dispatched for capture"
+    },
+    {
+      "file": "experiments.png",
+      "sha256": "1628e028b6e0d40aa3f782624838f7fe34f270b8539e47ab2a77bd4270b146ef",
+      "bytes": 45729,
+      "source": "local browser screenshot, 2026-10-07, original demo database",
+      "historical": false,
+      "image_edited": false,
+      "scope": "Read-only original database or historical report display; no model dispatched for capture"
+    },
+    {
+      "file": "guided-history.png",
+      "sha256": "dbb57e6dadb7ae90d407d2988e23f6216bc802438dc2d83ea0d25b25976b8ed7",
+      "bytes": 392590,
+      "source": "docs/verification/phase-4-round-2/guided-desktop.png",
+      "historical": true,
+      "image_edited": false,
+      "scope": "Historical image, not a current-model rerun"
+    },
+    {
+      "file": "hypothesis-history.png",
+      "sha256": "1cb8501fc1558766938d8b2ab25c7e83f8ad7be7d42e72817cac4bd1754e4d9a",
+      "bytes": 66079,
+      "source": "local browser screenshot, 2026-10-07, original demo database",
+      "historical": false,
+      "image_edited": false,
+      "scope": "Read-only original database or historical report display; no model dispatched for capture"
+    },
+    {
+      "file": "hypothesis-setup.png",
+      "sha256": "36c2f6871a12e687ab604b9556f43a8f9631ef7417c130c73aa4f798b30f3aa6",
+      "bytes": 65862,
+      "source": "local browser screenshot, 2026-10-07, original demo database",
+      "historical": false,
+      "image_edited": false,
+      "scope": "Read-only original database or historical report display; no model dispatched for capture"
+    },
+    {
+      "file": "investigation-history.png",
+      "sha256": "3953b05299ed979839f855f99e0ebd4ea5131d115d647b8869c183986d8cade6",
+      "bytes": 111147,
+      "source": "docs/verification/phase-5-round-1/investigation-desktop.png",
+      "historical": true,
+      "image_edited": false,
+      "scope": "Historical image, not a current-model rerun"
+    },
+    {
+      "file": "login.png",
+      "sha256": "be4c42b44a1f949cd84f4afe0aac1ba33bf19211fc50ad77db5d6030ea50f819",
+      "bytes": 44865,
+      "source": "local browser screenshot, 2026-10-07, original demo database",
+      "historical": false,
+      "image_edited": false,
+      "scope": "Read-only original database or historical report display; no model dispatched for capture"
+    },
+    {
+      "file": "memory-history.png",
+      "sha256": "bd1dd9361c382f65562de672a60a11ffd7a542ba8bdc7d93ddd0dc962729c7d2",
+      "bytes": 119087,
+      "source": "docs/verification/phase-6-round-2/memory-desktop.png",
+      "historical": true,
+      "image_edited": false,
+      "scope": "Historical image, not a current-model rerun"
+    },
+    {
+      "file": "mobile-history.png",
+      "sha256": "dca8a84c13063a5414757b1122e99356c385b1c394b7039a1bae6cb6da19ad95",
+      "bytes": 55464,
+      "source": "docs/verification/phase-8-round-2/reproduction-mobile.png",
+      "historical": true,
+      "image_edited": false,
+      "scope": "Historical image, not a current-model rerun"
+    },
+    {
+      "file": "publication-history.png",
+      "sha256": "41fd191a4313ba2d0a11cab81ab3aa93bdde0e2e0e760ff63c251d3c723538a0",
+      "bytes": 86828,
+      "source": "docs/verification/phase-6-round-3/publication-desktop.png",
+      "historical": true,
+      "image_edited": false,
+      "scope": "Historical image, not a current-model rerun"
+    },
+    {
+      "file": "run-details.png",
+      "sha256": "ea4c55a493b79d33f968570644bc8f3aa5ee9dcc95433f00eef131d8ca6c2397",
+      "bytes": 38952,
+      "source": "local browser screenshot, 2026-10-07, original demo database",
+      "historical": false,
+      "image_edited": false,
+      "scope": "Read-only original database or historical report display; no model dispatched for capture"
+    },
+    {
+      "file": "runs.png",
+      "sha256": "c2f8ed0ddb7a244b5692c6a4263a99b2edc7dd150af934c2fe10291ee7d47c00",
+      "bytes": 53558,
+      "source": "local browser screenshot, 2026-10-07, original demo database",
+      "historical": false,
+      "image_edited": false,
+      "scope": "Read-only original database or historical report display; no model dispatched for capture"
+    },
+    {
+      "file": "screenshot-history.png",
+      "sha256": "eb7ad2d3c8b6dd029e70cb1dba2c6965ea8c73d33d353e9ed17b5a572fe6bbc9",
+      "bytes": 586905,
+      "source": "docs/verification/phase-4-round-3/screenshot-answer-desktop.png",
+      "historical": true,
+      "image_edited": false,
+      "scope": "Historical image, not a current-model rerun"
+    },
+    {
+      "file": "skill-details.png",
+      "sha256": "df10755728a33670a24c1631b64d1975d30bcee31afbdd143dabc72f19b270b2",
+      "bytes": 67192,
+      "source": "local browser screenshot, 2026-10-07, original demo database",
+      "historical": false,
+      "image_edited": false,
+      "scope": "Read-only original database or historical report display; no model dispatched for capture"
+    },
+    {
+      "file": "skill-publication.png",
+      "sha256": "54e5b09d830b67844899c35ad3101763aaabd76d4c21ec9f2f6632c68266fc55",
+      "bytes": 59360,
+      "source": "local browser screenshot, 2026-10-07, original demo database",
+      "historical": false,
+      "image_edited": false,
+      "scope": "Read-only original database or historical report display; no model dispatched for capture"
+    },
+    {
+      "file": "skills.png",
+      "sha256": "358c12adaf2ea540e71e4349afc3f1a94f37725dacdf3a5e88464103ed1a2098",
+      "bytes": 61106,
+      "source": "local browser screenshot, 2026-10-07, original demo database",
+      "historical": false,
+      "image_edited": false,
+      "scope": "Read-only original database or historical report display; no model dispatched for capture"
+    },
+    {
+      "file": "ticket-details.png",
+      "sha256": "3bf48d255d6cc4854e2ce80cb47dfefa5f2eac14dd9055947f9ba70e1baee791",
+      "bytes": 42409,
+      "source": "local browser screenshot, 2026-10-07, original demo database",
+      "historical": false,
+      "image_edited": false,
+      "scope": "Read-only original database or historical report display; no model dispatched for capture"
+    },
+    {
+      "file": "workbench.png",
+      "sha256": "61982c6dbe22522fda4a2670d9e5b69a5a589a5cd9a90c7bb017f389bb5353c2",
+      "bytes": 57555,
+      "source": "local browser screenshot, 2026-10-07, original demo database",
+      "historical": false,
+      "image_edited": false,
+      "scope": "Read-only original database or historical report display; no model dispatched for capture"
+    }
+  ],
+  "historical_source_files_are_local_archives": true
+}

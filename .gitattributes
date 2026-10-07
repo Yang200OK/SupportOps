@@ -1,0 +1,21 @@
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.toml text eol=lf
+*.ps1 text eol=crlf
+*.txt text eol=lf
+*.sh text eol=lf
+*.yaml text eol=lf
+*.ini text eol=lf
+*.vue text eol=lf
+*.ts text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.cjs text eol=lf
+*.yml text eol=lf
+# 已冻结资料与历史报告按原字节发布，避免换行转换改变证据摘要。
+data/** -text
+docs/verification/** -text

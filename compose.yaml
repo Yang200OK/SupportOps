@@ -1,0 +1,25 @@
+name: supportops
+
+services:
+  postgres:
+    image: supportops-postgres:17.11-vector-0.8.7
+    build:
+      context: ./docker/postgres
+    environment:
+      POSTGRES_USER: supportops_admin
+      POSTGRES_PASSWORD: ${SUPPORTOPS_POSTGRES_PASSWORD:?请先运行初始化配置脚本}
+      POSTGRES_DB: supportops
+      SUPPORTOPS_APP_PASSWORD: ${SUPPORTOPS_APP_PASSWORD:?请先运行初始化配置脚本}
+    ports:
+      - "127.0.0.1:${SUPPORTOPS_POSTGRES_PORT:-55432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./docker/postgres/init.sh:/docker-entrypoint-initdb.d/10-supportops.sh:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U supportops_admin -d supportops"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  postgres_data:

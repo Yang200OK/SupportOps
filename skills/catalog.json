@@ -1,0 +1,182 @@
+{
+  "schema_version": "skill-catalog.v1",
+  "items": [
+    {
+      "skill_id": "configuration-investigation",
+      "version": "1.0.0",
+      "title": "配置与版本排查",
+      "summary": "核对版本键、单位和启动诊断。",
+      "product_versions": [
+        "1.0",
+        "1.1",
+        "2.0"
+      ],
+      "modes": [
+        "startup",
+        "online"
+      ],
+      "signals": [
+        "RD_CONFIG_INVALID",
+        "配置",
+        "启动失败"
+      ],
+      "body_sha256": "474f60cc36d90d71589cdabe83121002bf487ea9e24551e2c9b56c3f25d63f81",
+      "sources": [
+        {
+          "path": "data/relaydesk/1.0/configuration.md",
+          "product_version": "1.0",
+          "sha256": "ec44a97ca34ab77d21ff8f243ffb1054fa8567f8d107516817ae9e9ffb6be33e",
+          "source_type": "self_authored_design",
+          "license": "CC0-1.0"
+        },
+        {
+          "path": "data/relaydesk/1.1/configuration.md",
+          "product_version": "1.1",
+          "sha256": "253769700546a06e2e43c50326337b9e5d4dae0d97e0952f4a577d3b9f5ece0b",
+          "source_type": "self_authored_design",
+          "license": "CC0-1.0"
+        },
+        {
+          "path": "data/relaydesk/2.0/configuration.md",
+          "product_version": "2.0",
+          "sha256": "ece5742c21d81be335252c8ee986032f16ff5d807dc17d2979a5c5c1dc8e59eb",
+          "source_type": "self_authored_design",
+          "license": "CC0-1.0"
+        }
+      ],
+      "human_semantic_reviewed": false
+    },
+    {
+      "skill_id": "pool-investigation",
+      "version": "1.0.0",
+      "title": "连接池等待排查",
+      "summary": "核对连接占用与本次请求等待。",
+      "product_versions": [
+        "1.0",
+        "1.1",
+        "2.0"
+      ],
+      "modes": [
+        "online"
+      ],
+      "signals": [
+        "RD_POOL_WAIT",
+        "连接池",
+        "连接等待"
+      ],
+      "body_sha256": "6b81b9a6097a64fd493f51f076f3cd0726a6e483ae9e28249485f66d833c37ed",
+      "sources": [
+        {
+          "path": "data/relaydesk/1.0/troubleshooting.md",
+          "product_version": "1.0",
+          "sha256": "af6d01eb9dc4dba9196750f53e92e6480231c7e68c6e1f9735df1fa0018ba7ae",
+          "source_type": "self_authored_design",
+          "license": "CC0-1.0"
+        },
+        {
+          "path": "data/relaydesk/1.1/troubleshooting.md",
+          "product_version": "1.1",
+          "sha256": "f08e54daca3579b2bbc853b9db2ec71cefddeb486bb91c00a723a602563101f6",
+          "source_type": "self_authored_design",
+          "license": "CC0-1.0"
+        },
+        {
+          "path": "data/relaydesk/2.0/troubleshooting.md",
+          "product_version": "2.0",
+          "sha256": "aa3b115b7e6cf4d4819e511748f90ffc7c14a6fa4eec844c5d02eda0a9feddb4",
+          "source_type": "self_authored_design",
+          "license": "CC0-1.0"
+        }
+      ],
+      "human_semantic_reviewed": false
+    },
+    {
+      "skill_id": "cache-investigation",
+      "version": "1.0.0",
+      "title": "缓存目标与代次排查",
+      "summary": "比较本次目标、缓存与代次。",
+      "product_versions": [
+        "1.0",
+        "1.1",
+        "2.0"
+      ],
+      "modes": [
+        "online"
+      ],
+      "signals": [
+        "RD_CACHE_STALE",
+        "缓存",
+        "旧值"
+      ],
+      "body_sha256": "6ac00bd444675f85d0c354dcb9716c9939878b2280d9dd44bce821753b7efe4d",
+      "sources": [
+        {
+          "path": "data/relaydesk/1.0/troubleshooting.md",
+          "product_version": "1.0",
+          "sha256": "af6d01eb9dc4dba9196750f53e92e6480231c7e68c6e1f9735df1fa0018ba7ae",
+          "source_type": "self_authored_design",
+          "license": "CC0-1.0"
+        },
+        {
+          "path": "data/relaydesk/1.1/troubleshooting.md",
+          "product_version": "1.1",
+          "sha256": "f08e54daca3579b2bbc853b9db2ec71cefddeb486bb91c00a723a602563101f6",
+          "source_type": "self_authored_design",
+          "license": "CC0-1.0"
+        },
+        {
+          "path": "data/relaydesk/2.0/troubleshooting.md",
+          "product_version": "2.0",
+          "sha256": "aa3b115b7e6cf4d4819e511748f90ffc7c14a6fa4eec844c5d02eda0a9feddb4",
+          "source_type": "self_authored_design",
+          "license": "CC0-1.0"
+        }
+      ],
+      "human_semantic_reviewed": false
+    },
+    {
+      "skill_id": "downstream-investigation",
+      "version": "1.0.0",
+      "title": "下游超时排查",
+      "summary": "核对有效超时和实际响应链路。",
+      "product_versions": [
+        "1.0",
+        "1.1",
+        "2.0"
+      ],
+      "modes": [
+        "online"
+      ],
+      "signals": [
+        "RD_TIMEOUT",
+        "下游",
+        "超时"
+      ],
+      "body_sha256": "6f204091027abd97a004b03845a4f3c9a04ac158684d5d4b44a18ad55a889408",
+      "sources": [
+        {
+          "path": "data/relaydesk/1.0/troubleshooting.md",
+          "product_version": "1.0",
+          "sha256": "af6d01eb9dc4dba9196750f53e92e6480231c7e68c6e1f9735df1fa0018ba7ae",
+          "source_type": "self_authored_design",
+          "license": "CC0-1.0"
+        },
+        {
+          "path": "data/relaydesk/1.1/troubleshooting.md",
+          "product_version": "1.1",
+          "sha256": "f08e54daca3579b2bbc853b9db2ec71cefddeb486bb91c00a723a602563101f6",
+          "source_type": "self_authored_design",
+          "license": "CC0-1.0"
+        },
+        {
+          "path": "data/relaydesk/2.0/troubleshooting.md",
+          "product_version": "2.0",
+          "sha256": "aa3b115b7e6cf4d4819e511748f90ffc7c14a6fa4eec844c5d02eda0a9feddb4",
+          "source_type": "self_authored_design",
+          "license": "CC0-1.0"
+        }
+      ],
+      "human_semantic_reviewed": false
+    }
+  ]
+}

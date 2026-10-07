@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "supportops"
+version = "0.1.0"
+description = "Evidence-driven local software support investigations."
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "fastapi==0.142.2", "pydantic==2.13.5", "uvicorn==0.54.0",
+    "sqlalchemy==2.1.3", "alembic==1.20.0", "psycopg[binary]==3.3.6",
+    "pydantic-settings==2.15.0", "pwdlib[argon2]==0.3.1",
+    "httpx==0.28.1",
+    "markdown-it-py==4.0.0", "pypdf==6.19.0", "redis==8.1.0", "Pillow==12.3.0",
+    "mcp==1.29.1",
+    "langgraph==1.2.13",
+]
+
+[project.optional-dependencies]
+dev = ["httpx==0.28.1", "httpx2==2.13.0", "pytest==9.1.1", "ruff==0.16.10"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra -p no:cacheprovider"
+markers = ["integration: requires the explicitly configured supportops_test PostgreSQL database"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]

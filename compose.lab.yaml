@@ -1,0 +1,57 @@
+name: supportops-lab
+
+services:
+  lab-postgres:
+    image: postgres:17.11-bookworm@sha256:639ab7ceb90e13123085b741fb31ef493fba25463002f6da665352e7b534b652
+    environment:
+      POSTGRES_USER: relaydesk
+      POSTGRES_DB: relaydesk
+      POSTGRES_PASSWORD: ${LAB_POSTGRES_PASSWORD:?请先初始化 .env.lab}
+    volumes:
+      - lab_postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U relaydesk -d relaydesk"]
+      interval: 2s
+      timeout: 2s
+      retries: 30
+  lab-redis:
+    image: redis:8.2.2-bookworm@sha256:4521b581dbddea6e7d81f8fe95ede93f5648aaa66a9dacd581611bf6fe7527bd
+    command: ["redis-server", "--save", "", "--appendonly", "yes", "--appendfsync", "always"]
+    volumes:
+      - lab_receipts:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      timeout: 2s
+      retries: 30
+  receiver:
+    build:
+      context: .
+      dockerfile: docker/lab/Dockerfile
+    image: supportops-relaydesk:phase-5-round-3
+    command: ["python", "-m", "uvicorn", "supportops.lab.receiver:app", "--host", "0.0.0.0", "--port", "8102", "--no-access-log"]
+    environment:
+      LAB_CONTROL_TOKEN: ${LAB_CONTROL_TOKEN:?请先初始化 .env.lab}
+    ports:
+      - "127.0.0.1:8102:8102"
+  relaydesk:
+    image: supportops-relaydesk:phase-5-round-3
+    command: ["python", "-m", "uvicorn", "supportops.lab.product:app", "--host", "0.0.0.0", "--port", "8101", "--no-access-log"]
+    environment:
+      LAB_CONTROL_TOKEN: ${LAB_CONTROL_TOKEN:?请先初始化 .env.lab}
+      LAB_DATABASE_URL: postgresql+psycopg://relaydesk:${LAB_POSTGRES_PASSWORD}@lab-postgres:5432/relaydesk
+      LAB_REDIS_URL: redis://lab-redis:6379/0
+      LAB_RECEIVER_URL: http://receiver:8102
+      RELAYDESK_CONFIG: '{"product_version":"1.1"}'
+    ports:
+      - "127.0.0.1:8101:8101"
+    depends_on:
+      lab-postgres:
+        condition: service_healthy
+      lab-redis:
+        condition: service_healthy
+      receiver:
+        condition: service_started
+volumes:
+  lab_postgres:
+  lab_receipts:

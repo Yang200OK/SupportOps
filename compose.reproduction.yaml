@@ -1,0 +1,62 @@
+# 独立项目名由调用者显式传入；不接入原网络或外部数据卷。
+services:
+  postgres:
+    image: supportops-postgres:17.11-vector-0.8.7
+    build:
+      context: ./docker/postgres
+    environment:
+      POSTGRES_USER: supportops_admin
+      POSTGRES_PASSWORD: ${SUPPORTOPS_POSTGRES_PASSWORD:?需要独立初始化配置}
+      POSTGRES_DB: supportops
+      SUPPORTOPS_APP_PASSWORD: ${SUPPORTOPS_APP_PASSWORD:?需要独立初始化配置}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./docker/postgres/init.sh:/docker-entrypoint-initdb.d/10-supportops.sh:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U supportops_admin -d supportops"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+  api:
+    image: supportops-reproduction-backend:phase-8-round-2
+    build:
+      context: .
+      dockerfile: docker/reproduction/backend.Dockerfile
+    environment:
+      DASHSCOPE_API_KEY: ""
+      SUPPORTOPS_MODEL_API_KEY: ""
+      SUPPORTOPS_LIVE_GUIDED: "0"
+      SUPPORTOPS_LIVE_ANSWER_SAFETY: "0"
+    volumes:
+      - ${SUPPORTOPS_REPRO_DIRECTORY:?需要独立私有目录}/.env:/app/.env:ro
+      - ${SUPPORTOPS_REPRO_DIRECTORY:?需要独立私有目录}:/app/local
+    ports:
+      - "127.0.0.1:${SUPPORTOPS_REPRO_API_PORT:?显式 API 端口}:8010"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8010/health/ready', timeout=5)"]
+      interval: 3s
+      timeout: 6s
+      retries: 40
+  web:
+    image: supportops-reproduction-frontend:phase-8-round-2
+    build:
+      context: .
+      dockerfile: docker/reproduction/frontend.Dockerfile
+    environment:
+      SUPPORTOPS_REPRO_BROWSER_BASE_URL: http://127.0.0.1:5173
+      SUPPORTOPS_REPRO_BROWSER: chromium
+      SUPPORTOPS_REPRO_ACCOUNTS: /run/supportops-credentials/demo-accounts.json
+      SUPPORTOPS_REPRO_BROWSER_OUTPUT: /run/supportops-evidence/browser
+    volumes:
+      - ${SUPPORTOPS_REPRO_DIRECTORY:?需要独立私有目录}:/run/supportops-credentials:ro
+      - ${SUPPORTOPS_REPRO_DIRECTORY:?需要独立私有目录}/browser:/run/supportops-evidence/browser
+    ports:
+      - "127.0.0.1:${SUPPORTOPS_REPRO_WEB_PORT:?显式网页端口}:5173"
+    depends_on:
+      api:
+        condition: service_healthy
+volumes:
+  postgres_data:

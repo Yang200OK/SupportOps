@@ -1,0 +1,16 @@
+{
+  "schema_version": "supportops.evaluation-dataset.v1",
+  "dataset_id": "format-demo-v1",
+  "tasks": [
+    {
+      "task_id": "dev-missing-version", "source_group": "missing-version-family", "split": "dev",
+      "input": {"title": "投递超时，版本未知", "description": "构造案例：RelayDesk 返回 RD_TIMEOUT，尚未提供版本。", "product": "relaydesk", "product_version": null, "environment": "local_lab", "source_type": "synthetic_case"},
+      "expected": {"outcome": "needs_clarification", "evidence_ids": []}
+    },
+    {
+      "task_id": "holdout-no-evidence", "source_group": "no-evidence-family", "split": "holdout",
+      "input": {"title": "投递延迟，需要证据", "description": "构造案例：RelayDesk 1.1 投递延迟，但尚无日志。", "product": "relaydesk", "product_version": "1.1", "environment": "local_lab", "source_type": "synthetic_case"},
+      "expected": {"outcome": "needs_evidence", "evidence_ids": []}
+    }
+  ]
+}

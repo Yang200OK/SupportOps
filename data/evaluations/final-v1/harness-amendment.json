@@ -1,0 +1,20 @@
+{
+  "schema_version": "supportops.harness-amendment.v1",
+  "manifest_sha256": "a858598d3906a1b23c59092e03cc316f6751a9f97b474f07eaddc47e5ed17323",
+  "recorded_at_utc": "2026-10-07T02:28:29.464707+00:00",
+  "changes": {
+    "scripts/run-final-evaluation.py": {
+      "before": "6116f94f40848f3e8a64bf947dac50fdb5e010bca16a45401101b03d6ef89c54",
+      "after": "adc8e290b30ea28985b2a6cb21a7e1095267127198013f7d225a79c1a6f76fc5"
+    }
+  },
+  "reason": "调查开始前，按既有 API 的字符串 / 对象错误协议修正离线计量读取；加入此修订的显式摘要验证。",
+  "completed_retrieval_report_sha256": "f5f9580a78558206f721823d0c57ccde7d58cb006892d95d6fdaf889755429d8",
+  "before_suites": [
+    "answers",
+    "agents"
+  ],
+  "inference_changes": false,
+  "requests_prompts_labels_budgets_changed": false,
+  "sha256": "b4696fa0b701fa926ef1daaa9888a0cd61e958da258486301277ac525d23458c"
+}

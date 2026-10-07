@@ -1,0 +1,394 @@
+"""沿用已验收 API，按冻结网格实跑；每次派发先落盘，不恢复或重试未知尝试。"""
+
+import argparse
+import hashlib
+import importlib.util
+import json
+import os
+from datetime import datetime, timezone
+from time import perf_counter
+from uuid import uuid4
+
+import httpx
+
+from supportops.chunks.chunking import digest
+from supportops.coordination.comparison import initial_state, metrics
+from supportops.coordination.envelope import expand_source
+from supportops.evaluations.answers import score
+from supportops.evaluations.final import bind_manifest, grid, usage, validate_report
+from supportops.investigations.live_sources import verify_snapshot
+from supportops.models.provider import ModelSettings
+from supportops.rag.model import AnswerModelSettings
+from supportops.retrieval.contexts import covered_ids, text_hash
+from supportops.retrieval.evaluation import metrics as retrieval_metrics
+from supportops.settings import ROOT
+
+DIRECTORY = ROOT / "docs/verification/phase-8-round-1"
+
+
+def load(path):
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def module(name):
+    spec = importlib.util.spec_from_file_location(name, ROOT / f"scripts/{name}.py")
+    value = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(value)
+    return value
+
+
+def check_freeze(manifest):
+    bind_manifest(manifest)
+    for name, sha in manifest["files"].items():
+        if hashlib.sha256((ROOT / name).read_bytes()).hexdigest() != sha:
+            raise ValueError("冻结文件变化：" + name)
+    if ModelSettings().model_dump(mode="json", exclude={"api_key"}) != manifest["models"]:
+        raise ValueError("冻结模型配置变化。")
+    if AnswerModelSettings().timeout_seconds != manifest["answer_timeout_seconds"]:
+        raise ValueError("冻结回答超时配置变化。")
+
+
+def save(path, body):
+    # 同目录原子替换，避免中断留下半个 JSON；只改写当前正在运行的进度报告。
+    temp = path.with_suffix(".writing")
+    temp.write_text(json.dumps(body, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    os.replace(temp, path)
+
+
+def audit_agent(client, body, variant):
+    refs = {}
+    if variant != "multi":
+        assert digest(body["input_snapshot"]) == body["input_sha256"]
+        for result in body["tool_results"]:
+            assert digest(result["result"]) == result["result_sha256"]
+            if "snapshot" in result["result"]:
+                verify_snapshot(result["result"])
+        evidence = body["evidence"]
+        contexts = {c["context_id"]: c for c in body["contexts"]}
+        report = body.get("report") or {}
+    else:
+        evidence = [e for t in body["tasks"].values() for e in t["evidence"]]
+        contexts = {e["evidence_id"]: e for e in evidence}
+        report = body.get("result") or {}
+        for task in body["tasks"].values():
+            for result in task["results"]:
+                value = result["value"]
+                if "snapshot" in value:
+                    verify_snapshot(
+                        {
+                            **value,
+                            "evidence": [
+                                {**e, "source": expand_source(e, value["snapshot"])}
+                                for e in value["evidence"]
+                            ],
+                        }
+                    )
+    for e in evidence:
+        path = (
+            f"/api/coordination-executions/{body['execution_id']}/evidence/{e['evidence_id']}"
+            if variant == "multi"
+            else e["reference_url"]
+        )
+        response = client.get(path)
+        response.raise_for_status()
+        detail = response.json()
+        if variant == "multi" or e["source"].get("source_type", "").startswith("current_"):
+            assert detail["evidence"]["text"] == e["text"]
+        else:
+            assert detail["text_verified"] and detail["chunk"]["text"] == e["text"]
+        assert e["product_version"] == "1.1"
+        refs[path] = digest(detail)
+    for claim in report.get("claims", []):
+        for citation in claim["citations"]:
+            context = contexts[citation["context_id"]]
+            assert context["text"][citation["start"] : citation["end"]] == citation["quote"]
+            assert text_hash(context["text"]) == citation["context_text_sha256"]
+    return refs
+
+
+def execute_agent(client, manifest, task, row, output, report):
+    prepare = module("prepare-investigation-lab")
+    prefix = f"{row['task_id']}-r{row['repeat']}-{row['variant']}"
+    prepared_path = DIRECTORY / (prefix + "-prepare.json")
+    row["status"] = "preparing"
+    save(output, report)
+    lab = prepare.prepare(task["family"], prepared_path)
+    state = initial_state(lab)
+    row.update(
+        initial_state_sha256=digest(state),
+        initial_state=state,
+        prepared_path=prepared_path.relative_to(ROOT).as_posix(),
+        prepared_sha256=digest(lab),
+        lab_run_id=lab["lab_run_id"],
+    )
+    if row["variant"] == "memory":
+        preview = client.get(
+            f"/api/tickets/{task['ticket']['ticket_id']}/memory-recall?mode={task['mode']}"
+        )
+        preview.raise_for_status()
+        if preview.json() != task["memory"]:
+            raise ValueError("冻结经验资格或内容发生变化。")
+    identity = task["ticket"]["ticket_id"]
+    common = {
+        "index_id": manifest["index"]["index_id"],
+        "lab_run_id": lab["lab_run_id"],
+        "max_tool_calls": 6,
+        "max_model_calls": 8,
+        "time_budget_ms": 240000,
+    }
+    path = f"/api/tickets/{identity}/hypothesis-investigations"
+    if row["variant"] == "multi":
+        board_response = client.post(
+            f"/api/tickets/{identity}/coordination-boards",
+            json={**common, "request_id": str(uuid4()), "context_chars": 16000},
+        )
+        board_response.raise_for_status()
+        board = board_response.json()
+        row["board"] = board
+        response = client.post(
+            f"/api/coordination-boards/{board['board_id']}/executions",
+            json={"request_id": str(uuid4())},
+        )
+        response.raise_for_status()
+        row["execution_id"] = response.json()["execution_id"]
+        row["waves"] = []
+        path = f"/api/coordination-executions/{row['execution_id']}/advance"
+    else:
+        row["request"] = {
+            **common,
+            "use_memory": row["variant"] == "memory",
+            "use_skills": False,
+            "use_published_skills": False,
+        }
+    row["status"] = "request_started"
+    save(output, report)
+    started = perf_counter()
+    if row["variant"] == "multi":
+        for _ in range(2):
+            response = client.post(path)
+            row["http_status"] = response.status_code
+            row["response"] = response.json()
+            row["waves"].append(row["response"])
+            save(output, report)
+            response.raise_for_status()
+            if row["response"]["status"] != "pending":
+                break
+    else:
+        response = client.post(path, json=row["request"])
+        row["http_status"] = response.status_code
+        row["response"] = response.json()
+        save(output, report)
+        response.raise_for_status()
+    row["duration_ms"] = round((perf_counter() - started) * 1000)
+    body = row["response"]
+    values = metrics("multi" if row["variant"] == "multi" else "single", body, row["duration_ms"])
+    row["agent_metrics"] = values
+    row["usage"] = {
+        k: values[k] for k in ("known_calls", "unknown_calls", "input_tokens", "output_tokens")
+    }
+    row["status"] = body["status"]
+    error = body.get("error") or {}
+    row["error_code"] = error.get("code") or (
+        body.get("stop_reason") if body["status"] != "completed" else None
+    )
+    if row["status"] not in ("completed", "failed", "stopped"):
+        row["error_code"] = "WORKFLOW_NOT_TERMINAL"
+        row["status"] = "stopped"
+    row["quality"] = {
+        "current_evidence": values["current_evidence"],
+        "claim_count": values["claim_count"],
+        "literal_citations": values["literal_verified_citations"],
+        "model_not_supported": values["review_not_supported"],
+    }
+    if row["variant"] == "memory":
+        assert body["input_snapshot"]["memory"] == task["memory"]
+    row["record_path"] = (
+        f"/api/coordination-executions/{body['execution_id']}"
+        if row["variant"] == "multi"
+        else f"/api/investigations/{body['investigation_id']}"
+    )
+    save(output, report)
+    row["references"] = audit_agent(client, body, row["variant"])
+    row["readback_verified"] = True
+    current = client.get(row["record_path"])
+    current.raise_for_status()
+    assert current.json() == body
+
+
+def execute_rag(client, manifest, task, row, output, report, suite):
+    request = dict(task["request"])
+    variant = row["variant"]
+    if suite == "retrieval":
+        request.update(
+            mode=variant.split("-")[0],
+            candidate_limit=20,
+            rerank="rerank" in variant,
+            expand_parent="parent" in variant,
+            rerank_pool=20,
+            parent_max_chars=3000,
+            context_budget_chars=12000,
+        )
+    elif variant == "guided":
+        request.update(max_searches=2, max_model_calls=9, time_budget_ms=180000)
+    row.update(request=request, status="request_started")
+    save(output, report)
+    path = f"/api/retrieval/indexes/{manifest['index']['index_id']}/"
+    path += (
+        "search" if suite == "retrieval" else ("answer" if variant == "direct" else "guided-answer")
+    )
+    started = perf_counter()
+    response = client.post(path, json=request)
+    row.update(
+        duration_ms=round((perf_counter() - started) * 1000),
+        http_status=response.status_code,
+        response=response.json(),
+    )
+    row["usage"] = usage(suite, row["response"], response.status_code)
+    save(output, report)
+    body = row["response"]
+    if response.status_code != 200:
+        row.update(
+            status="failed",
+            error_code=body.get("error", {}).get("code", "HTTP_ERROR"),
+            failed_stage=body.get("stage"),
+        )
+        return
+    if suite == "retrieval":
+        label = next(
+            item for item in manifest["labels"][suite] if item["task_id"] == task["task_id"]
+        )
+        entries = load(ROOT / "data/retrieval/baseline-v1/snapshot.json")["entries"]
+        coverage = covered_ids(body, entries)
+        row["quality"] = {
+            **retrieval_metrics([h["evidence_id"] for h in body["items"]], label["relevance"], 5),
+            "context_recall": len(coverage & set(label["relevance"])) / len(label["relevance"]),
+            "versions_match": all(
+                h["product_version"] == request["product_version"] for h in body["items"]
+            ),
+            "context_chars": body.get("context_chars", sum(len(h["text"]) for h in body["items"])),
+        }
+        refs = {}
+        for hit in body["items"]:
+            reference = client.get(hit["reference_url"])
+            reference.raise_for_status()
+            detail = reference.json()
+            assert detail["text_verified"]
+            if hit["kind"] == "document":
+                assert detail["chunk"]["text"] == hit["text"]
+            else:
+                assert (
+                    detail["artifact"]["observations"][hit["source"]["ordinal"]]
+                    == hit["source"]["event"]
+                )
+            refs[hit["reference_url"]] = digest(detail)
+        row["references"] = refs
+    else:
+        answer = body if variant == "direct" else body.get("answer")
+        if answer is None:
+            row.update(status="stopped", error_code=body.get("stop_reason", body["status"]))
+            return
+        label = next(
+            item for item in manifest["labels"][suite] if item["task_id"] == task["task_id"]
+        )
+        row["quality"] = score(answer, task["request"], label)
+        helper = module("smoke-rag")
+        auth = {"Authorization": client.headers["Authorization"]}
+        verified = helper.audit(client, auth, answer)
+        row["references"] = {
+            h["reference_url"]: verified[h["evidence_id"]]
+            for h in answer["retrieval"]["items"]
+            if h["evidence_id"] in verified
+        }
+    row.update(status="completed", readback_verified=True)
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--suite", choices=("retrieval", "answers", "agents"), required=True)
+    args = parser.parse_args()
+    manifest = load(ROOT / "data/evaluations/final-v1/manifest.json")
+    check_freeze(manifest)
+    output = DIRECTORY / (args.suite + ".json")
+    if output.exists():
+        raise ValueError("原报告已存在，不恢复、不覆盖或重试；重复已预登记在网格中。")
+    report = {
+        "schema_version": "supportops.final-report.v1",
+        "manifest_sha256": manifest["sha256"],
+        "suite": args.suite,
+        "attempts": grid(manifest, args.suite),
+        "checks": "running",
+        "started_at_utc": datetime.now(timezone.utc).isoformat(),
+        "cost_cny": None,
+        "human_reviewed": False,
+    }
+    DIRECTORY.mkdir(parents=True, exist_ok=True)
+    save(output, report)
+    account = next(
+        a
+        for a in load(ROOT / "local/demo-accounts.json")["accounts"]
+        if a["username"] == "support_a"
+    )
+    with httpx.Client(base_url="http://127.0.0.1:8010", timeout=300, trust_env=False) as client:
+        login = client.post(
+            "/api/auth/login",
+            json={"username": account["username"], "password": account["password"]},
+        )
+        login.raise_for_status()
+        client.headers["Authorization"] = "Bearer " + login.json()["access_token"]
+        try:
+            index = client.get(f"/api/retrieval/indexes/{manifest['index']['index_id']}")
+            index.raise_for_status()
+            if index.json() != manifest["index"]:
+                raise ValueError("实际索引变化。")
+            for row in report["attempts"]:
+                check_freeze(manifest)
+                task = next(
+                    t for t in manifest["tasks"][args.suite] if t["task_id"] == row["task_id"]
+                )
+                row.update(
+                    task_sha256=digest(
+                        task.get("ticket", task["request"] if "request" in task else task)
+                    ),
+                    index_sha256=manifest["index"]["corpus_sha256"],
+                    model=manifest["models"]["main_model"],
+                    budget=manifest["agent_budget"] if args.suite == "agents" else {},
+                    initial_state_sha256="static-corpus" if args.suite != "agents" else None,
+                )
+                started = perf_counter()
+                try:
+                    if args.suite == "agents":
+                        execute_agent(client, manifest, task, row, output, report)
+                    else:
+                        execute_rag(client, manifest, task, row, output, report, args.suite)
+                except (httpx.HTTPError, ValueError, KeyError, AssertionError, RuntimeError) as exc:
+                    row["failure_type"] = type(exc).__name__
+                    # 保留已收到的付费用量和响应；传输未知单独计管道，不能猜测调用数。
+                    row["duration_ms"] = row["duration_ms"] or round(
+                        (perf_counter() - started) * 1000
+                    )
+                    row["status"] = "failed"
+                    row["error_code"] = row["error_code"] or "HARNESS_" + type(exc).__name__
+                    row["quality"] = None
+                finally:
+                    save(output, report)
+                print(
+                    json.dumps(
+                        {
+                            k: row[k]
+                            for k in ("task_id", "repeat", "variant", "status", "error_code")
+                        },
+                        ensure_ascii=False,
+                    ),
+                    flush=True,
+                )
+            validate_report(manifest, report)
+            report["checks"] = "attempts_finished"
+            save(output, report)
+        finally:
+            if args.suite == "agents":
+                module("prepare-investigation-lab").cleanup()
+            client.post("/api/auth/logout").raise_for_status()
+
+
+if __name__ == "__main__":
+    main()

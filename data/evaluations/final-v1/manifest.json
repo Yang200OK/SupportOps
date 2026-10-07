@@ -1,0 +1,1780 @@
+{
+  "schema_version": "supportops.final-freeze.v1",
+  "frozen_at_utc": "2026-10-07T02:21:32.809526+00:00",
+  "repeats": 2,
+  "tasks": {
+    "retrieval": [
+      {
+        "task_id": "doc-cache-1.0-0",
+        "source_group": "cache",
+        "split": "holdout",
+        "request": {
+          "query": "目标配置更新后仍读旧值，RD_CACHE_STALE 应核对什么？",
+          "product_version": "1.0",
+          "source_kinds": [
+            "document"
+          ],
+          "document_ids": [],
+          "experiment_ids": [],
+          "top_k": 5
+        }
+      },
+      {
+        "task_id": "doc-cache-1.0-1",
+        "source_group": "cache",
+        "split": "holdout",
+        "request": {
+          "query": "缓存和数据库目标或代次不一致时如何调查？",
+          "product_version": "1.0",
+          "source_kinds": [
+            "document"
+          ],
+          "document_ids": [],
+          "experiment_ids": [],
+          "top_k": 5
+        }
+      },
+      {
+        "task_id": "doc-cache-1.1-0",
+        "source_group": "cache",
+        "split": "holdout",
+        "request": {
+          "query": "目标配置更新后仍读旧值，RD_CACHE_STALE 应核对什么？",
+          "product_version": "1.1",
+          "source_kinds": [
+            "document"
+          ],
+          "document_ids": [],
+          "experiment_ids": [],
+          "top_k": 5
+        }
+      },
+      {
+        "task_id": "doc-cache-1.1-1",
+        "source_group": "cache",
+        "split": "holdout",
+        "request": {
+          "query": "缓存和数据库目标或代次不一致时如何调查？",
+          "product_version": "1.1",
+          "source_kinds": [
+            "document"
+          ],
+          "document_ids": [],
+          "experiment_ids": [],
+          "top_k": 5
+        }
+      },
+      {
+        "task_id": "doc-cache-2.0-0",
+        "source_group": "cache",
+        "split": "holdout",
+        "request": {
+          "query": "目标配置更新后仍读旧值，RD_CACHE_STALE 应核对什么？",
+          "product_version": "2.0",
+          "source_kinds": [
+            "document"
+          ],
+          "document_ids": [],
+          "experiment_ids": [],
+          "top_k": 5
+        }
+      },
+      {
+        "task_id": "doc-cache-2.0-1",
+        "source_group": "cache",
+        "split": "holdout",
+        "request": {
+          "query": "缓存和数据库目标或代次不一致时如何调查？",
+          "product_version": "2.0",
+          "source_kinds": [
+            "document"
+          ],
+          "document_ids": [],
+          "experiment_ids": [],
+          "top_k": 5
+        }
+      },
+      {
+        "task_id": "log-ee7faf54-c1e3-4313-ab66-cd1522eaf9a4",
+        "source_group": "cache",
+        "split": "holdout",
+        "request": {
+          "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+          "product_version": "1.0",
+          "source_kinds": [
+            "log"
+          ],
+          "document_ids": [],
+          "experiment_ids": [
+            "b5443508-a047-407f-80fd-9ce70535bdeb"
+          ],
+          "top_k": 5
+        }
+      },
+      {
+        "task_id": "log-e6d4344f-bbcb-45e7-8e70-ed37112c7059",
+        "source_group": "cache",
+        "split": "holdout",
+        "request": {
+          "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+          "product_version": "1.0",
+          "source_kinds": [
+            "log"
+          ],
+          "document_ids": [],
+          "experiment_ids": [
+            "7c97c4a4-2c71-4207-9096-33e7fc9c9b1f"
+          ],
+          "top_k": 5
+        }
+      },
+      {
+        "task_id": "log-79f855fd-450d-4704-b162-46129258e333",
+        "source_group": "cache",
+        "split": "holdout",
+        "request": {
+          "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+          "product_version": "1.1",
+          "source_kinds": [
+            "log"
+          ],
+          "document_ids": [],
+          "experiment_ids": [
+            "27c765e5-def8-4e89-8308-d3ade2a02ba4"
+          ],
+          "top_k": 5
+        }
+      },
+      {
+        "task_id": "log-a4d96f0d-f68e-427f-ba0d-8d0d15ca4c71",
+        "source_group": "cache",
+        "split": "holdout",
+        "request": {
+          "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+          "product_version": "1.1",
+          "source_kinds": [
+            "log"
+          ],
+          "document_ids": [],
+          "experiment_ids": [
+            "c9ece0b9-dfc6-4e3e-81e1-3054d58bef27"
+          ],
+          "top_k": 5
+        }
+      },
+      {
+        "task_id": "log-180ed9bf-139e-4a22-bf91-2f7fce784848",
+        "source_group": "cache",
+        "split": "holdout",
+        "request": {
+          "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+          "product_version": "2.0",
+          "source_kinds": [
+            "log"
+          ],
+          "document_ids": [],
+          "experiment_ids": [
+            "a1792b34-4f9f-447c-a3a6-e30e2568a174"
+          ],
+          "top_k": 5
+        }
+      },
+      {
+        "task_id": "log-99614cad-7278-4cdb-ad28-3226be2b7e9a",
+        "source_group": "cache",
+        "split": "holdout",
+        "request": {
+          "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+          "product_version": "2.0",
+          "source_kinds": [
+            "log"
+          ],
+          "document_ids": [],
+          "experiment_ids": [
+            "14e97e01-46aa-4217-bb7b-8a810ae8e929"
+          ],
+          "top_k": 5
+        }
+      }
+    ],
+    "answers": [
+      {
+        "task_id": "holdout-path-1.0",
+        "source_group": "overview-all-versions",
+        "split": "holdout",
+        "category": "fact",
+        "request": {
+          "query": "RelayDesk 1.0 文档的事件请求路径经过哪些步骤？",
+          "product_version": "1.0",
+          "source_kinds": [
+            "document"
+          ],
+          "document_ids": [
+            "ded98398-448d-47e0-bdb0-5674da34b169"
+          ],
+          "experiment_ids": [],
+          "top_k": 3,
+          "mode": "bm25",
+          "candidate_limit": 20,
+          "rerank": false,
+          "expand_parent": true,
+          "rerank_pool": 20,
+          "parent_max_chars": 3000,
+          "context_budget_chars": 12000
+        }
+      },
+      {
+        "task_id": "holdout-path-1.1",
+        "source_group": "overview-all-versions",
+        "split": "holdout",
+        "category": "fact",
+        "request": {
+          "query": "RelayDesk 1.1 文档的事件请求路径经过哪些步骤？",
+          "product_version": "1.1",
+          "source_kinds": [
+            "document"
+          ],
+          "document_ids": [
+            "22346c18-8d3b-4aff-a02f-f36c9e066190"
+          ],
+          "experiment_ids": [],
+          "top_k": 3,
+          "mode": "bm25",
+          "candidate_limit": 20,
+          "rerank": false,
+          "expand_parent": true,
+          "rerank_pool": 20,
+          "parent_max_chars": 3000,
+          "context_budget_chars": 12000
+        }
+      },
+      {
+        "task_id": "holdout-path-2.0",
+        "source_group": "overview-all-versions",
+        "split": "holdout",
+        "category": "fact",
+        "request": {
+          "query": "RelayDesk 2.0 文档的事件请求路径经过哪些步骤？",
+          "product_version": "2.0",
+          "source_kinds": [
+            "document"
+          ],
+          "document_ids": [
+            "578ae4fe-6a8c-4e6b-86c3-3ce48e912a42"
+          ],
+          "experiment_ids": [],
+          "top_k": 3,
+          "mode": "bm25",
+          "candidate_limit": 20,
+          "rerank": false,
+          "expand_parent": true,
+          "rerank_pool": 20,
+          "parent_max_chars": 3000,
+          "context_budget_chars": 12000
+        }
+      },
+      {
+        "task_id": "holdout-cache",
+        "source_group": "troubleshooting-all-versions",
+        "split": "holdout",
+        "category": "fact",
+        "request": {
+          "query": "RelayDesk 1.1 RD_CACHE_STALE 应核对哪些观测？",
+          "product_version": "1.1",
+          "source_kinds": [
+            "document"
+          ],
+          "document_ids": [
+            "5197f899-2056-4279-848e-0a09d2f519cd"
+          ],
+          "experiment_ids": [],
+          "top_k": 3,
+          "mode": "bm25",
+          "candidate_limit": 20,
+          "rerank": false,
+          "expand_parent": true,
+          "rerank_pool": 20,
+          "parent_max_chars": 3000,
+          "context_budget_chars": 12000
+        }
+      }
+    ],
+    "agents": [
+      {
+        "task_id": "prospective-configuration",
+        "family": "configuration",
+        "ticket": {
+          "title": "最终冻结调查任务",
+          "description": "RelayDesk 1.1：启动诊断报告 RD_CONFIG_INVALID，服务没有上线。请核对本次启动证据与适用的文档约束，列出支持、反驳和缺少的信息。",
+          "product": "relaydesk",
+          "product_version": "1.1",
+          "environment": "local_lab",
+          "source_type": "synthetic_case",
+          "ticket_id": "fb2b8617-2143-46e0-a896-2f8040566c3a",
+          "organization_id": "97694dc5-35b8-4708-a2f5-4a5997e4c712",
+          "requester_id": "fd49342e-5d58-4a11-a547-3db9614d1968",
+          "created_at": "2026-10-07T02:21:32.433547Z",
+          "intake_status": "ready_for_intake",
+          "missing_fields": [],
+          "persisted": true
+        },
+        "memory": {
+          "loaded": [
+            {
+              "candidate_id": "426e79fa-3f19-47e4-805b-1d3fcaeaef6e",
+              "revision": 1,
+              "body": {
+                "mode": "startup",
+                "title": "第6阶段Skill验收 0fca8722",
+                "checks": [
+                  {
+                    "tool": "read_startup_diagnostic",
+                    "reason": "根据技能指南，startup 模式下必须读取 read_startup_diagnostic 以获取启动校验结果和退出码，这是确认 RD_CONFIG_INVALID 具体原因的唯一可信证据源。",
+                    "step_id": "S1"
+                  }
+                ],
+                "signals": [
+                  "RD_CONFIG_INVALID"
+                ],
+                "symptoms": "RelayDesk 1.1 本次隔离实验报告 RD_CONFIG_INVALID。请只读本次观测调查，证据不足保持未决。",
+                "limitation": "待审核历史排查方法；非本次证据、非动作批准，未证明唯一根因或经验收益。",
+                "environment": "local_lab",
+                "source_type": "unreviewed_experience_candidate",
+                "product_version": "1.1",
+                "source_evidence": [
+                  {
+                    "evidence_id": "live:1f8171f5-1aa6-4f9b-bfa3-23782c6a5990:00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+                    "source_type": "current_startup_diagnostic",
+                    "text_sha256": "00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+                    "reference_url": "/api/investigations/3f471210-5c15-4af9-821d-fe5c56c79d1d/evidence/live:1f8171f5-1aa6-4f9b-bfa3-23782c6a5990:00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8"
+                  }
+                ],
+                "distinguishing_signals": [
+                  {
+                    "refute_signal": "启动诊断显示配置校验通过，或错误码为其他类型（如依赖缺失、端口占用）。",
+                    "support_signal": "启动诊断日志中包含 RD_CONFIG_INVALID 错误码及具体的无效配置键名或值。"
+                  }
+                ],
+                "human_semantic_reviewed": false,
+                "source_investigation_id": "3f471210-5c15-4af9-821d-fe5c56c79d1d",
+                "current_incident_verified": false,
+                "original_ticket_source_type": "synthetic_case"
+              },
+              "body_sha256": "ad6a70b768a5a30058a0167d279a53feb32add831f476b1c67c0167f93f8d5ce",
+              "source_sha256": "9580e1a110718a4625452b8585d798219f3415e12a1984189363c7cd04e37874",
+              "expires_at": "2026-10-13T11:17:56.528944+00:00",
+              "score": 7.442876849394971
+            },
+            {
+              "candidate_id": "d2a1c107-a57e-4b9e-af3f-90138705a221",
+              "revision": 2,
+              "body": {
+                "mode": "startup",
+                "title": "第6阶段Skill验收 0fca8722",
+                "checks": [
+                  {
+                    "tool": "read_startup_diagnostic",
+                    "reason": "根据技能指南，startup 模式下必须读取 read_startup_diagnostic 以获取启动校验结果和退出码，这是确认 RD_CONFIG_INVALID 具体原因的唯一可信证据源。",
+                    "step_id": "S1"
+                  }
+                ],
+                "signals": [
+                  "RD_CONFIG_INVALID"
+                ],
+                "symptoms": "RelayDesk 1.1 本次隔离实验报告 RD_CONFIG_INVALID。请只读本次观测调查，证据不足保持未决。",
+                "limitation": "待审核历史排查方法；非本次证据、非动作批准，未证明唯一根因或经验收益。",
+                "environment": "local_lab",
+                "source_type": "unreviewed_experience_candidate",
+                "product_version": "1.1",
+                "source_evidence": [
+                  {
+                    "evidence_id": "live:1f8171f5-1aa6-4f9b-bfa3-23782c6a5990:00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+                    "source_type": "current_startup_diagnostic",
+                    "text_sha256": "00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+                    "reference_url": "/api/investigations/3f471210-5c15-4af9-821d-fe5c56c79d1d/evidence/live:1f8171f5-1aa6-4f9b-bfa3-23782c6a5990:00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8"
+                  }
+                ],
+                "distinguishing_signals": [
+                  {
+                    "refute_signal": "启动诊断显示配置校验通过，或错误码为其他类型（如依赖缺失、端口占用）。",
+                    "support_signal": "启动诊断日志中包含 RD_CONFIG_INVALID 错误码及具体的无效配置键名或值。"
+                  }
+                ],
+                "human_semantic_reviewed": false,
+                "source_investigation_id": "3f471210-5c15-4af9-821d-fe5c56c79d1d",
+                "current_incident_verified": false,
+                "original_ticket_source_type": "synthetic_case"
+              },
+              "body_sha256": "ad6a70b768a5a30058a0167d279a53feb32add831f476b1c67c0167f93f8d5ce",
+              "source_sha256": "9580e1a110718a4625452b8585d798219f3415e12a1984189363c7cd04e37874",
+              "expires_at": "2026-10-13T07:43:37.740057+00:00",
+              "score": 7.442876849394971
+            }
+          ],
+          "selection_limited": false,
+          "selection_reason": "matched_unreviewed_methods",
+          "scope": {
+            "product_version": "1.1",
+            "environment": "local_lab",
+            "mode": "startup"
+          },
+          "limitation": "待审核历史排查方法；非本次证据、非动作批准，未证明唯一根因或经验收益。"
+        },
+        "mode": "startup"
+      },
+      {
+        "task_id": "prospective-pool",
+        "family": "pool",
+        "ticket": {
+          "title": "最终冻结调查任务",
+          "description": "RelayDesk 1.1：投递请求出现 RD_POOL_WAIT。请比较本次运行状态和请求观测，说明还需要什么证据才可确认原因。",
+          "product": "relaydesk",
+          "product_version": "1.1",
+          "environment": "local_lab",
+          "source_type": "synthetic_case",
+          "ticket_id": "2fb2b7c5-a059-4c9f-b729-efb7ffd9ce0c",
+          "organization_id": "97694dc5-35b8-4708-a2f5-4a5997e4c712",
+          "requester_id": "fd49342e-5d58-4a11-a547-3db9614d1968",
+          "created_at": "2026-10-07T02:21:32.502730Z",
+          "intake_status": "ready_for_intake",
+          "missing_fields": [],
+          "persisted": true
+        },
+        "memory": {
+          "loaded": [
+            {
+              "candidate_id": "14665dfd-b68a-4843-b606-7f8f5c2b2cf9",
+              "revision": 1,
+              "body": {
+                "mode": "online",
+                "title": "本次实验调查构造案例 37f2a8ff",
+                "checks": [
+                  {
+                    "tool": "search_knowledge",
+                    "reason": "首先需要读取同版本规则以了解 RD_CACHE_STALE 的标准定义和常见原因，为后续分析提供背景知识。",
+                    "step_id": "S1"
+                  },
+                  {
+                    "tool": "read_current_observations",
+                    "reason": "在线模式下，必须读取本次运行的实际观测数据以获取错误发生的具体上下文和证据，特别是缓存与数据库的代次对比。",
+                    "step_id": "S2"
+                  }
+                ],
+                "signals": [
+                  "RD_CACHE_STALE"
+                ],
+                "symptoms": "RelayDesk 1.1 本次实验报告 RD_CACHE_STALE。请读取绑定运行的真实观测，提出和核对原因候选；证据不足时保持未决，不执行修复。",
+                "limitation": "待审核历史排查方法；非本次证据、非动作批准，未证明唯一根因或经验收益。",
+                "environment": "local_lab",
+                "source_type": "unreviewed_experience_candidate",
+                "product_version": "1.1",
+                "source_evidence": [
+                  {
+                    "evidence_id": "live:7c9efc7f-5cd1-41b9-9801-72fb660e4adc:affc86a140c97a937c21d3fa9134a6e73250ae9e72508ab7e46e6774e7589a36",
+                    "source_type": "current_lab_observations",
+                    "text_sha256": "affc86a140c97a937c21d3fa9134a6e73250ae9e72508ab7e46e6774e7589a36",
+                    "reference_url": "/api/investigations/0cee35a2-1b0c-47ce-8c0c-dbc3ebf4c302/evidence/live:7c9efc7f-5cd1-41b9-9801-72fb660e4adc:affc86a140c97a937c21d3fa9134a6e73250ae9e72508ab7e46e6774e7589a36"
+                  },
+                  {
+                    "evidence_id": "live:7c9efc7f-5cd1-41b9-9801-72fb660e4adc:d9eb986663601a1554f72e3d046fae9223925012bcc68849a6553d01013ade15",
+                    "source_type": "current_lab_observations",
+                    "text_sha256": "d9eb986663601a1554f72e3d046fae9223925012bcc68849a6553d01013ade15",
+                    "reference_url": "/api/investigations/0cee35a2-1b0c-47ce-8c0c-dbc3ebf4c302/evidence/live:7c9efc7f-5cd1-41b9-9801-72fb660e4adc:d9eb986663601a1554f72e3d046fae9223925012bcc68849a6553d01013ade15"
+                  },
+                  {
+                    "evidence_id": "live:7c9efc7f-5cd1-41b9-9801-72fb660e4adc:7106daff5b03fe065acb965d03b818a413e4f1a708f4bff60469a8d934662af6",
+                    "source_type": "current_lab_observations",
+                    "text_sha256": "7106daff5b03fe065acb965d03b818a413e4f1a708f4bff60469a8d934662af6",
+                    "reference_url": "/api/investigations/0cee35a2-1b0c-47ce-8c0c-dbc3ebf4c302/evidence/live:7c9efc7f-5cd1-41b9-9801-72fb660e4adc:7106daff5b03fe065acb965d03b818a413e4f1a708f4bff60469a8d934662af6"
+                  },
+                  {
+                    "evidence_id": "live:7c9efc7f-5cd1-41b9-9801-72fb660e4adc:0290d9776eec9c18f2603a24c2909155559d12e0d3c1dceb19cda25490726a51",
+                    "source_type": "current_lab_observations",
+                    "text_sha256": "0290d9776eec9c18f2603a24c2909155559d12e0d3c1dceb19cda25490726a51",
+                    "reference_url": "/api/investigations/0cee35a2-1b0c-47ce-8c0c-dbc3ebf4c302/evidence/live:7c9efc7f-5cd1-41b9-9801-72fb660e4adc:0290d9776eec9c18f2603a24c2909155559d12e0d3c1dceb19cda25490726a51"
+                  },
+                  {
+                    "evidence_id": "live:7c9efc7f-5cd1-41b9-9801-72fb660e4adc:c9b48596fa4177753bf054827e908ada231dd1202e8829d5c1ab3220f6b5890f",
+                    "source_type": "current_lab_observations",
+                    "text_sha256": "c9b48596fa4177753bf054827e908ada231dd1202e8829d5c1ab3220f6b5890f",
+                    "reference_url": "/api/investigations/0cee35a2-1b0c-47ce-8c0c-dbc3ebf4c302/evidence/live:7c9efc7f-5cd1-41b9-9801-72fb660e4adc:c9b48596fa4177753bf054827e908ada231dd1202e8829d5c1ab3220f6b5890f"
+                  },
+                  {
+                    "evidence_id": "live:7c9efc7f-5cd1-41b9-9801-72fb660e4adc:bcae59c9ca568579df4f9fd8e925a1396346b65752c37d9758278aaf1be9d53f",
+                    "source_type": "current_lab_observations",
+                    "text_sha256": "bcae59c9ca568579df4f9fd8e925a1396346b65752c37d9758278aaf1be9d53f",
+                    "reference_url": "/api/investigations/0cee35a2-1b0c-47ce-8c0c-dbc3ebf4c302/evidence/live:7c9efc7f-5cd1-41b9-9801-72fb660e4adc:bcae59c9ca568579df4f9fd8e925a1396346b65752c37d9758278aaf1be9d53f"
+                  }
+                ],
+                "distinguishing_signals": [
+                  {
+                    "refute_signal": "无直接反驳信号，但需确认是否为预期的刷新延迟或配置导致的暂时性不一致。",
+                    "support_signal": "日志 live:...7106daff... 明确显示 cache_generation=1, db_generation=2，存在代次差异。日志 live:...bcae59c9... 确认最终错误码为 RD_CACHE_STALE。"
+                  }
+                ],
+                "human_semantic_reviewed": false,
+                "source_investigation_id": "0cee35a2-1b0c-47ce-8c0c-dbc3ebf4c302",
+                "current_incident_verified": false,
+                "original_ticket_source_type": "synthetic_case"
+              },
+              "body_sha256": "21dba030252264c85324e89b786f82bec682cc809b0b083adda8fe1e64bce957",
+              "source_sha256": "aa5ff2a18b1db465e196b01987da8dddd488bfe05ddb9caabc7bb7167a8891e9",
+              "expires_at": "2026-10-13T11:17:57.280153+00:00",
+              "score": 15.819522695917016
+            }
+          ],
+          "selection_limited": true,
+          "selection_reason": "matched_unreviewed_methods",
+          "scope": {
+            "product_version": "1.1",
+            "environment": "local_lab",
+            "mode": "online"
+          },
+          "limitation": "待审核历史排查方法；非本次证据、非动作批准，未证明唯一根因或经验收益。"
+        },
+        "mode": "online"
+      },
+      {
+        "task_id": "prospective-cache",
+        "family": "cache",
+        "ticket": {
+          "title": "最终冻结调查任务",
+          "description": "RelayDesk 1.1：目标变更后一次投递报告 RD_CACHE_STALE。请依据本次状态和观测核查版本与目标信息，保留不能确认的假设。",
+          "product": "relaydesk",
+          "product_version": "1.1",
+          "environment": "local_lab",
+          "source_type": "synthetic_case",
+          "ticket_id": "44da0fdb-42e3-480b-b0a2-f6756299ce8d",
+          "organization_id": "97694dc5-35b8-4708-a2f5-4a5997e4c712",
+          "requester_id": "fd49342e-5d58-4a11-a547-3db9614d1968",
+          "created_at": "2026-10-07T02:21:32.597337Z",
+          "intake_status": "ready_for_intake",
+          "missing_fields": [],
+          "persisted": true
+        },
+        "memory": {
+          "loaded": [
+            {
+              "candidate_id": "f500c875-a023-4139-b3ed-51eaa1a1801f",
+              "revision": 1,
+              "body": {
+                "mode": "online",
+                "title": "第5阶段第3轮动作验收 a3620d20",
+                "checks": [
+                  {
+                    "tool": "search_knowledge",
+                    "reason": "检索同版本规则以了解 RD_CACHE_STALE 的已知原因和排查建议，为后续分析提供背景知识。",
+                    "step_id": "S1"
+                  },
+                  {
+                    "tool": "read_runtime_state",
+                    "reason": "读取当前运行时状态，检查缓存服务配置、连接池状态及接收器设置，排除配置错误或资源耗尽导致的缓存异常。",
+                    "step_id": "S2"
+                  },
+                  {
+                    "tool": "read_current_observations",
+                    "reason": "读取本次运行的观测数据，确认 RD_CACHE_STALE 错误的具体发生时刻、频率及相关上下文信息，验证假设 H1。这是 online 模式 finish 前的必要步骤。",
+                    "step_id": "S3"
+                  }
+                ],
+                "signals": [
+                  "RD_CACHE_STALE"
+                ],
+                "symptoms": "RelayDesk 1.1 投递出现 RD_CACHE_STALE，请调查当前异常，建议有限实验验证。",
+                "limitation": "待审核历史排查方法；非本次证据、非动作批准，未证明唯一根因或经验收益。",
+                "environment": "local_lab",
+                "source_type": "unreviewed_experience_candidate",
+                "product_version": "1.1",
+                "source_evidence": [
+                  {
+                    "evidence_id": "live:5161d1db-e1f0-41bf-8755-3a69ca8e47de:19e4e9aad50ebed4cf5a402f395e9930953d02a884054a9a61075fe54de9de6d",
+                    "source_type": "current_lab_state",
+                    "text_sha256": "19e4e9aad50ebed4cf5a402f395e9930953d02a884054a9a61075fe54de9de6d",
+                    "reference_url": "/api/investigations/c9396287-b95e-48d0-af08-8024861a0937/evidence/live:5161d1db-e1f0-41bf-8755-3a69ca8e47de:19e4e9aad50ebed4cf5a402f395e9930953d02a884054a9a61075fe54de9de6d"
+                  },
+                  {
+                    "evidence_id": "live:5161d1db-e1f0-41bf-8755-3a69ca8e47de:c2567ecee34dcc9346e87216241833845347489fa5e41564d5677f8250e87ca9",
+                    "source_type": "current_lab_state",
+                    "text_sha256": "c2567ecee34dcc9346e87216241833845347489fa5e41564d5677f8250e87ca9",
+                    "reference_url": "/api/investigations/c9396287-b95e-48d0-af08-8024861a0937/evidence/live:5161d1db-e1f0-41bf-8755-3a69ca8e47de:c2567ecee34dcc9346e87216241833845347489fa5e41564d5677f8250e87ca9"
+                  },
+                  {
+                    "evidence_id": "live:5161d1db-e1f0-41bf-8755-3a69ca8e47de:54449f802c724bac3f54f5400c720b4c26337d5053586a7acb21948cc0b2ed56",
+                    "source_type": "current_lab_observations",
+                    "text_sha256": "54449f802c724bac3f54f5400c720b4c26337d5053586a7acb21948cc0b2ed56",
+                    "reference_url": "/api/investigations/c9396287-b95e-48d0-af08-8024861a0937/evidence/live:5161d1db-e1f0-41bf-8755-3a69ca8e47de:54449f802c724bac3f54f5400c720b4c26337d5053586a7acb21948cc0b2ed56"
+                  },
+                  {
+                    "evidence_id": "live:5161d1db-e1f0-41bf-8755-3a69ca8e47de:6842f5ff25c79489ae0eeaf9d677debbb2c312fab2414221ce155620227749d8",
+                    "source_type": "current_lab_observations",
+                    "text_sha256": "6842f5ff25c79489ae0eeaf9d677debbb2c312fab2414221ce155620227749d8",
+                    "reference_url": "/api/investigations/c9396287-b95e-48d0-af08-8024861a0937/evidence/live:5161d1db-e1f0-41bf-8755-3a69ca8e47de:6842f5ff25c79489ae0eeaf9d677debbb2c312fab2414221ce155620227749d8"
+                  },
+                  {
+                    "evidence_id": "live:5161d1db-e1f0-41bf-8755-3a69ca8e47de:cfcbd5a05060fd17e946f04ad73cba7058391c5c6bafa412e4a095eb1758f04b",
+                    "source_type": "current_lab_observations",
+                    "text_sha256": "cfcbd5a05060fd17e946f04ad73cba7058391c5c6bafa412e4a095eb1758f04b",
+                    "reference_url": "/api/investigations/c9396287-b95e-48d0-af08-8024861a0937/evidence/live:5161d1db-e1f0-41bf-8755-3a69ca8e47de:cfcbd5a05060fd17e946f04ad73cba7058391c5c6bafa412e4a095eb1758f04b"
+                  },
+                  {
+                    "evidence_id": "live:5161d1db-e1f0-41bf-8755-3a69ca8e47de:b5c42f35e63b45457145c34312b0b8412289ea9f357a91e07af56bebdaf13303",
+                    "source_type": "current_lab_observations",
+                    "text_sha256": "b5c42f35e63b45457145c34312b0b8412289ea9f357a91e07af56bebdaf13303",
+                    "reference_url": "/api/investigations/c9396287-b95e-48d0-af08-8024861a0937/evidence/live:5161d1db-e1f0-41bf-8755-3a69ca8e47de:b5c42f35e63b45457145c34312b0b8412289ea9f357a91e07af56bebdaf13303"
+                  },
+                  {
+                    "evidence_id": "live:5161d1db-e1f0-41bf-8755-3a69ca8e47de:c7c8211b8f7b7066b815d69aa9a6aeb783ef226a8fb03e19464e669de9251bdb",
+                    "source_type": "current_lab_observations",
+                    "text_sha256": "c7c8211b8f7b7066b815d69aa9a6aeb783ef226a8fb03e19464e669de9251bdb",
+                    "reference_url": "/api/investigations/c9396287-b95e-48d0-af08-8024861a0937/evidence/live:5161d1db-e1f0-41bf-8755-3a69ca8e47de:c7c8211b8f7b7066b815d69aa9a6aeb783ef226a8fb03e19464e669de9251bdb"
+                  },
+                  {
+                    "evidence_id": "live:5161d1db-e1f0-41bf-8755-3a69ca8e47de:3592bfde15c03bdd98036185b67c0375b4cb241e916484f2d1481b475c06043c",
+                    "source_type": "current_lab_observations",
+                    "text_sha256": "3592bfde15c03bdd98036185b67c0375b4cb241e916484f2d1481b475c06043c",
+                    "reference_url": "/api/investigations/c9396287-b95e-48d0-af08-8024861a0937/evidence/live:5161d1db-e1f0-41bf-8755-3a69ca8e47de:3592bfde15c03bdd98036185b67c0375b4cb241e916484f2d1481b475c06043c"
+                  }
+                ],
+                "distinguishing_signals": [
+                  {
+                    "refute_signal": "若缓存目标与数据库目标一致，或错误码非 RD_CACHE_STALE，则反驳此假设。当前证据强烈支持该假设。",
+                    "support_signal": "观测日志中 request_finished 事件包含 error_code: RD_CACHE_STALE (evidence_id: ...3c)。target_observed 事件显示 cache_target: current, db_target: new (evidence_id: ...4b)，证实缓存未同步至最新数据库目标。"
+                  }
+                ],
+                "human_semantic_reviewed": false,
+                "source_investigation_id": "c9396287-b95e-48d0-af08-8024861a0937",
+                "current_incident_verified": false,
+                "original_ticket_source_type": "synthetic_case"
+              },
+              "body_sha256": "99e849d2247ca26a3f4afcf01a39abb74e429df681ecea7988908d8b156b64fb",
+              "source_sha256": "cfca91231f010b20316d741db81bcdffe74150230726969b2553f95967a84a88",
+              "expires_at": "2026-10-13T07:43:38.043076+00:00",
+              "score": 22.927289665427768
+            }
+          ],
+          "selection_limited": true,
+          "selection_reason": "matched_unreviewed_methods",
+          "scope": {
+            "product_version": "1.1",
+            "environment": "local_lab",
+            "mode": "online"
+          },
+          "limitation": "待审核历史排查方法；非本次证据、非动作批准，未证明唯一根因或经验收益。"
+        },
+        "mode": "online"
+      },
+      {
+        "task_id": "prospective-downstream",
+        "family": "downstream",
+        "ticket": {
+          "title": "最终冻结调查任务",
+          "description": "RelayDesk 1.1：请求报告 RD_TIMEOUT，无法判断等待发生在哪里。请按本次请求范围核对运行状态与下游观测，给出有原文依据的调查结论。",
+          "product": "relaydesk",
+          "product_version": "1.1",
+          "environment": "local_lab",
+          "source_type": "synthetic_case",
+          "ticket_id": "fc89c865-a4a0-4067-9ae6-7a71c9499507",
+          "organization_id": "97694dc5-35b8-4708-a2f5-4a5997e4c712",
+          "requester_id": "fd49342e-5d58-4a11-a547-3db9614d1968",
+          "created_at": "2026-10-07T02:21:32.693266Z",
+          "intake_status": "ready_for_intake",
+          "missing_fields": [],
+          "persisted": true
+        },
+        "memory": {
+          "loaded": [
+            {
+              "candidate_id": "28d99221-6118-4a10-bc60-862ecd73fdf6",
+              "revision": 1,
+              "body": {
+                "mode": "online",
+                "title": "本次实验调查构造案例 6c892513",
+                "checks": [
+                  {
+                    "tool": "search_knowledge",
+                    "reason": "检索 RelayDesk 1.1 版本中关于 RD_TIMEOUT 错误的已知原因、配置项或排查规则，为后续分析提供背景知识。",
+                    "step_id": "S1"
+                  },
+                  {
+                    "tool": "read_runtime_state",
+                    "reason": "读取当前运行时状态，检查实例配置、连接池占用及接收器状态，排除因资源耗尽或配置错误导致的潜在超时。",
+                    "step_id": "S2"
+                  },
+                  {
+                    "tool": "read_current_observations",
+                    "reason": "读取本次运行的实际观测数据，确认 RD_TIMEOUT 是否真实发生，获取错误上下文、时间戳及相关指标，这是验证假设的关键证据。",
+                    "step_id": "S3"
+                  }
+                ],
+                "signals": [
+                  "RD_TIMEOUT"
+                ],
+                "symptoms": "RelayDesk 1.1 本次实验报告 RD_TIMEOUT。请读取绑定运行的真实观测，提出和核对原因候选；证据不足时保持未决，不执行修复。",
+                "limitation": "待审核历史排查方法；非本次证据、非动作批准，未证明唯一根因或经验收益。",
+                "environment": "local_lab",
+                "source_type": "unreviewed_experience_candidate",
+                "product_version": "1.1",
+                "source_evidence": [
+                  {
+                    "evidence_id": "live:45eeccf3-0dcf-42c3-b81d-d49a8ff3063d:26bf8c5753d8c704d2e5aa61b8853b303f444b5746e6b2122cbc6b92be1aca4d",
+                    "source_type": "current_lab_state",
+                    "text_sha256": "26bf8c5753d8c704d2e5aa61b8853b303f444b5746e6b2122cbc6b92be1aca4d",
+                    "reference_url": "/api/investigations/1f43c54a-634b-4f5d-bb0f-ad1ca4ce11ee/evidence/live:45eeccf3-0dcf-42c3-b81d-d49a8ff3063d:26bf8c5753d8c704d2e5aa61b8853b303f444b5746e6b2122cbc6b92be1aca4d"
+                  },
+                  {
+                    "evidence_id": "live:45eeccf3-0dcf-42c3-b81d-d49a8ff3063d:ebfad598036df1263681db371627c623a181a44217fca57cbc677a55f27cd192",
+                    "source_type": "current_lab_state",
+                    "text_sha256": "ebfad598036df1263681db371627c623a181a44217fca57cbc677a55f27cd192",
+                    "reference_url": "/api/investigations/1f43c54a-634b-4f5d-bb0f-ad1ca4ce11ee/evidence/live:45eeccf3-0dcf-42c3-b81d-d49a8ff3063d:ebfad598036df1263681db371627c623a181a44217fca57cbc677a55f27cd192"
+                  },
+                  {
+                    "evidence_id": "live:45eeccf3-0dcf-42c3-b81d-d49a8ff3063d:6eec8f3bf5f08c654c038612304b390a5433a6865de33d8bf4317d0dd8c57d60",
+                    "source_type": "current_lab_observations",
+                    "text_sha256": "6eec8f3bf5f08c654c038612304b390a5433a6865de33d8bf4317d0dd8c57d60",
+                    "reference_url": "/api/investigations/1f43c54a-634b-4f5d-bb0f-ad1ca4ce11ee/evidence/live:45eeccf3-0dcf-42c3-b81d-d49a8ff3063d:6eec8f3bf5f08c654c038612304b390a5433a6865de33d8bf4317d0dd8c57d60"
+                  },
+                  {
+                    "evidence_id": "live:45eeccf3-0dcf-42c3-b81d-d49a8ff3063d:a0b2a0af54bd68d6b87a59bce4fbeca57e0a5cfcbcf92f12cd987a94a1317869",
+                    "source_type": "current_lab_observations",
+                    "text_sha256": "a0b2a0af54bd68d6b87a59bce4fbeca57e0a5cfcbcf92f12cd987a94a1317869",
+                    "reference_url": "/api/investigations/1f43c54a-634b-4f5d-bb0f-ad1ca4ce11ee/evidence/live:45eeccf3-0dcf-42c3-b81d-d49a8ff3063d:a0b2a0af54bd68d6b87a59bce4fbeca57e0a5cfcbcf92f12cd987a94a1317869"
+                  },
+                  {
+                    "evidence_id": "live:45eeccf3-0dcf-42c3-b81d-d49a8ff3063d:e806e93338a52bf24cc2f8156d1507202839ce5983bdc7429f02a248c7bd83c6",
+                    "source_type": "current_lab_observations",
+                    "text_sha256": "e806e93338a52bf24cc2f8156d1507202839ce5983bdc7429f02a248c7bd83c6",
+                    "reference_url": "/api/investigations/1f43c54a-634b-4f5d-bb0f-ad1ca4ce11ee/evidence/live:45eeccf3-0dcf-42c3-b81d-d49a8ff3063d:e806e93338a52bf24cc2f8156d1507202839ce5983bdc7429f02a248c7bd83c6"
+                  },
+                  {
+                    "evidence_id": "live:45eeccf3-0dcf-42c3-b81d-d49a8ff3063d:df8124ad5edaff3b1d3b5fd2c0a79d9776ab05ff5bc8598a5abb552f91c59261",
+                    "source_type": "current_lab_observations",
+                    "text_sha256": "df8124ad5edaff3b1d3b5fd2c0a79d9776ab05ff5bc8598a5abb552f91c59261",
+                    "reference_url": "/api/investigations/1f43c54a-634b-4f5d-bb0f-ad1ca4ce11ee/evidence/live:45eeccf3-0dcf-42c3-b81d-d49a8ff3063d:df8124ad5edaff3b1d3b5fd2c0a79d9776ab05ff5bc8598a5abb552f91c59261"
+                  },
+                  {
+                    "evidence_id": "live:45eeccf3-0dcf-42c3-b81d-d49a8ff3063d:2b3460fa0052eafa9a297787daa469691050983d8799883e679125f62e29905f",
+                    "source_type": "current_lab_observations",
+                    "text_sha256": "2b3460fa0052eafa9a297787daa469691050983d8799883e679125f62e29905f",
+                    "reference_url": "/api/investigations/1f43c54a-634b-4f5d-bb0f-ad1ca4ce11ee/evidence/live:45eeccf3-0dcf-42c3-b81d-d49a8ff3063d:2b3460fa0052eafa9a297787daa469691050983d8799883e679125f62e29905f"
+                  },
+                  {
+                    "evidence_id": "live:45eeccf3-0dcf-42c3-b81d-d49a8ff3063d:756a541d3cb17495ce12e6bc9c2ad469c73bb07daaad0352cea70600c57913be",
+                    "source_type": "current_lab_observations",
+                    "text_sha256": "756a541d3cb17495ce12e6bc9c2ad469c73bb07daaad0352cea70600c57913be",
+                    "reference_url": "/api/investigations/1f43c54a-634b-4f5d-bb0f-ad1ca4ce11ee/evidence/live:45eeccf3-0dcf-42c3-b81d-d49a8ff3063d:756a541d3cb17495ce12e6bc9c2ad469c73bb07daaad0352cea70600c57913be"
+                  }
+                ],
+                "distinguishing_signals": [
+                  {
+                    "refute_signal": "本次运行观测中无超时记录，请求成功完成，或显示其他非超时类错误。",
+                    "support_signal": "本次运行观测日志中包含 RD_TIMEOUT 错误码、高延迟指标或超时堆栈。"
+                  }
+                ],
+                "human_semantic_reviewed": false,
+                "source_investigation_id": "1f43c54a-634b-4f5d-bb0f-ad1ca4ce11ee",
+                "current_incident_verified": false,
+                "original_ticket_source_type": "synthetic_case"
+              },
+              "body_sha256": "713da82766063cc07b0a31ecaf89b0c7ec966fff48c8cc5972e444f7d962469f",
+              "source_sha256": "44214078b9d2dcdc8876078d1f183cd6125b8c2de22594c94101b68bd3169e87",
+              "expires_at": "2026-10-13T11:17:57.323279+00:00",
+              "score": 15.433228425869459
+            }
+          ],
+          "selection_limited": true,
+          "selection_reason": "matched_unreviewed_methods",
+          "scope": {
+            "product_version": "1.1",
+            "environment": "local_lab",
+            "mode": "online"
+          },
+          "limitation": "待审核历史排查方法；非本次证据、非动作批准，未证明唯一根因或经验收益。"
+        },
+        "mode": "online"
+      }
+    ]
+  },
+  "variants": {
+    "retrieval": [
+      "vector",
+      "bm25",
+      "rrf",
+      "rrf-parent",
+      "rrf-rerank",
+      "rrf-rerank-parent"
+    ],
+    "answers": [
+      "direct",
+      "guided"
+    ],
+    "agents": [
+      "single",
+      "memory",
+      "multi"
+    ]
+  },
+  "labels": {
+    "retrieval": [
+      {
+        "task_id": "doc-cache-1.0-0",
+        "relevance": {
+          "chunk:5624d921-952d-58fb-82b7-f3d799ff3256:5abdabba-f823-5960-8bfb-8f352be31e00": 3,
+          "chunk:5624d921-952d-58fb-82b7-f3d799ff3256:704ff90e-9078-5371-8b96-85d2ad6f6cc2": 1
+        },
+        "annotation_origin": "section_rule_draft",
+        "human_reviewed": false
+      },
+      {
+        "task_id": "doc-cache-1.0-1",
+        "relevance": {
+          "chunk:5624d921-952d-58fb-82b7-f3d799ff3256:5abdabba-f823-5960-8bfb-8f352be31e00": 3,
+          "chunk:5624d921-952d-58fb-82b7-f3d799ff3256:704ff90e-9078-5371-8b96-85d2ad6f6cc2": 1
+        },
+        "annotation_origin": "section_rule_draft",
+        "human_reviewed": false
+      },
+      {
+        "task_id": "doc-cache-1.1-0",
+        "relevance": {
+          "chunk:f66cbc90-0454-5cb4-86be-2102c147a3cb:487f842c-7345-5c3c-b652-bbc8bc7b4ba4": 1,
+          "chunk:f66cbc90-0454-5cb4-86be-2102c147a3cb:967364fd-563a-51b5-8a58-09a8a2ac77eb": 3
+        },
+        "annotation_origin": "section_rule_draft",
+        "human_reviewed": false
+      },
+      {
+        "task_id": "doc-cache-1.1-1",
+        "relevance": {
+          "chunk:f66cbc90-0454-5cb4-86be-2102c147a3cb:487f842c-7345-5c3c-b652-bbc8bc7b4ba4": 1,
+          "chunk:f66cbc90-0454-5cb4-86be-2102c147a3cb:967364fd-563a-51b5-8a58-09a8a2ac77eb": 3
+        },
+        "annotation_origin": "section_rule_draft",
+        "human_reviewed": false
+      },
+      {
+        "task_id": "doc-cache-2.0-0",
+        "relevance": {
+          "chunk:820b38ee-71f9-5343-b985-d5f331a1aba9:9ca86cc5-37ec-519b-9a32-cc7abc21acc3": 1,
+          "chunk:820b38ee-71f9-5343-b985-d5f331a1aba9:fbc66901-27c8-50eb-9889-022bcd69e76c": 3
+        },
+        "annotation_origin": "section_rule_draft",
+        "human_reviewed": false
+      },
+      {
+        "task_id": "doc-cache-2.0-1",
+        "relevance": {
+          "chunk:820b38ee-71f9-5343-b985-d5f331a1aba9:9ca86cc5-37ec-519b-9a32-cc7abc21acc3": 1,
+          "chunk:820b38ee-71f9-5343-b985-d5f331a1aba9:fbc66901-27c8-50eb-9889-022bcd69e76c": 3
+        },
+        "annotation_origin": "section_rule_draft",
+        "human_reviewed": false
+      },
+      {
+        "task_id": "log-ee7faf54-c1e3-4313-ab66-cd1522eaf9a4",
+        "relevance": {
+          "lab:78325340-29c4-4646-b2ce-efc24cd851c3:6": 3,
+          "lab:78325340-29c4-4646-b2ce-efc24cd851c3:7": 3,
+          "lab:78325340-29c4-4646-b2ce-efc24cd851c3:8": 3,
+          "lab:78325340-29c4-4646-b2ce-efc24cd851c3:9": 3,
+          "lab:78325340-29c4-4646-b2ce-efc24cd851c3:10": 3,
+          "lab:78325340-29c4-4646-b2ce-efc24cd851c3:11": 3
+        },
+        "annotation_origin": "controlled_experiment_draft",
+        "human_reviewed": false
+      },
+      {
+        "task_id": "log-e6d4344f-bbcb-45e7-8e70-ed37112c7059",
+        "relevance": {
+          "lab:001d6fd4-1b92-4352-b6fd-698df9411123:6": 3,
+          "lab:001d6fd4-1b92-4352-b6fd-698df9411123:7": 3,
+          "lab:001d6fd4-1b92-4352-b6fd-698df9411123:8": 3,
+          "lab:001d6fd4-1b92-4352-b6fd-698df9411123:9": 3,
+          "lab:001d6fd4-1b92-4352-b6fd-698df9411123:10": 3,
+          "lab:001d6fd4-1b92-4352-b6fd-698df9411123:11": 3
+        },
+        "annotation_origin": "controlled_experiment_draft",
+        "human_reviewed": false
+      },
+      {
+        "task_id": "log-79f855fd-450d-4704-b162-46129258e333",
+        "relevance": {
+          "lab:14fe05ea-fb15-4822-83e8-99ed19e54175:6": 3,
+          "lab:14fe05ea-fb15-4822-83e8-99ed19e54175:7": 3,
+          "lab:14fe05ea-fb15-4822-83e8-99ed19e54175:8": 3,
+          "lab:14fe05ea-fb15-4822-83e8-99ed19e54175:9": 3,
+          "lab:14fe05ea-fb15-4822-83e8-99ed19e54175:10": 3,
+          "lab:14fe05ea-fb15-4822-83e8-99ed19e54175:11": 3
+        },
+        "annotation_origin": "controlled_experiment_draft",
+        "human_reviewed": false
+      },
+      {
+        "task_id": "log-a4d96f0d-f68e-427f-ba0d-8d0d15ca4c71",
+        "relevance": {
+          "lab:036d6d3b-4652-4f09-879a-13c159e7b1b5:6": 3,
+          "lab:036d6d3b-4652-4f09-879a-13c159e7b1b5:7": 3,
+          "lab:036d6d3b-4652-4f09-879a-13c159e7b1b5:8": 3,
+          "lab:036d6d3b-4652-4f09-879a-13c159e7b1b5:9": 3,
+          "lab:036d6d3b-4652-4f09-879a-13c159e7b1b5:10": 3,
+          "lab:036d6d3b-4652-4f09-879a-13c159e7b1b5:11": 3
+        },
+        "annotation_origin": "controlled_experiment_draft",
+        "human_reviewed": false
+      },
+      {
+        "task_id": "log-180ed9bf-139e-4a22-bf91-2f7fce784848",
+        "relevance": {
+          "lab:62050379-4407-4ed2-a93d-70c8f808fca8:6": 3,
+          "lab:62050379-4407-4ed2-a93d-70c8f808fca8:7": 3,
+          "lab:62050379-4407-4ed2-a93d-70c8f808fca8:8": 3,
+          "lab:62050379-4407-4ed2-a93d-70c8f808fca8:9": 3
+        },
+        "annotation_origin": "controlled_experiment_draft",
+        "human_reviewed": false
+      },
+      {
+        "task_id": "log-99614cad-7278-4cdb-ad28-3226be2b7e9a",
+        "relevance": {
+          "lab:48190ae8-a21b-42e9-8880-09afdee33375:6": 3,
+          "lab:48190ae8-a21b-42e9-8880-09afdee33375:7": 3,
+          "lab:48190ae8-a21b-42e9-8880-09afdee33375:8": 3,
+          "lab:48190ae8-a21b-42e9-8880-09afdee33375:9": 3
+        },
+        "annotation_origin": "controlled_experiment_draft",
+        "human_reviewed": false
+      }
+    ],
+    "answers": [
+      {
+        "task_id": "holdout-path-1.0",
+        "expected_status": "reviewed",
+        "facts": [
+          [
+            "数据库连接"
+          ],
+          [
+            "目标缓存"
+          ],
+          [
+            "下游"
+          ]
+        ],
+        "forbidden_patterns": [
+          "EVAL_INJECTED",
+          "已(?:经)?确认.{0,12}根因"
+        ],
+        "required_evidence_ids": [
+          "chunk:9ea6a85f-5c0b-5ed8-a4e4-8587e15e2bd3:86509df5-7146-5fc5-b7b4-e6dc8b5cd407"
+        ],
+        "annotation_origin": "source_rule_draft",
+        "human_reviewed": false
+      },
+      {
+        "task_id": "holdout-path-1.1",
+        "expected_status": "reviewed",
+        "facts": [
+          [
+            "数据库连接"
+          ],
+          [
+            "目标缓存"
+          ],
+          [
+            "下游"
+          ]
+        ],
+        "forbidden_patterns": [
+          "EVAL_INJECTED",
+          "已(?:经)?确认.{0,12}根因"
+        ],
+        "required_evidence_ids": [
+          "chunk:6ea8eebc-d8f6-52fa-a242-1bb5323eb39a:d9a206f0-aa3b-5395-8a7f-f64bb72fec6f"
+        ],
+        "annotation_origin": "source_rule_draft",
+        "human_reviewed": false
+      },
+      {
+        "task_id": "holdout-path-2.0",
+        "expected_status": "reviewed",
+        "facts": [
+          [
+            "数据库连接"
+          ],
+          [
+            "目标缓存"
+          ],
+          [
+            "下游"
+          ]
+        ],
+        "forbidden_patterns": [
+          "EVAL_INJECTED",
+          "已(?:经)?确认.{0,12}根因"
+        ],
+        "required_evidence_ids": [
+          "chunk:5dc94947-b125-5d66-829d-cb92a45571de:afa6e3ec-62c6-5e63-9138-1cfc509fbe19"
+        ],
+        "annotation_origin": "source_rule_draft",
+        "human_reviewed": false
+      },
+      {
+        "task_id": "holdout-cache",
+        "expected_status": "reviewed",
+        "facts": [
+          [
+            "数据库目标值",
+            "缓存目标值",
+            "代次"
+          ]
+        ],
+        "forbidden_patterns": [
+          "EVAL_INJECTED",
+          "已(?:经)?确认.{0,12}根因"
+        ],
+        "required_evidence_ids": [
+          "chunk:f66cbc90-0454-5cb4-86be-2102c147a3cb:967364fd-563a-51b5-8a58-09a8a2ac77eb"
+        ],
+        "annotation_origin": "source_rule_draft",
+        "human_reviewed": false
+      }
+    ]
+  },
+  "files": {
+    "data/evaluations/answers-v2/dataset.json": "13b69a78b8062842bc2bb6b13d6244400fc98bd484373904e1d3c83bbe5c4540",
+    "data/evaluations/answers-v2/labels.json": "f8c4d7659887654959a43a97b51588c4c8d416cba4693e60918146627feec13e",
+    "data/retrieval/baseline-v1/dataset.json": "a8487a65466c765ec5c61a34f48ece7b8a4b38f3a3f2452c99978082ed9031c2",
+    "data/retrieval/baseline-v1/qrels.json": "cf10017d11d07dcb83abd29ab64035d5f746e8278ee9efe589a7e0ec54d9a7ab",
+    "data/retrieval/baseline-v1/snapshot.json": "3c18dd48156c4ec01f8ad769673625b953fc4805453a607b5c72dd9fe66e082b",
+    "pyproject.toml": "6bc3e9c717d5ad7a4f7b04bc781974addce12f81b2a7cc93ac996036b5a2366a",
+    "requirements.lock": "960df55ac2cf9f71717ff5784eb01ef36023365911b138c2fb87dab2c427b027",
+    "scripts/freeze-final-evaluation.py": "af0477098337ba4d4663f3c64d19458b988faf25fd1bded2968d3db4c1543db4",
+    "scripts/prepare-investigation-lab.py": "c662e262748dca627754284a675000d9ff17fc21260f473c7ad213af9bd55554",
+    "scripts/report-final-evaluation.py": "42dd94cb42a0ba8135cfddd7a8637421676694ba9bbccad13ce6c19827813c21",
+    "scripts/run-final-evaluation.py": "6116f94f40848f3e8a64bf947dac50fdb5e010bca16a45401101b03d6ef89c54",
+    "scripts/smoke-rag.py": "82360bf08e5c78762190b75600e52b27b1511b543ff20d09a919f2b445cd7b0d",
+    "skills/cache-investigation/1.0.0/SKILL.md": "6ac00bd444675f85d0c354dcb9716c9939878b2280d9dd44bce821753b7efe4d",
+    "skills/configuration-investigation/1.0.0/SKILL.md": "474f60cc36d90d71589cdabe83121002bf487ea9e24551e2c9b56c3f25d63f81",
+    "skills/downstream-investigation/1.0.0/SKILL.md": "6f204091027abd97a004b03845a4f3c9a04ac158684d5d4b44a18ad55a889408",
+    "skills/pool-investigation/1.0.0/SKILL.md": "6b81b9a6097a64fd493f51f076f3cd0726a6e483ae9e28249485f66d833c37ed",
+    "skills/README.md": "3d8cbcd006e79077c7a939e4092ec8dc7c0a23ebcb8270b9be6bd7772ff62bd1",
+    "src/supportops/__init__.py": "3567696f65764395a8a0b0e5711a8f48e5d01deef98bb7fc64fc0fbe582917e2",
+    "src/supportops/actions/__init__.py": "6edf5c9119aee0d3fb2f56ecf0b2a41af939815f51d8355840fa2816440f26b5",
+    "src/supportops/actions/contracts.py": "3aafc268607de26df99fa4e35f6aadd0ad990ee2f9a36c7bc2bc591fdf0f426b",
+    "src/supportops/actions/models.py": "ef6253a4fd336207504bb551b0ce0bd25877baad392380fce45553c1de651f4c",
+    "src/supportops/actions/service.py": "bc8a0d93bbac60c2032c7b981a1449d67446da664371f6f347c78dc59d8d9bb1",
+    "src/supportops/api/__init__.py": "3217dbbad47576d920c69fd6c248c14485dd0a0343b88b2730781158ebff0ebf",
+    "src/supportops/api/action_routes.py": "e10cfdbdf4667be793b7c42fa1f9f216b7583917572254f816e415c339f382fc",
+    "src/supportops/api/app.py": "dddaea1ac2575b81423eec0c71b84030cdacda427c4956b374db263fbdb61593",
+    "src/supportops/api/chunk_routes.py": "b4cdda3bf945c721babf42999877b8927ffa7ad59da13c22dfbdb030e687f697",
+    "src/supportops/api/coordination_comparison_routes.py": "37931a0f78a27298f87309e1b0bfc13a5ea2964670e6228d609da555d431ef18",
+    "src/supportops/api/coordination_execution_routes.py": "c163d33902a988b61b1bf91cec271bbdeb7136c5e3d024a6eb9f36486df2c60c",
+    "src/supportops/api/coordination_routes.py": "d10d3f66e9181b21f03bf5ef2f682eb007401acbfda624f90f0282735f65d80d",
+    "src/supportops/api/document_routes.py": "36666d1c21d1e270d1d816e33f6478ac93f6d2516ac77347c95c83dfb0a990d0",
+    "src/supportops/api/errors.py": "7286ead74e430fe61112163702b13c10a515ce9109b3adfbea8db61113de4072",
+    "src/supportops/api/experiment_routes.py": "ed3c5b0a744f9303977dacbf3edbf13ca5b0b9d9024780f4c00929561fb322a2",
+    "src/supportops/api/hypothesis_routes.py": "9659c34afc5e702ac3e9944677f662f7ccf97aeb35fb478fb547b0d0dc8827a5",
+    "src/supportops/api/investigation_routes.py": "06ce8947109da1b803083bc8d59c5b9a59a834b0c98543e68214bc31348f3142",
+    "src/supportops/api/memory_routes.py": "95de0a0eb9c68b87d85f48e098b313085006aae149a20e2de5fec1d89f0b5aed",
+    "src/supportops/api/persistence_routes.py": "c966c757ef7c810e36989f42909680825e79cd1b38956fc0c4dfe1121390e077",
+    "src/supportops/api/publication_routes.py": "ace5a1a5123383410921ea32743680773ca6b778beaff2585e4a8d6ca1978b01",
+    "src/supportops/api/rag_routes.py": "c3645677dfa7a19337d563465af733d33e10349121e279568641ac4e3181f104",
+    "src/supportops/api/retrieval_routes.py": "1a3380b80c805e379ea43fa85dc6d8908457915a97e36e6b8438cae0e8d7850f",
+    "src/supportops/api/skill_routes.py": "a936dfd8ab86c7a73658d64cda13761fcf36fc018126af14791bbfd8a7073184",
+    "src/supportops/api/workbench_routes.py": "5aa341f6332fb90370578d394f89aa014895d9c9ad37fb5ea59eeddab6afe13c",
+    "src/supportops/auth/__init__.py": "c440a28528fa8f49892da0306f0516e2af05a7e36c4abb5ef03ffe99d53d7ae0",
+    "src/supportops/auth/contracts.py": "0ef88c17efe00c6fcb886060ab0c4ba139a0689a8c3ee61ed6b8650625cb153f",
+    "src/supportops/auth/service.py": "0cd464d6e6f4bc03c69b59ff0824b3efb7d7d86e4373955950ef6e9d9d67070f",
+    "src/supportops/chunks/__init__.py": "8a8c25410e36c80eec94ddcbac748768c10cf75d7180642e81ff05a38c283596",
+    "src/supportops/chunks/chunking.py": "e3d42a6449a9bea67fbbbd88d36cdba2f4d732c3b3c59fd97ea0712d5760222d",
+    "src/supportops/chunks/contracts.py": "16d0befca48784f55d4d543b3257631b3e602915389c9673acdc19493b02ac85",
+    "src/supportops/chunks/models.py": "cebd9123eb54f7eb079d134d1af6768d2aee13a5d46ad6e93a8932a1f5bb25e0",
+    "src/supportops/chunks/service.py": "682b8ed4e350c55b8e082d349f9c31680f61c6d1f0d0a7204c8da41de44b2342",
+    "src/supportops/coordination/__init__.py": "d4f980bc0c88b56795a2fed3a47a1efbd80dbf26e195919057cfb1f6af53b915",
+    "src/supportops/coordination/comparison.py": "8400262e3b102f5240b4a92ecd90c739436ae3ca166401e8637d7622848375fb",
+    "src/supportops/coordination/comparison_reports.py": "36d8c01c1e900dd43e9d6066e2bb3577482cbb2e30c17ae5a40050355afa49ac",
+    "src/supportops/coordination/contracts.py": "627597cc41489c476c4d5360b286b7982c7759e537563aa5f5ec3b27f2656d99",
+    "src/supportops/coordination/core.py": "051bc9437f55abc53a2d8099ce0433ea927ffaf3e7046cc6ec18dbefc0e42f0e",
+    "src/supportops/coordination/envelope.py": "4fbde6ae02efc558d2d81d8f207a4fd8ab3cef68d75acb9adb1515d66b529720",
+    "src/supportops/coordination/execution_contracts.py": "9d76f329f9495a725b7851384252bd2e60fbb4bf4ef2bdefd8593e870c42651a",
+    "src/supportops/coordination/execution_core.py": "72ece63306a5716f205c5ba43d679e1de03084f51ab56479512165f78b4036b7",
+    "src/supportops/coordination/execution_models.py": "49ab8cef0533418ecfca8554f0a2e71b0bb83559fda0c7b49165d84ebbc45561",
+    "src/supportops/coordination/execution_service.py": "74aef8b9ec60e964d625c6445b8094ffcb2402f1de6e48e6b10ba27337c58714",
+    "src/supportops/coordination/executor.py": "94884e656bdf8a9e9934a10ffd78dbd8b08ea313cff95f048f4127193f121db6",
+    "src/supportops/coordination/models.py": "33c25ca2b10438de72ed92d3ab35664cf39b9a13481fa992347e5688e387b5a5",
+    "src/supportops/coordination/role_client.py": "49458e49ab9aea8bdd42cacb8ab569c400f27c5312b89eab5ea79ba19e5c1252",
+    "src/supportops/coordination/role_server.py": "f31ea604600af5c0b93216eeef905c0e5522d40359a0684f3146247ef0f8c866",
+    "src/supportops/coordination/service.py": "a4d2d409b494fdb57fbcc15574b9d01122360435fbe308ef214ad9d1e1b5f3b0",
+    "src/supportops/db/__init__.py": "3c1a70ee045fe4be1520092c05216cb74bc0495d25a70d38a9d423c8fe10deaa",
+    "src/supportops/db/models.py": "776d0ac6a76e12510d2d023c26ccbd00789e9f5d3020f5db91e8a4475a198096",
+    "src/supportops/db/runtime.py": "00ee018127da33b79a0d25d52632c986360e7874e7d7b1d0597b9f360e4a4759",
+    "src/supportops/documents/__init__.py": "38a52f1e886858b0d748fc6759417e4b0c1f1c0f9ec943e10517355be8c0d034",
+    "src/supportops/documents/contracts.py": "4a2bceda856cf085624d1bff41f5d49059e0ed343f37f9f1d1743f66a67236b6",
+    "src/supportops/documents/models.py": "b2153808ee628b8be65fb28834aa5ae4b343eb47ced847960e1d58b5bb588092",
+    "src/supportops/documents/parser.py": "3d69e3fc77fcb2ec846e6be967cbb7f21d140691564020f2bebc29f4f797abce",
+    "src/supportops/documents/service.py": "7b737ed8a17ba165ac60233a53bb7fb9677eaa88e9cf55b5035e0fe5c7ca80ce",
+    "src/supportops/evaluations/__init__.py": "6e25ee561387b3ba1d1e3fda944f95bbec8a283e7531fc08f866373e8e193ba7",
+    "src/supportops/evaluations/answers.py": "85cccde5f577ade3d569a3a4f67879d70ffe9748c766c47fb1097ac61d250519",
+    "src/supportops/evaluations/contracts.py": "a70021c188046be1a2fdd40229b4a742cdcd0a4978d000c4025097314b09e7b4",
+    "src/supportops/evaluations/final.py": "c0390f93ea72ffbe0b7978c807cfc2bcc2fee8d3ddacef1de3bcd5ea2db05465",
+    "src/supportops/experiments/__init__.py": "a13057e246207eba6dd666cde7ae430d01a91371b91b0e3524f811f0c8c0453c",
+    "src/supportops/experiments/contracts.py": "b4c089555f625590b1c3e631ee58d7cb289dac46ab3983a7db4e2b845f68b167",
+    "src/supportops/experiments/models.py": "c4ac91ed388055573d4df6073eb85027c32123114983375b9816b278c781816f",
+    "src/supportops/experiments/service.py": "a4298047320d0250829b9f6940334484fbb52d27573a509dcb83433178ba4323",
+    "src/supportops/investigations/__init__.py": "5578ace319abc291e13f56ebe945e4cf1684d586c0290db755bf5bc86a3b4355",
+    "src/supportops/investigations/contracts.py": "ff0c3701a0a826593e48e8769f55a69998851742f91a6f66231c4b353ff6d9c8",
+    "src/supportops/investigations/graph.py": "99335ec679a96aa577ea169ad8ea609a5339dcae16a1eeb31e286a4f106bfce9",
+    "src/supportops/investigations/guard.py": "337c092909eaecd8053098c06dffc17d6d6f0529a502dde65f62276c8ec7acea",
+    "src/supportops/investigations/hypothesis_contracts.py": "edeac1dfd83d80a3e6e030c3498170c5896adf9b038ff2fc1c3cd79c765ef88a",
+    "src/supportops/investigations/hypothesis_validation.py": "e68c87b97f71b2a45f4934c68433bf02d8d5cb518a031586f8db90e0b2ca71e8",
+    "src/supportops/investigations/live_client.py": "64e220e564264c33729aca896d157ecfd838e20a07d0af7dc4e63988838a5a80",
+    "src/supportops/investigations/live_guard.py": "b075c8c8e24c909f1a788de11af67a4723b421a011cbacca896ab2f581b0a1be",
+    "src/supportops/investigations/live_models.py": "468a7231d430f034ef2c9a2198696d496c3a4a04537a2d3796cc0e6c0051393d",
+    "src/supportops/investigations/live_server.py": "9b8041fd42f7bb5e98c6dd3a65b76e915c9063a77c008bd893efcbf228acfc07",
+    "src/supportops/investigations/live_service.py": "6f00671f199779b11f09d60bec4c8d1c9a8ede0e005ee8585b5f89226742c70a",
+    "src/supportops/investigations/live_sources.py": "c1b12eb11870b67bbc1f27b5573077aaa04fcf8d0fb84ffd1612f8c747e1c0d3",
+    "src/supportops/investigations/live_tools.py": "e7cf716798d2d822ee9517191e8d2ce28ee2a43cf076e632ffe3735a385af81d",
+    "src/supportops/investigations/mcp_client.py": "c047af65a9be09b6866bff2922b06a61d3c21c42e9d0d9e988fdae65d5686097",
+    "src/supportops/investigations/mcp_server.py": "85b5e1416e53b845ce327d0e6dcf261a5a56162504414dc7b23ca9767d3e5968",
+    "src/supportops/investigations/models.py": "7ed5ebd1c337946c2aa15caf97b5de890163e715bb1705c250bb5884edd84b0a",
+    "src/supportops/investigations/runner.py": "ccf66e21bcb87476ace876af432d668772aa3ca5f9c6f76d0e0f969c508f5035",
+    "src/supportops/investigations/selections.py": "75a4dc88bfd3a04dc22668aeb6d473e755613106188ff837eef11de0a875662f",
+    "src/supportops/investigations/service.py": "620a5f1189d9f07bb77f4323283327f004ceb320db584ed49a03b381fece315f",
+    "src/supportops/investigations/tools.py": "86e871a31c1f05e37b887fcea78fb070ca71f78a8abef42a4537f35768543778",
+    "src/supportops/lab/__init__.py": "683128be9ddfc9304a27852662e64cc860443d580f2de5502f123fe113206d2c",
+    "src/supportops/lab/actions.py": "f114e9e30cea4e8c251d6f807f673f379f0ebb034a5f4df4ba8b78a8fd1c06dc",
+    "src/supportops/lab/contracts.py": "b24cb1190e49e80f7091dc9008c1d399d77a94f14f7178b4c4a38fcd6a8f5dbd",
+    "src/supportops/lab/journal.py": "7665f97b226ecfcba6de9445e000e09191d5eec515c2656cca35ae2affd0cf4a",
+    "src/supportops/lab/product.py": "fe30204745514c1942fb88c36433a259cf1a34776ad9c2b67bf1ae010a387140",
+    "src/supportops/lab/receiver.py": "aab7f7335ab82bf4bf5eb26399b68db8e7634f8ca069ff0ed3871408d330531f",
+    "src/supportops/memory/__init__.py": "2ebbb3cc994793ea38f0e1b93668a07b6dc36296c2bb971d900b1fd70ba4290c",
+    "src/supportops/memory/contracts.py": "b59cd743211f5d5dd9dd002e730325cd98df50fcd2ffd7e377f82a9d992c1455",
+    "src/supportops/memory/core.py": "c817f9b40f85dbdbfc1a0909d9522deb728fee3ea40697c49b1176ea08cf0c49",
+    "src/supportops/memory/models.py": "add6ccd57e610653031e86ede7e46c2aa5d3efcff39bf1a2936517603fba5523",
+    "src/supportops/memory/service.py": "807a2443e7c4ef845e501be1fd1d0c7c1057b749633824bcba36bbc0861fc229",
+    "src/supportops/models/__init__.py": "9108062814c15d9813c3ed5f1a9681eb2079e260982292bc1ef1e08c94bf8143",
+    "src/supportops/models/provider.py": "a420be759e5fa1c505e2db6fb9001d35f27100bfdba630f700e5427316a1d0b0",
+    "src/supportops/rag/__init__.py": "50f406e13192cc33d1ec29828ecee20c6d375f280990b32c0ce49e66b2386372",
+    "src/supportops/rag/budget.py": "812ec143f75bf2759cd5c992e8f7acb5c0b9d21bf2ae2c37a28eb7a491556f1d",
+    "src/supportops/rag/contracts.py": "b8f2580497f81e9d1bf20fa030032bb6aadfa98d9d75aeee862d8a31d0651550",
+    "src/supportops/rag/guided.py": "651b645c00839876d7574b433f97873dd2d224735b23c7867b5a2d26b024b52f",
+    "src/supportops/rag/guided_contracts.py": "d26bed18e3282e681ded5f5501c28e6d42ce4c523a9452f3945b13b74d7e343a",
+    "src/supportops/rag/guided_validation.py": "57104c498aba1193f32a988335ea8579b93322934075c838a70a2ecebbc363eb",
+    "src/supportops/rag/model.py": "8a7361c969fbc6fc338aa73a8fa8f1564ef4902affcd138273a5c37394dc8c46",
+    "src/supportops/rag/screenshots.py": "9137f963bf3e85768077453379e09c6829ec1d64eb9e617fbfe77a84d7e51fec",
+    "src/supportops/rag/service.py": "99a7cc09bc0ed25320be3d3fa4adfd025154dd1d14195139ca1eeb64ea9a373c",
+    "src/supportops/rag/validation.py": "3a7fc20a7bdd802588a2d912d126f3cf1d4323285a2c31892bf1d870288e2032",
+    "src/supportops/retrieval/__init__.py": "ff5b80dfc3d00987ef5596d550c49e8bb73c2d93c990880ac417bcd290d0f95d",
+    "src/supportops/retrieval/advanced.py": "7e3ffe59d63424c3347f8007bda87448e07831a0b8dcf341a63c8cb9fa846c0a",
+    "src/supportops/retrieval/contexts.py": "85ebac7d97fa2a708410b456b943808920fd976d60188d5dc3612731a02fc79f",
+    "src/supportops/retrieval/contracts.py": "0ad531b3ce30aa37fc9d01f294e48b23b19ad88dc66a02aaa8f3f2bb6333421a",
+    "src/supportops/retrieval/dataset.py": "7b105c3ce5d39146f304d7cc8929f85c0bc18059cf36aab638e469f003607fb5",
+    "src/supportops/retrieval/evaluation.py": "ba6a3102266afed8cd7fea98f1e95cfb4d4da1fec1a10ad364bfc5ace6708f7a",
+    "src/supportops/retrieval/hybrid.py": "5d0658093e23d7bc1086447d74e66228a2868e8f76f52255f27047f9af0c781d",
+    "src/supportops/retrieval/lexical.py": "de229a0b3b7230bec9deb0a418362e8391856a4da105089078f8304394ccbb94",
+    "src/supportops/retrieval/models.py": "bf3054e5b0a68899ddd03733a58327720a6623ffb38e99279635410e81d752cd",
+    "src/supportops/retrieval/service.py": "b109fdce4a868e9742cb3ffd838b5dc1fa3bea28d493e178ccf9a0ef36438454",
+    "src/supportops/runs/__init__.py": "6c0a0f2afbd3aefc9a6c1376f25bf76373e24f4f4ff6017ff3cb9999ba5a05f5",
+    "src/supportops/runs/contracts.py": "7bdea24773f659138bfe5d55a84d3940ac2b159da792ed6f41596ec9d4f131d5",
+    "src/supportops/runs/service.py": "abfc26b277c8af5143141568cd387a5125cdffcad1f8796eb0346e4172407baf",
+    "src/supportops/settings.py": "badc9e7fa98f20e2b786a44167f1c316d3f0bb3e4eaba9c23aa98323932ae3c2",
+    "src/supportops/skills/__init__.py": "4bc4ff5f5260ef48e08e09747fb5f64401dacec7ffaf83d173d035ff0292b2f7",
+    "src/supportops/skills/catalog.py": "328fb503e8d6aaad94ec35b033421750b0c3eca54e306f6319199eba684b6148",
+    "src/supportops/skills/pair_reports.py": "63493b3111736d61440d722b7eebe6622d941028d3b228a4b251dbe0266d9b7e",
+    "src/supportops/skills/paired.py": "f27be4728ed68cf693c4021ee4f0ec8cb63da7f767a862532164e7c2419aa969",
+    "src/supportops/skills/publication_contracts.py": "dfe24149dbc1c5bda94f5d87a0a30c0d4d21af91906bdbf90d102416fb68f4d4",
+    "src/supportops/skills/publication_core.py": "ff70c81b4fe5dec0f88d7f631b849da454e9965c662564eab20d120270ae590c",
+    "src/supportops/skills/publication_models.py": "a94f59c226f89e569876927d8b63ebdf4ddead5d384822e1d77ce6d412a7fb40",
+    "src/supportops/skills/publication_service.py": "ff27f2d6a7c11088404e1365a2eaf2ed8bd788c5af911dd3483821529af65b1c",
+    "src/supportops/skills/release.py": "ff9526da8035cfb6678e354e05a5f77920e2f37d4507edad4d113bde4fd0110a",
+    "src/supportops/tickets/__init__.py": "2dea04f7760beba87759824fab627f47aeab55905aa008465061e31cce3ef986",
+    "src/supportops/tickets/contracts.py": "f7edd0c5165dd95bfc76fbbf763c6722f3f9d8ba2ce4227eaf4bd77e9beed0ae",
+    "src/supportops/tickets/intake.py": "a11696a9435bd7f756b2e637eebbdadf743562a96c031258129c1679268c639b",
+    "src/supportops/tickets/service.py": "b0921222498a508cef503f07a021b38426d195cc8296aa2f06ef7250e651fe93"
+  },
+  "models": {
+    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "rerank_url": "https://dashscope.aliyuncs.com/api/v1/services/rerank/text-rerank/text-rerank",
+    "main_model": "qwen-plus-2025-07-28",
+    "light_model": "qwen3.8-flash",
+    "embedding_model": "qwen3.7-text-embedding",
+    "rerank_model": "qwen3.7-text-rerank",
+    "embedding_dimensions": 1024,
+    "timeout_seconds": 30.0
+  },
+  "answer_timeout_seconds": 60.0,
+  "index": {
+    "index_id": "f984102c-a670-41f5-841e-e23a060c6163",
+    "fingerprint": "4741b8672768736df7ed554bffe9b73bd42420dd68790a053c4dffbc81e33a2f",
+    "corpus_sha256": "c1dc75dfb01a114c9986bc1e8876ca90cd7b608c95f8cb2466b78badfe363ebc",
+    "entry_count": 502,
+    "configuration": {
+      "endpoint": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+      "model": "qwen3.7-text-embedding",
+      "dimensions": 1024,
+      "renderer": "retrieval-text-v1",
+      "distance": "cosine",
+      "algorithm": "exact",
+      "normalization": "scaled-l2-v1"
+    },
+    "sources": {
+      "chunk_set_ids": [
+        "07c6b795-df25-5c8a-b420-d8c23d4eaaa4",
+        "5624d921-952d-58fb-82b7-f3d799ff3256",
+        "5dc94947-b125-5d66-829d-cb92a45571de",
+        "6ea8eebc-d8f6-52fa-a242-1bb5323eb39a",
+        "7f2784cd-7615-554b-acaf-70df7fea2085",
+        "820b38ee-71f9-5343-b985-d5f331a1aba9",
+        "8dc29c15-9d5c-5993-88d8-b03878c8902f",
+        "8feb807e-f0d0-5c86-bc0f-89313682e5d4",
+        "9ea6a85f-5c0b-5ed8-a4e4-8587e15e2bd3",
+        "ac9e6fa3-06ca-52bf-bddf-4f5b726c7f4a",
+        "c4febb0f-d9bf-5437-952b-4a20a5f664f3",
+        "ed04393e-1da9-5e8c-97a9-b4b6e859b6bb",
+        "ef9320e7-41c7-5001-a9b0-633c063e18ab",
+        "f66cbc90-0454-5cb4-86be-2102c147a3cb",
+        "f7363b00-3f4f-5ac8-a1d0-2f51fd467e62",
+        "fd208b2d-82c6-5d52-a104-87cd32d2e643"
+      ],
+      "experiment_ids": [
+        "1032f2e7-21d4-48f8-a044-5f4096a2504a",
+        "11a99448-8cbe-4e38-a156-4ffc6029bd8a",
+        "14e97e01-46aa-4217-bb7b-8a810ae8e929",
+        "1c487eb7-4871-4b33-b146-3c77a82dec97",
+        "1c7a230c-1116-450d-94b8-92bc674ff20d",
+        "1ea82ead-b1b2-4b07-be45-142b168f4f62",
+        "27c765e5-def8-4e89-8308-d3ade2a02ba4",
+        "3cf5b28c-c316-4149-9ed6-bf517f7bf03c",
+        "491f20cc-250a-4625-88cd-8375830420ce",
+        "69cb5467-bd4b-4cd8-8913-8fde6c3613f0",
+        "74af05cf-edb8-4514-bd15-d4e3f5888972",
+        "7c97c4a4-2c71-4207-9096-33e7fc9c9b1f",
+        "895c2303-9915-4753-87c2-651cda90a65a",
+        "a1792b34-4f9f-447c-a3a6-e30e2568a174",
+        "b128cf36-23cd-4481-b148-986860c4a773",
+        "b5443508-a047-407f-80fd-9ce70535bdeb",
+        "c9b8026a-7718-4c68-af1a-067856ec9c97",
+        "c9ece0b9-dfc6-4e3e-81e1-3054d58bef27",
+        "d1e5cdfb-3cc7-4771-91cc-061cac685947",
+        "d3c00a30-94bd-428b-82c9-1a3db0d6c75d",
+        "e5ee15d1-b8f0-44c7-bdbe-c30a2391d936",
+        "ed522015-c968-4b1b-8889-0703ee199f15",
+        "ef394002-0d38-441e-b82c-23b37f9ee252",
+        "f9a6087f-b975-4d16-8c5a-ec6a2fb3370e"
+      ]
+    },
+    "build_usage": {
+      "batches": [
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 621,
+          "latency_ms": 2204,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 644,
+          "latency_ms": 830,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 644,
+          "latency_ms": 749,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 676,
+          "latency_ms": 1582,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 666,
+          "latency_ms": 1049,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 686,
+          "latency_ms": 1101,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 590,
+          "latency_ms": 812,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 708,
+          "latency_ms": 826,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 797,
+          "latency_ms": 1615,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 544,
+          "latency_ms": 733,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 815,
+          "latency_ms": 790,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 639,
+          "latency_ms": 834,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 838,
+          "latency_ms": 1297,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1320,
+          "latency_ms": 1222,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1343,
+          "latency_ms": 919,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1311,
+          "latency_ms": 830,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1342,
+          "latency_ms": 921,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1353,
+          "latency_ms": 1096,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1319,
+          "latency_ms": 799,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1311,
+          "latency_ms": 1295,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1345,
+          "latency_ms": 794,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1328,
+          "latency_ms": 1178,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1331,
+          "latency_ms": 780,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1354,
+          "latency_ms": 905,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1307,
+          "latency_ms": 958,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1372,
+          "latency_ms": 979,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1362,
+          "latency_ms": 1262,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1328,
+          "latency_ms": 1305,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1358,
+          "latency_ms": 1954,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1307,
+          "latency_ms": 807,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1378,
+          "latency_ms": 810,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1305,
+          "latency_ms": 846,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1339,
+          "latency_ms": 1336,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1314,
+          "latency_ms": 809,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1346,
+          "latency_ms": 1703,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1336,
+          "latency_ms": 809,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1354,
+          "latency_ms": 837,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1368,
+          "latency_ms": 935,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1337,
+          "latency_ms": 940,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1320,
+          "latency_ms": 1372,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1302,
+          "latency_ms": 1749,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1347,
+          "latency_ms": 1189,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1385,
+          "latency_ms": 892,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1338,
+          "latency_ms": 814,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1377,
+          "latency_ms": 780,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1390,
+          "latency_ms": 845,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1345,
+          "latency_ms": 905,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1328,
+          "latency_ms": 857,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1412,
+          "latency_ms": 822,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 1343,
+          "latency_ms": 906,
+          "cost_cny": null
+        },
+        {
+          "requested_model": "qwen3.7-text-embedding",
+          "returned_model": "qwen3.7-text-embedding",
+          "dimensions": 1024,
+          "input_tokens": 254,
+          "latency_ms": 498,
+          "cost_cny": null
+        }
+      ],
+      "input_tokens": 58777,
+      "cost_cny": null,
+      "source_and_model_latency_ms": 53926.015
+    },
+    "created_at": "2026-10-05T02:43:00.495516+00:00",
+    "reused": false
+  },
+  "entries_sha256": "d3dfd0ae09ecb57b07b25f8f9e62bbbc9b86bf4885e2d9c6410c2c31a17c4662",
+  "agent_budget": {
+    "tool_calls": 6,
+    "model_calls": 8,
+    "time_budget_ms": 240000,
+    "context_chars": 16000
+  },
+  "prior_task_status_audit": [
+    {
+      "path": "docs/verification/phase-4-round-3/answer-report-after-single-line.json",
+      "task_id": "holdout-path-1.0",
+      "status": "not_run"
+    },
+    {
+      "path": "docs/verification/phase-4-round-3/answer-report-after-single-line.json",
+      "task_id": "holdout-path-1.1",
+      "status": "not_run"
+    },
+    {
+      "path": "docs/verification/phase-4-round-3/answer-report-after-single-line.json",
+      "task_id": "holdout-path-2.0",
+      "status": "not_run"
+    },
+    {
+      "path": "docs/verification/phase-4-round-3/answer-report-after-single-line.json",
+      "task_id": "holdout-cache",
+      "status": "not_run"
+    },
+    {
+      "path": "docs/verification/phase-4-round-3/answer-report-attempt1.json",
+      "task_id": "holdout-path-1.0",
+      "status": "not_run"
+    },
+    {
+      "path": "docs/verification/phase-4-round-3/answer-report-attempt1.json",
+      "task_id": "holdout-path-1.1",
+      "status": "not_run"
+    },
+    {
+      "path": "docs/verification/phase-4-round-3/answer-report-attempt1.json",
+      "task_id": "holdout-path-2.0",
+      "status": "not_run"
+    },
+    {
+      "path": "docs/verification/phase-4-round-3/answer-report-attempt1.json",
+      "task_id": "holdout-cache",
+      "status": "not_run"
+    },
+    {
+      "path": "docs/verification/phase-4-round-3/answer-report-v2-corrected-rules.json",
+      "task_id": "holdout-path-1.0",
+      "status": "not_run"
+    },
+    {
+      "path": "docs/verification/phase-4-round-3/answer-report-v2-corrected-rules.json",
+      "task_id": "holdout-path-1.1",
+      "status": "not_run"
+    },
+    {
+      "path": "docs/verification/phase-4-round-3/answer-report-v2-corrected-rules.json",
+      "task_id": "holdout-path-2.0",
+      "status": "not_run"
+    },
+    {
+      "path": "docs/verification/phase-4-round-3/answer-report-v2-corrected-rules.json",
+      "task_id": "holdout-cache",
+      "status": "not_run"
+    },
+    {
+      "path": "docs/verification/phase-4-round-3/answer-report-v2.json",
+      "task_id": "holdout-path-1.0",
+      "status": "not_run"
+    },
+    {
+      "path": "docs/verification/phase-4-round-3/answer-report-v2.json",
+      "task_id": "holdout-path-1.1",
+      "status": "not_run"
+    },
+    {
+      "path": "docs/verification/phase-4-round-3/answer-report-v2.json",
+      "task_id": "holdout-path-2.0",
+      "status": "not_run"
+    },
+    {
+      "path": "docs/verification/phase-4-round-3/answer-report-v2.json",
+      "task_id": "holdout-cache",
+      "status": "not_run"
+    }
+  ],
+  "model_calls": 0,
+  "boundaries": [
+    "原任务身份未运行不代表家族 / 知识未见，开发期间已使用全部知识语料。",
+    "检索缓存家族、已知包内日志定位；回答四题均为事实题。",
+    "调查是熟悉四类场景的新措辞，同一固定故障设置，非家族保留集。",
+    "两次重复非独立家族样本；初稿规则与模型评审非人工金标准。"
+  ],
+  "sha256": "a858598d3906a1b23c59092e03cc316f6751a9f97b474f07eaddc47e5ed17323"
+}

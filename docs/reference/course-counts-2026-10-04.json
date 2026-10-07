@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-04",
+  "root": "E:\\VScode_file",
+  "excluded_directories": [
+    ".git",
+    ".idea",
+    ".pytest_cache",
+    ".venv",
+    ".venv-api",
+    ".vscode",
+    "__pycache__",
+    "node_modules",
+    "venv"
+  ],
+  "file_count": 2251,
+  "counts": {
+    "10-RAG多模态数据处理": 112,
+    "11.RAG调优": 54,
+    "12.企业知识库（企业RAG大赛冠军项目）": 128,
+    "20.Function Calling与MCP": 21,
+    "21.Agent的自主规划与工具开发": 9,
+    "22.Agent的能力优化与效果评估": 27,
+    "23.OpenManus开发实战": 1717,
+    "24.Harness Engineering": 23,
+    "25.搭建Hermes Agent 中的长期记忆和自进化能力": 40,
+    "26.实现Hermes中的多Agent协作、主Agent调度": 38,
+    "9-RAG技术与应用": 82
+  }
+}

@@ -1,0 +1,39 @@
+name: SupportOps zero-model reproduction
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reproduction:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          persist-credentials: false
+      - name: Create independent configuration
+        id: configuration
+        run: python3 scripts/init-reproduction.py --name ci --api-port 18011 --web-port 15174
+      - name: Build and start clean services
+        run: docker compose -p supportops-repro-ci --env-file local/reproduction/ci/.env -f compose.reproduction.yaml up --build --wait --wait-timeout 300
+      - name: Backend and real PostgreSQL
+        run: docker compose -p supportops-repro-ci --env-file local/reproduction/ci/.env -f compose.reproduction.yaml exec -T api python scripts/verify-reproduction.py
+      - name: Frontend format, tests and build
+        run: docker compose -p supportops-repro-ci --env-file local/reproduction/ci/.env -f compose.reproduction.yaml exec -T web sh -c 'npm run format:check && npm test && npm run build'
+      - name: Independent HTTP evidence
+        run: docker compose -p supportops-repro-ci --env-file local/reproduction/ci/.env -f compose.reproduction.yaml exec -T api python scripts/smoke-reproduction.py --output local/http.json
+      - name: Real Chromium
+        run: docker compose -p supportops-repro-ci --env-file local/reproduction/ci/.env -f compose.reproduction.yaml exec -T web npm run test:reproduction
+      - name: Restart API
+        run: docker compose -p supportops-repro-ci --env-file local/reproduction/ci/.env -f compose.reproduction.yaml restart api
+      - name: Verify stored evidence after restart
+        run: docker compose -p supportops-repro-ci --env-file local/reproduction/ci/.env -f compose.reproduction.yaml exec -T api python scripts/smoke-reproduction.py --output local/http.json --readback
+      - name: Stop this CI project
+        if: always() && steps.configuration.outcome == 'success'
+        run: docker compose -p supportops-repro-ci --env-file local/reproduction/ci/.env -f compose.reproduction.yaml down

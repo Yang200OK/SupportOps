@@ -1,0 +1,91 @@
+{
+  "scope": "Public synthetic historical reports required for read-only comparison or result inspection; original database identities are not imported by fresh initialization",
+  "reports": [
+    "docs/verification/phase-6-round-3/pairs-attempt1.json",
+    "docs/verification/phase-6-round-3/pairs-qwen-max-attempt1.json",
+    "docs/verification/phase-6-round-3/pairs-qwen-plus-0728-attempt1.json",
+    "docs/verification/phase-7-round-3/pairs-attempt1.json",
+    "docs/verification/phase-8-round-1/retrieval.json",
+    "docs/verification/phase-8-round-1/answers.json",
+    "docs/verification/phase-8-round-1/agents.json",
+    "docs/verification/phase-8-round-1/summary.json",
+    "docs/verification/phase-8-round-1/model-usage.json",
+    "docs/verification/phase-8-round-1/configuration-repair/agents.json",
+    "docs/verification/phase-8-round-1/configuration-repair/manifest.json",
+    "docs/verification/phase-4-round-3/answer-report-v2-corrected-rules.json",
+    "docs/verification/phase-6-round-1/live-configuration-attempt2.json",
+    "docs/verification/phase-6-round-2/zero-model-attempt3.json"
+  ],
+  "report_integrity": [
+    {
+      "path": "docs/verification/phase-6-round-3/pairs-attempt1.json",
+      "sha256": "cd8341960445c57ddaea489ee9450e7c886add723f1f86313d306f73c35ea4fb",
+      "bytes": 612686
+    },
+    {
+      "path": "docs/verification/phase-6-round-3/pairs-qwen-max-attempt1.json",
+      "sha256": "ff416cb749bc0bf413599a74f81217aa195a4760f282b37ee7c5a9bae881c659",
+      "bytes": 233184
+    },
+    {
+      "path": "docs/verification/phase-6-round-3/pairs-qwen-plus-0728-attempt1.json",
+      "sha256": "06b0d0a0e2e8175c4c34320ffc499c00ffb837ee10182aed294f65a3c5d78f81",
+      "bytes": 709607
+    },
+    {
+      "path": "docs/verification/phase-7-round-3/pairs-attempt1.json",
+      "sha256": "47626043b10d8ce42e27ff2fa6f88c3d2e90913628f067ec40876718026622b2",
+      "bytes": 1098213
+    },
+    {
+      "path": "docs/verification/phase-8-round-1/retrieval.json",
+      "sha256": "511ff070ad7df4bf65a2ea77e88aa93fd367e9a26c08d0c61660ed489ce5222e",
+      "bytes": 2573235
+    },
+    {
+      "path": "docs/verification/phase-8-round-1/answers.json",
+      "sha256": "fbbf7db51e027a51c32d40a31c3146f551125f0cda92b5ccc53524e1533f594a",
+      "bytes": 663581
+    },
+    {
+      "path": "docs/verification/phase-8-round-1/agents.json",
+      "sha256": "5a5a574ae7795053d79b937b6b221993ee1c45b3ac5c2e25363d614b83387c6d",
+      "bytes": 2020729
+    },
+    {
+      "path": "docs/verification/phase-8-round-1/summary.json",
+      "sha256": "cd39be1a3330325be200167365976dbdf05a33af4bb2e9c6b070f35583b4886c",
+      "bytes": 135083
+    },
+    {
+      "path": "docs/verification/phase-8-round-1/model-usage.json",
+      "sha256": "6482334570a3fb9f078d131845cc220e71e07d43c3cb33927d251384a760fbe4",
+      "bytes": 3091
+    },
+    {
+      "path": "docs/verification/phase-8-round-1/configuration-repair/agents.json",
+      "sha256": "5eb6c38bae70a8911438e2cd50898d9a3d1ab1fedad5ccc935bcff4d000d6229",
+      "bytes": 793592
+    },
+    {
+      "path": "docs/verification/phase-8-round-1/configuration-repair/manifest.json",
+      "sha256": "38516cdc2306f315a95cac179cdddd74fbdbd8007e67a3564d34cb9482e0d173",
+      "bytes": 87090
+    },
+    {
+      "path": "docs/verification/phase-4-round-3/answer-report-v2-corrected-rules.json",
+      "sha256": "fa918e93b1a145329ddf5ced6a8fe11398333128128954a899ffa0643224b986",
+      "bytes": 11670
+    },
+    {
+      "path": "docs/verification/phase-6-round-1/live-configuration-attempt2.json",
+      "sha256": "2394b7ac2b2e6f78d9e06635818caf58513dd9434260118e9b8feaaeb1864053",
+      "bytes": 55830
+    },
+    {
+      "path": "docs/verification/phase-6-round-2/zero-model-attempt3.json",
+      "sha256": "827b446f6380593e7ef5d0a42f1183b80351d6a100621268491af9576b71aed4",
+      "bytes": 23870
+    }
+  ]
+}

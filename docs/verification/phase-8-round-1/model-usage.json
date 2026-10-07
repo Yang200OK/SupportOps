@@ -1,0 +1,93 @@
+{
+  "original_184": {
+    "known_calls": 284,
+    "unknown_calls": 1,
+    "input_tokens": 667005,
+    "output_tokens": 56781,
+    "unknown_pipeline_attempts": 6,
+    "cost_cny": null,
+    "preparation_failure_attempts_proven_zero": 6,
+    "unknown_pipeline_attempts_after_preparation_audit": 0,
+    "preparation_proofs": [
+      {
+        "path": "prospective-configuration-r1-single-prepare.json",
+        "sha256": "d4b1befdc95e6d4c80b122bad2ff6bfd09f6e704a722fe00b62e56a1aa2ddc57",
+        "model_calls": 0
+      },
+      {
+        "path": "prospective-configuration-r1-memory-prepare.json",
+        "sha256": "87e16bf11fba59f0998f2724d93241759c758135666fb878a9b6ed699c78394f",
+        "model_calls": 0
+      },
+      {
+        "path": "prospective-configuration-r1-multi-prepare.json",
+        "sha256": "7f980ac6d46e0516033ce00aeeae4be054ad1d69ef3be9aeaadfb3d6c553dab7",
+        "model_calls": 0
+      },
+      {
+        "path": "prospective-configuration-r2-multi-prepare.json",
+        "sha256": "70cfd52ee966cd6086328445f3fc8b65369c6851be69f3e9a80bbe86f664e6bf",
+        "model_calls": 0
+      },
+      {
+        "path": "prospective-configuration-r2-memory-prepare.json",
+        "sha256": "03ef989e652f48651603f9e94ffea8137f64752805c830d8b1707b176041445d",
+        "model_calls": 0
+      },
+      {
+        "path": "prospective-configuration-r2-single-prepare.json",
+        "sha256": "f170303d4f85f25a773f6656510e86f6bb011a0bc333a32174b20610f7d62fa6",
+        "model_calls": 0
+      }
+    ],
+    "original_summary_sha256": "85ff93dde89454473543842f54fa5e7a25d74fc8f0453c33daa5534e4286936a"
+  },
+  "new_model_six_configuration": {
+    "total": 6,
+    "completed": 3,
+    "failed": 3,
+    "known_calls": 28,
+    "unknown_calls": 2,
+    "input_tokens": 100637,
+    "output_tokens": 15032,
+    "cost_cny": null
+  },
+  "new_model_cohort_sha256": "d073cad3854a310fa7ea4c222c190e798acf3d9994cc8c025862ca739cebdff6",
+  "successful_new_model_probe": {
+    "role": "main",
+    "requested_model": "qwen3.6-plus",
+    "returned_model": "qwen3.6-plus",
+    "probe_status": "ok",
+    "latency_ms": 1620,
+    "input_tokens": 67,
+    "output_tokens": 12,
+    "cost_cny": null,
+    "parameters": {
+      "temperature": 0,
+      "max_tokens": 128,
+      "enable_thinking": false
+    }
+  },
+  "failed_sandbox_probe": {
+    "status": "failed",
+    "error_code": "MODEL_CONNECTION_FAILED",
+    "unconfirmed_request_attempts": 1,
+    "possible_upstream_call_range": [
+      0,
+      1
+    ],
+    "sha256": "86b8bcbb142c192e63b62345aa97109e8f217ebd05e9bd1246ebb7e27fc8bcd8"
+  },
+  "all_known_usage_including_probe": {
+    "known_calls": 313,
+    "input_tokens": 767709,
+    "output_tokens": 71825,
+    "pipeline_unknown_calls": 3,
+    "additional_unconfirmed_probe_requests": 1,
+    "cost_cny": null
+  },
+  "quality_policy": "原184和新六次的质量分母分别保留，接口探测不计任务完成率。",
+  "human_gold_accuracy": null,
+  "provider_bill_reconciled": false,
+  "automatic_retry": false
+}

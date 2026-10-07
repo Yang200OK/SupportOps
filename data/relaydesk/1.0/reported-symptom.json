@@ -1,0 +1,8 @@
+{
+  "schema_version": "1",
+  "product": "relaydesk",
+  "product_version": "1.0",
+  "title": "1.0 投递超时构造报告",
+  "description": "构造症状：升级到 1.0 后出现 RD_TIMEOUT。尚未收集运行日志、实际配置或根因证据。",
+  "source_type": "synthetic_case"
+}

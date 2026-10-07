@@ -1,0 +1,1310 @@
+{
+  "transport": "real_docker_http_mcp_bailian",
+  "case_for_test_harness_only": "configuration",
+  "started_at": "2026-10-06T07:09:18.794294+00:00",
+  "status": "completed",
+  "cost_cny": null,
+  "human_semantic_reviewed": false,
+  "catalog": {
+    "schema_version": "skill-catalog.v1",
+    "catalog_sha256": "5d9605f3e88a544a7957a98f7426eb4e6a8c530e2cdda548c7515fbde0733074",
+    "items": [
+      {
+        "skill_id": "configuration-investigation",
+        "version": "1.0.0",
+        "title": "配置与版本排查",
+        "summary": "核对版本键、单位和启动诊断。",
+        "product_versions": [
+          "1.0",
+          "1.1",
+          "2.0"
+        ],
+        "modes": [
+          "startup",
+          "online"
+        ],
+        "signals": [
+          "RD_CONFIG_INVALID",
+          "配置",
+          "启动失败"
+        ],
+        "body_sha256": "474f60cc36d90d71589cdabe83121002bf487ea9e24551e2c9b56c3f25d63f81",
+        "human_semantic_reviewed": false,
+        "source_count": 3
+      },
+      {
+        "skill_id": "pool-investigation",
+        "version": "1.0.0",
+        "title": "连接池等待排查",
+        "summary": "核对连接占用与本次请求等待。",
+        "product_versions": [
+          "1.0",
+          "1.1",
+          "2.0"
+        ],
+        "modes": [
+          "online"
+        ],
+        "signals": [
+          "RD_POOL_WAIT",
+          "连接池",
+          "连接等待"
+        ],
+        "body_sha256": "6b81b9a6097a64fd493f51f076f3cd0726a6e483ae9e28249485f66d833c37ed",
+        "human_semantic_reviewed": false,
+        "source_count": 3
+      },
+      {
+        "skill_id": "cache-investigation",
+        "version": "1.0.0",
+        "title": "缓存目标与代次排查",
+        "summary": "比较本次目标、缓存与代次。",
+        "product_versions": [
+          "1.0",
+          "1.1",
+          "2.0"
+        ],
+        "modes": [
+          "online"
+        ],
+        "signals": [
+          "RD_CACHE_STALE",
+          "缓存",
+          "旧值"
+        ],
+        "body_sha256": "6ac00bd444675f85d0c354dcb9716c9939878b2280d9dd44bce821753b7efe4d",
+        "human_semantic_reviewed": false,
+        "source_count": 3
+      },
+      {
+        "skill_id": "downstream-investigation",
+        "version": "1.0.0",
+        "title": "下游超时排查",
+        "summary": "核对有效超时和实际响应链路。",
+        "product_versions": [
+          "1.0",
+          "1.1",
+          "2.0"
+        ],
+        "modes": [
+          "online"
+        ],
+        "signals": [
+          "RD_TIMEOUT",
+          "下游",
+          "超时"
+        ],
+        "body_sha256": "6f204091027abd97a004b03845a4f3c9a04ac158684d5d4b44a18ad55a889408",
+        "human_semantic_reviewed": false,
+        "source_count": 3
+      }
+    ],
+    "source_type": "project_release",
+    "effectiveness_evaluated": false
+  },
+  "ticket_id": "98f76657-5385-4229-92ed-246b248d1b12",
+  "response": {
+    "investigation_id": "3f471210-5c15-4af9-821d-fe5c56c79d1d",
+    "ticket_id": "98f76657-5385-4229-92ed-246b248d1b12",
+    "workflow_version": "hypothesis-investigation.v1",
+    "created_at": "2026-10-06T07:09:21.044898+00:00",
+    "input_snapshot": {
+      "ticket": {
+        "title": "第6阶段Skill验收 0fca8722",
+        "description": "RelayDesk 1.1 本次隔离实验报告 RD_CONFIG_INVALID。请只读本次观测调查，证据不足保持未决。",
+        "product": "relaydesk",
+        "product_version": "1.1",
+        "environment": "local_lab",
+        "source_type": "synthetic_case",
+        "ticket_id": "98f76657-5385-4229-92ed-246b248d1b12",
+        "organization_id": "97694dc5-35b8-4708-a2f5-4a5997e4c712",
+        "requester_id": "fd49342e-5d58-4a11-a547-3db9614d1968",
+        "created_at": "2026-10-06T07:09:21.027660Z",
+        "intake_status": "ready_for_intake",
+        "missing_fields": [],
+        "persisted": true
+      },
+      "request": {
+        "index_id": "f984102c-a670-41f5-841e-e23a060c6163",
+        "lab_run_id": "1f8171f5-1aa6-4f9b-bfa3-23782c6a5990",
+        "use_skills": true,
+        "max_tool_calls": 6,
+        "max_model_calls": 8,
+        "time_budget_ms": 240000
+      },
+      "knowledge": {
+        "index_id": "f984102c-a670-41f5-841e-e23a060c6163",
+        "corpus_sha256": "c1dc75dfb01a114c9986bc1e8876ca90cd7b608c95f8cb2466b78badfe363ebc"
+      },
+      "lab_registration": {
+        "run_id": "0fca8722-3336-47ba-bfec-ca115a1e1a3c",
+        "instance_id": "778f7629-d564-49b3-ad2c-094427d2a869",
+        "receiver_instance_id": null,
+        "product_version": "1.1",
+        "request_ids": [
+          "c224afb8-db8a-49f0-b18c-c2dec4d42d78"
+        ],
+        "started_at": "2026-10-06T07:09:19.113095Z",
+        "expires_at": "2026-10-06T07:24:19.113095Z",
+        "mode": "startup",
+        "boot": {
+          "exit_code": 2,
+          "observation": {
+            "request_id": "c224afb8-db8a-49f0-b18c-c2dec4d42d78",
+            "observed_at": "2026-10-06T07:09:20.404332Z",
+            "phase": "failure",
+            "service": "boot",
+            "product_version": "1.1",
+            "event": "config_checked",
+            "status": 422,
+            "error_code": "RD_CONFIG_INVALID",
+            "elapsed_ms": 0.03,
+            "effective_config": null,
+            "invalid_keys": [
+              "downstream_timeout_ms"
+            ],
+            "database": null,
+            "checked_out": null,
+            "db_target": null,
+            "cache_target": null,
+            "db_generation": null,
+            "cache_generation": null,
+            "target": null,
+            "delay_ms": null
+          }
+        }
+      },
+      "registration_sha256": "01bd2af65fb8ac640122884c1137b9d752de80f41da94ae9d2cd1813a35ff64f",
+      "tools": [
+        {
+          "name": "get_ticket",
+          "description": "读取固定工单陈述，陈述不是实测事实。",
+          "inputSchema": {
+            "additionalProperties": false,
+            "properties": {},
+            "title": "NoArguments",
+            "type": "object"
+          },
+          "annotations": {
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          }
+        },
+        {
+          "name": "search_knowledge",
+          "description": "固定同版本文档 / 案例 BM25，最多三段；资料不能证明本次根因。",
+          "inputSchema": {
+            "additionalProperties": false,
+            "properties": {
+              "query": {
+                "maxLength": 2000,
+                "minLength": 1,
+                "title": "Query",
+                "type": "string"
+              }
+            },
+            "required": [
+              "query"
+            ],
+            "title": "SearchArguments",
+            "type": "object"
+          },
+          "annotations": {
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          }
+        },
+        {
+          "name": "read_runtime_state",
+          "description": "固定登记实例的当前配置与连接池占用、接收器状态；仅在线运行。",
+          "inputSchema": {
+            "additionalProperties": false,
+            "properties": {},
+            "title": "NoArguments",
+            "type": "object"
+          },
+          "annotations": {
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          }
+        },
+        {
+          "name": "read_current_observations",
+          "description": "读取本次固定运行 / 请求 / 时间窗口内的异常观测；仅在线运行。",
+          "inputSchema": {
+            "additionalProperties": false,
+            "properties": {},
+            "title": "NoArguments",
+            "type": "object"
+          },
+          "annotations": {
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          }
+        },
+        {
+          "name": "read_startup_diagnostic",
+          "description": "读取明确登记的本次启动诊断与退出码；没有在线服务，不能代替在线状态。",
+          "inputSchema": {
+            "additionalProperties": false,
+            "properties": {},
+            "title": "NoArguments",
+            "type": "object"
+          },
+          "annotations": {
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          }
+        }
+      ],
+      "workflow_version": "hypothesis-investigation.v1",
+      "skills": {
+        "selection_version": "symptom-match.v1",
+        "catalog": {
+          "schema_version": "skill-catalog.v1",
+          "catalog_sha256": "5d9605f3e88a544a7957a98f7426eb4e6a8c530e2cdda548c7515fbde0733074",
+          "items": [
+            {
+              "skill_id": "configuration-investigation",
+              "version": "1.0.0",
+              "title": "配置与版本排查",
+              "summary": "核对版本键、单位和启动诊断。",
+              "product_versions": [
+                "1.0",
+                "1.1",
+                "2.0"
+              ],
+              "modes": [
+                "startup",
+                "online"
+              ],
+              "signals": [
+                "RD_CONFIG_INVALID",
+                "配置",
+                "启动失败"
+              ],
+              "body_sha256": "474f60cc36d90d71589cdabe83121002bf487ea9e24551e2c9b56c3f25d63f81",
+              "human_semantic_reviewed": false,
+              "source_count": 3
+            },
+            {
+              "skill_id": "pool-investigation",
+              "version": "1.0.0",
+              "title": "连接池等待排查",
+              "summary": "核对连接占用与本次请求等待。",
+              "product_versions": [
+                "1.0",
+                "1.1",
+                "2.0"
+              ],
+              "modes": [
+                "online"
+              ],
+              "signals": [
+                "RD_POOL_WAIT",
+                "连接池",
+                "连接等待"
+              ],
+              "body_sha256": "6b81b9a6097a64fd493f51f076f3cd0726a6e483ae9e28249485f66d833c37ed",
+              "human_semantic_reviewed": false,
+              "source_count": 3
+            },
+            {
+              "skill_id": "cache-investigation",
+              "version": "1.0.0",
+              "title": "缓存目标与代次排查",
+              "summary": "比较本次目标、缓存与代次。",
+              "product_versions": [
+                "1.0",
+                "1.1",
+                "2.0"
+              ],
+              "modes": [
+                "online"
+              ],
+              "signals": [
+                "RD_CACHE_STALE",
+                "缓存",
+                "旧值"
+              ],
+              "body_sha256": "6ac00bd444675f85d0c354dcb9716c9939878b2280d9dd44bce821753b7efe4d",
+              "human_semantic_reviewed": false,
+              "source_count": 3
+            },
+            {
+              "skill_id": "downstream-investigation",
+              "version": "1.0.0",
+              "title": "下游超时排查",
+              "summary": "核对有效超时和实际响应链路。",
+              "product_versions": [
+                "1.0",
+                "1.1",
+                "2.0"
+              ],
+              "modes": [
+                "online"
+              ],
+              "signals": [
+                "RD_TIMEOUT",
+                "下游",
+                "超时"
+              ],
+              "body_sha256": "6f204091027abd97a004b03845a4f3c9a04ac158684d5d4b44a18ad55a889408",
+              "human_semantic_reviewed": false,
+              "source_count": 3
+            }
+          ],
+          "source_type": "project_release",
+          "effectiveness_evaluated": false
+        },
+        "loaded": [
+          {
+            "skill_id": "configuration-investigation",
+            "version": "1.0.0",
+            "title": "配置与版本排查",
+            "summary": "核对版本键、单位和启动诊断。",
+            "product_versions": [
+              "1.0",
+              "1.1",
+              "2.0"
+            ],
+            "modes": [
+              "startup",
+              "online"
+            ],
+            "signals": [
+              "RD_CONFIG_INVALID",
+              "配置",
+              "启动失败"
+            ],
+            "body_sha256": "474f60cc36d90d71589cdabe83121002bf487ea9e24551e2c9b56c3f25d63f81",
+            "sources": [
+              {
+                "path": "data/relaydesk/1.1/configuration.md",
+                "product_version": "1.1",
+                "sha256": "253769700546a06e2e43c50326337b9e5d4dae0d97e0952f4a577d3b9f5ece0b",
+                "source_type": "self_authored_design",
+                "license": "CC0-1.0"
+              }
+            ],
+            "human_semantic_reviewed": false,
+            "body": "# 配置与版本排查\n\n适用 RelayDesk 1.0 / 1.1 / 2.0，在线异常或明确登记的启动失败。症状词只用于选择方法，不能证明原因。\n\n1. 检索本次版本的配置规则，分别核对实际键名、单位、配置来源与版本。不能从文档默认值推出现场实际值。\n2. startup 读取 read_startup_diagnostic；它记录已经发生的启动校验与退出码，没有在线服务，不安排在线状态工具。\n3. online 读取 read_runtime_state 和 read_current_observations。只从本次记录判定发生了什么。\n4. invalid_keys 只能说明哪些键被拒绝；没有值或类型的观测，不能推成“值超范围”。缺失事件不能反驳假设。\n5. 引用同版本原文与本次证据；条件不足时保持未决，说明需要补充的配置与复测。\n\n此方法是自建演示资料的人工编写流程，未完成人工语义审定或成对效果评测。它不授予工具权限，不批准动作，也不是本次原因证据。控制动作只沿用应用的独立人工批准入口。\n",
+            "body_verified": true,
+            "sources_verified": true,
+            "selected_product_version": "1.1",
+            "selected_mode": "startup",
+            "catalog_sha256": "5d9605f3e88a544a7957a98f7426eb4e6a8c530e2cdda548c7515fbde0733074",
+            "role": "planning_guidance_only",
+            "matched_signals": [
+              "RD_CONFIG_INVALID"
+            ]
+          }
+        ],
+        "selection_limited": false,
+        "selection_reason": "matched",
+        "max_loaded": 2,
+        "role": "planning_guidance_only"
+      }
+    },
+    "input_sha256": "8e924456f2d1664ab5e5e61341354db102e81def70a4fb95d2b14016e1881e91",
+    "output_sha256": "efae55063983d5bd9a648cf6641d6e43c84359efc41ea00451590be20b0fb2b3",
+    "persisted": true,
+    "status": "completed",
+    "stop_reason": "hypothesis_investigation_complete",
+    "report": {
+      "claims": [
+        {
+          "claim_id": "C1",
+          "kind": "fact",
+          "text": "RelayDesk 1.1 在启动阶段（service: boot）发生配置检查失败，错误码为 RD_CONFIG_INVALID，HTTP 状态码 422。",
+          "citations": [
+            {
+              "context_id": "live:1f8171f5-1aa6-4f9b-bfa3-23782c6a5990:00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+              "evidence_id": "live:1f8171f5-1aa6-4f9b-bfa3-23782c6a5990:00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+              "quote": "{\"exit_code\":2,\"observation\":{\"cache_generation\":null,\"cache_target\":null,\"checked_out\":null,\"database\":null,\"db_generation\":null,\"db_target\":null,\"delay_ms\":null,\"effective_config\":null,\"elapsed_ms\":0.03,\"error_code\":\"RD_CONFIG_INVALID\",\"event\":\"config_checked\",\"invalid_keys\":[\"downstream_timeout_ms\"],\"observed_at\":\"2026-10-06T07:09:20.404332Z\",\"phase\":\"failure\",\"product_version\":\"1.1\",\"request_id\":\"c224afb8-db8a-49f0-b18c-c2dec4d42d78\",\"service\":\"boot\",\"status\":422,\"target\":null}}",
+              "start": 0,
+              "end": 487,
+              "context_text_sha256": "00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+              "literal_verified": true
+            }
+          ],
+          "support": {
+            "verdict": "supported",
+            "reason": "引文明确记录 \"service\":\"boot\"、\"error_code\":\"RD_CONFIG_INVALID\" 和 \"status\":422，直接支持启动阶段配置检查失败及对应错误码和状态码的表述。",
+            "method": "independent_model_review",
+            "human_reviewed": false
+          }
+        },
+        {
+          "claim_id": "C2",
+          "kind": "fact",
+          "text": "诊断日志明确指出无效的配置键名为 \"downstream_timeout_ms\"。",
+          "citations": [
+            {
+              "context_id": "live:1f8171f5-1aa6-4f9b-bfa3-23782c6a5990:00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+              "evidence_id": "live:1f8171f5-1aa6-4f9b-bfa3-23782c6a5990:00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+              "quote": "{\"exit_code\":2,\"observation\":{\"cache_generation\":null,\"cache_target\":null,\"checked_out\":null,\"database\":null,\"db_generation\":null,\"db_target\":null,\"delay_ms\":null,\"effective_config\":null,\"elapsed_ms\":0.03,\"error_code\":\"RD_CONFIG_INVALID\",\"event\":\"config_checked\",\"invalid_keys\":[\"downstream_timeout_ms\"],\"observed_at\":\"2026-10-06T07:09:20.404332Z\",\"phase\":\"failure\",\"product_version\":\"1.1\",\"request_id\":\"c224afb8-db8a-49f0-b18c-c2dec4d42d78\",\"service\":\"boot\",\"status\":422,\"target\":null}}",
+              "start": 0,
+              "end": 487,
+              "context_text_sha256": "00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+              "literal_verified": true
+            }
+          ],
+          "support": {
+            "verdict": "supported",
+            "reason": "引文中 \"invalid_keys\":[\"downstream_timeout_ms\"] 明确指出了无效的配置键名，与结论完全一致。",
+            "method": "independent_model_review",
+            "human_reviewed": false
+          }
+        },
+        {
+          "claim_id": "C3",
+          "kind": "check",
+          "text": "检查当前环境中 \"downstream_timeout_ms\" 的具体配置值，确认其数据类型、单位及数值是否符合 RelayDesk 1.1 的定义规范。",
+          "citations": [
+            {
+              "context_id": "live:1f8171f5-1aa6-4f9b-bfa3-23782c6a5990:00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+              "evidence_id": "live:1f8171f5-1aa6-4f9b-bfa3-23782c6a5990:00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+              "quote": "{\"exit_code\":2,\"observation\":{\"cache_generation\":null,\"cache_target\":null,\"checked_out\":null,\"database\":null,\"db_generation\":null,\"db_target\":null,\"delay_ms\":null,\"effective_config\":null,\"elapsed_ms\":0.03,\"error_code\":\"RD_CONFIG_INVALID\",\"event\":\"config_checked\",\"invalid_keys\":[\"downstream_timeout_ms\"],\"observed_at\":\"2026-10-06T07:09:20.404332Z\",\"phase\":\"failure\",\"product_version\":\"1.1\",\"request_id\":\"c224afb8-db8a-49f0-b18c-c2dec4d42d78\",\"service\":\"boot\",\"status\":422,\"target\":null}}",
+              "start": 0,
+              "end": 487,
+              "context_text_sha256": "00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+              "literal_verified": true
+            }
+          ],
+          "support": {
+            "verdict": "insufficient",
+            "reason": "引文仅指出该键无效（invalid_keys），但未提供该键的具体配置值、数据类型或单位信息，也未包含 RelayDesk 1.1 的定义规范，无法仅凭此日志完成对具体值和规范的核对检查。",
+            "method": "independent_model_review",
+            "human_reviewed": false
+          }
+        },
+        {
+          "claim_id": "C7",
+          "kind": "hypothesis",
+          "text": "原因候选 H1 [supported]：RelayDesk 1.1 启动时配置校验失败 (RD_CONFIG_INVALID)；启动诊断证据明确显示 error_code 为 RD_CONFIG_INVALID，且 invalid_keys 包含 downstream_timeout_ms，直接支持配置校验失败的假设。",
+          "citations": [
+            {
+              "context_id": "live:1f8171f5-1aa6-4f9b-bfa3-23782c6a5990:00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+              "evidence_id": "live:1f8171f5-1aa6-4f9b-bfa3-23782c6a5990:00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+              "quote": "{\"exit_code\":2,\"observation\":{\"cache_generation\":null,\"cache_target\":null,\"checked_out\":null,\"database\":null,\"db_generation\":null,\"db_target\":null,\"delay_ms\":null,\"effective_config\":null,\"elapsed_ms\":0.03,\"error_code\":\"RD_CONFIG_INVALID\",\"event\":\"config_checked\",\"invalid_keys\":[\"downstream_timeout_ms\"],\"observed_at\":\"2026-10-06T07:09:20.404332Z\",\"phase\":\"failure\",\"product_version\":\"1.1\",\"request_id\":\"c224afb8-db8a-49f0-b18c-c2dec4d42d78\",\"service\":\"boot\",\"status\":422,\"target\":null}}",
+              "start": 0,
+              "end": 487,
+              "context_text_sha256": "00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+              "literal_verified": true
+            }
+          ],
+          "support": {
+            "verdict": "supported",
+            "reason": "引文中的 \"error_code\":\"RD_CONFIG_INVALID\" 和 \"invalid_keys\":[\"downstream_timeout_ms\"] 构成了明确的支持信号，证实了启动时因配置校验失败导致的问题，符合 hypothesis H1 的支持条件。",
+            "method": "independent_model_review",
+            "human_reviewed": false
+          }
+        }
+      ],
+      "missing_information": [
+        "本轮尚未实施修复与修复后复测，也未人工复核。",
+        "缺少 \"downstream_timeout_ms\" 在当前环境中的实际配置值。",
+        "缺少 RelayDesk 1.1 版本中关于 \"downstream_timeout_ms\" 的合法取值范围、数据类型及单位的技术文档定义。"
+      ]
+    },
+    "hypotheses": [
+      {
+        "hypothesis_id": "H1",
+        "cause": "RelayDesk 1.1 启动时配置校验失败 (RD_CONFIG_INVALID)",
+        "basis": "工单标题明确提及 'RD_CONFIG_INVALID' 且环境为 startup 模式，表明服务在启动阶段因配置问题未能成功运行。",
+        "support_signal": "启动诊断日志中包含 RD_CONFIG_INVALID 错误码及具体的无效配置键名或值。",
+        "refute_signal": "启动诊断显示配置校验通过，或错误码为其他类型（如依赖缺失、端口占用）。",
+        "missing_information": [
+          "downstream_timeout_ms 的具体配置值与预期范围",
+          "该配置项在 RelayDesk 1.1 中的合法定义（单位、类型、边界）"
+        ],
+        "status": "supported",
+        "reason": "启动诊断证据明确显示 error_code 为 RD_CONFIG_INVALID，且 invalid_keys 包含 downstream_timeout_ms，直接支持配置校验失败的假设。",
+        "support_citations": [
+          {
+            "context_id": "live:1f8171f5-1aa6-4f9b-bfa3-23782c6a5990:00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+            "evidence_id": "live:1f8171f5-1aa6-4f9b-bfa3-23782c6a5990:00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+            "quote": "{\"exit_code\":2,\"observation\":{\"cache_generation\":null,\"cache_target\":null,\"checked_out\":null,\"database\":null,\"db_generation\":null,\"db_target\":null,\"delay_ms\":null,\"effective_config\":null,\"elapsed_ms\":0.03,\"error_code\":\"RD_CONFIG_INVALID\",\"event\":\"config_checked\",\"invalid_keys\":[\"downstream_timeout_ms\"],\"observed_at\":\"2026-10-06T07:09:20.404332Z\",\"phase\":\"failure\",\"product_version\":\"1.1\",\"request_id\":\"c224afb8-db8a-49f0-b18c-c2dec4d42d78\",\"service\":\"boot\",\"status\":422,\"target\":null}}",
+            "start": 0,
+            "end": 487,
+            "context_text_sha256": "00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+            "literal_verified": true
+          }
+        ],
+        "refute_citations": [],
+        "semantic_reviewed": true,
+        "human_reviewed": false,
+        "proposed_status": "supported",
+        "support_review": {
+          "verdict": "supported",
+          "reason": "引文中的 \"error_code\":\"RD_CONFIG_INVALID\" 和 \"invalid_keys\":[\"downstream_timeout_ms\"] 构成了明确的支持信号，证实了启动时因配置校验失败导致的问题，符合 hypothesis H1 的支持条件。",
+          "method": "independent_model_review",
+          "human_reviewed": false
+        }
+      }
+    ],
+    "steps": [
+      {
+        "step_id": "S1",
+        "hypothesis_ids": [
+          "H1"
+        ],
+        "reason": "根据技能指南，startup 模式下必须读取 read_startup_diagnostic 以获取启动校验结果和退出码，这是确认 RD_CONFIG_INVALID 具体原因的唯一可信证据源。",
+        "tool": "read_startup_diagnostic",
+        "arguments": {},
+        "status": "completed",
+        "call_id": "f4a13e47-b165-44bb-ad44-da87f1ea5f1b"
+      }
+    ],
+    "plan_history": [
+      {
+        "sequence": 1,
+        "action": "execute",
+        "next_step_id": "S1",
+        "reason": "初次调查，需先读取启动诊断以验证配置无效的具体细节。",
+        "hypotheses": [
+          {
+            "hypothesis_id": "H1",
+            "cause": "RelayDesk 1.1 启动时配置校验失败 (RD_CONFIG_INVALID)",
+            "basis": "工单标题明确提及 'RD_CONFIG_INVALID' 且环境为 startup 模式，表明服务在启动阶段因配置问题未能成功运行。",
+            "support_signal": "启动诊断日志中包含 RD_CONFIG_INVALID 错误码及具体的无效配置键名或值。",
+            "refute_signal": "启动诊断显示配置校验通过，或错误码为其他类型（如依赖缺失、端口占用）。",
+            "missing_information": [
+              "本次启动的具体诊断日志内容",
+              "被标记为无效的配置键名或值",
+              "配置文件的来源与版本匹配情况"
+            ],
+            "status": "proposed",
+            "reason": "基于工单症状词提出的暂定假设，需读取启动诊断以确认具体失效配置项。",
+            "support_citations": [],
+            "refute_citations": [],
+            "semantic_reviewed": false,
+            "human_reviewed": false
+          }
+        ],
+        "steps": [
+          {
+            "step_id": "S1",
+            "hypothesis_ids": [
+              "H1"
+            ],
+            "reason": "根据技能指南，startup 模式下必须读取 read_startup_diagnostic 以获取启动校验结果和退出码，这是确认 RD_CONFIG_INVALID 具体原因的唯一可信证据源。",
+            "tool": "read_startup_diagnostic",
+            "arguments": {}
+          }
+        ],
+        "completed_step_ids": [],
+        "evidence_ids": []
+      },
+      {
+        "sequence": 2,
+        "action": "finish",
+        "next_step_id": null,
+        "reason": "已读取启动诊断，确认 RD_CONFIG_INVALID 错误及无效键 downstream_timeout_ms。由于是 startup 模式且无在线状态，无法进一步获取该配置的具体非法值或对比版本规则细节，但根因现象已确认。根据规则，启动诊断读取完毕后应 finish，保留缺口说明。",
+        "hypotheses": [
+          {
+            "hypothesis_id": "H1",
+            "cause": "RelayDesk 1.1 启动时配置校验失败 (RD_CONFIG_INVALID)",
+            "basis": "工单标题明确提及 'RD_CONFIG_INVALID' 且环境为 startup 模式，表明服务在启动阶段因配置问题未能成功运行。",
+            "support_signal": "启动诊断日志中包含 RD_CONFIG_INVALID 错误码及具体的无效配置键名或值。",
+            "refute_signal": "启动诊断显示配置校验通过，或错误码为其他类型（如依赖缺失、端口占用）。",
+            "missing_information": [
+              "downstream_timeout_ms 的具体配置值与预期范围",
+              "该配置项在 RelayDesk 1.1 中的合法定义（单位、类型、边界）"
+            ],
+            "status": "supported",
+            "reason": "启动诊断证据明确显示 error_code 为 RD_CONFIG_INVALID，且 invalid_keys 包含 downstream_timeout_ms，直接支持配置校验失败的假设。",
+            "support_citations": [
+              {
+                "context_id": "live:1f8171f5-1aa6-4f9b-bfa3-23782c6a5990:00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+                "evidence_id": "live:1f8171f5-1aa6-4f9b-bfa3-23782c6a5990:00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+                "quote": "{\"exit_code\":2,\"observation\":{\"cache_generation\":null,\"cache_target\":null,\"checked_out\":null,\"database\":null,\"db_generation\":null,\"db_target\":null,\"delay_ms\":null,\"effective_config\":null,\"elapsed_ms\":0.03,\"error_code\":\"RD_CONFIG_INVALID\",\"event\":\"config_checked\",\"invalid_keys\":[\"downstream_timeout_ms\"],\"observed_at\":\"2026-10-06T07:09:20.404332Z\",\"phase\":\"failure\",\"product_version\":\"1.1\",\"request_id\":\"c224afb8-db8a-49f0-b18c-c2dec4d42d78\",\"service\":\"boot\",\"status\":422,\"target\":null}}",
+                "start": 0,
+                "end": 487,
+                "context_text_sha256": "00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+                "literal_verified": true
+              }
+            ],
+            "refute_citations": [],
+            "semantic_reviewed": false,
+            "human_reviewed": false
+          }
+        ],
+        "steps": [
+          {
+            "step_id": "S1",
+            "hypothesis_ids": [
+              "H1"
+            ],
+            "reason": "根据技能指南，startup 模式下必须读取 read_startup_diagnostic 以获取启动校验结果和退出码，这是确认 RD_CONFIG_INVALID 具体原因的唯一可信证据源。",
+            "tool": "read_startup_diagnostic",
+            "arguments": {}
+          }
+        ],
+        "completed_step_ids": [
+          "S1"
+        ],
+        "evidence_ids": [
+          "live:1f8171f5-1aa6-4f9b-bfa3-23782c6a5990:00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8"
+        ]
+      }
+    ],
+    "events": [
+      {
+        "sequence": 1,
+        "event": "investigation_started",
+        "elapsed_ms": 0,
+        "workflow_version": "hypothesis-investigation.v1"
+      },
+      {
+        "sequence": 2,
+        "event": "skill_catalog_listed",
+        "elapsed_ms": 0,
+        "catalog_sha256": "5d9605f3e88a544a7957a98f7426eb4e6a8c530e2cdda548c7515fbde0733074"
+      },
+      {
+        "sequence": 3,
+        "event": "skills_loaded",
+        "elapsed_ms": 0,
+        "selection_reason": "matched",
+        "skills": [
+          {
+            "skill_id": "configuration-investigation",
+            "version": "1.0.0",
+            "body_sha256": "474f60cc36d90d71589cdabe83121002bf487ea9e24551e2c9b56c3f25d63f81",
+            "matched_signals": [
+              "RD_CONFIG_INVALID"
+            ]
+          }
+        ]
+      },
+      {
+        "sequence": 4,
+        "event": "mcp_initialized",
+        "elapsed_ms": 1629
+      },
+      {
+        "sequence": 5,
+        "event": "graph_node",
+        "elapsed_ms": 1637,
+        "node": "ticket"
+      },
+      {
+        "sequence": 6,
+        "event": "tool_started",
+        "elapsed_ms": 1637,
+        "tool": "get_ticket",
+        "arguments": {},
+        "call_id": "a206860d-40ad-46e6-88bd-317952feef9a"
+      },
+      {
+        "sequence": 7,
+        "event": "tool_finished",
+        "elapsed_ms": 1685,
+        "tool": "get_ticket",
+        "call_id": "a206860d-40ad-46e6-88bd-317952feef9a",
+        "result_sha256": "2992478cf559092259849f769a9ace79b85a7cb468336d87ef1b9d21db5f6a39",
+        "evidence_count": 0
+      },
+      {
+        "sequence": 8,
+        "event": "graph_node",
+        "elapsed_ms": 1686,
+        "node": "plan"
+      },
+      {
+        "sequence": 9,
+        "event": "model_started",
+        "elapsed_ms": 1688,
+        "stage": "plan"
+      },
+      {
+        "sequence": 10,
+        "event": "model_finished",
+        "elapsed_ms": 11790,
+        "stage": "plan"
+      },
+      {
+        "sequence": 11,
+        "event": "plan_updated",
+        "elapsed_ms": 11790,
+        "action": "execute",
+        "next_step_id": "S1",
+        "hypothesis_statuses": {
+          "H1": "proposed"
+        }
+      },
+      {
+        "sequence": 12,
+        "event": "graph_node",
+        "elapsed_ms": 11791,
+        "node": "tool",
+        "step_id": "S1"
+      },
+      {
+        "sequence": 13,
+        "event": "tool_started",
+        "elapsed_ms": 11791,
+        "tool": "read_startup_diagnostic",
+        "arguments": {},
+        "call_id": "f4a13e47-b165-44bb-ad44-da87f1ea5f1b"
+      },
+      {
+        "sequence": 14,
+        "event": "tool_finished",
+        "elapsed_ms": 11810,
+        "tool": "read_startup_diagnostic",
+        "call_id": "f4a13e47-b165-44bb-ad44-da87f1ea5f1b",
+        "result_sha256": "296269e913a35f0eec492ba7f1495aff7fd5d961dce440383d98025918cc7f98",
+        "evidence_count": 1
+      },
+      {
+        "sequence": 15,
+        "event": "step_completed",
+        "elapsed_ms": 11810,
+        "step_id": "S1",
+        "call_id": "f4a13e47-b165-44bb-ad44-da87f1ea5f1b"
+      },
+      {
+        "sequence": 16,
+        "event": "graph_node",
+        "elapsed_ms": 11810,
+        "node": "plan"
+      },
+      {
+        "sequence": 17,
+        "event": "model_started",
+        "elapsed_ms": 11816,
+        "stage": "plan"
+      },
+      {
+        "sequence": 18,
+        "event": "model_finished",
+        "elapsed_ms": 23474,
+        "stage": "plan"
+      },
+      {
+        "sequence": 19,
+        "event": "plan_updated",
+        "elapsed_ms": 23475,
+        "action": "finish",
+        "next_step_id": null,
+        "hypothesis_statuses": {
+          "H1": "supported"
+        }
+      },
+      {
+        "sequence": 20,
+        "event": "graph_node",
+        "elapsed_ms": 23475,
+        "node": "report"
+      },
+      {
+        "sequence": 21,
+        "event": "model_started",
+        "elapsed_ms": 23477,
+        "stage": "generate"
+      },
+      {
+        "sequence": 22,
+        "event": "model_finished",
+        "elapsed_ms": 36863,
+        "stage": "generate"
+      },
+      {
+        "sequence": 23,
+        "event": "model_started",
+        "elapsed_ms": 36863,
+        "stage": "review"
+      },
+      {
+        "sequence": 24,
+        "event": "model_finished",
+        "elapsed_ms": 45634,
+        "stage": "review"
+      },
+      {
+        "sequence": 25,
+        "event": "investigation_finished",
+        "elapsed_ms": 45880,
+        "status": "completed",
+        "stop_reason": "hypothesis_investigation_complete"
+      }
+    ],
+    "tool_results": [
+      {
+        "call_id": "a206860d-40ad-46e6-88bd-317952feef9a",
+        "tool": "get_ticket",
+        "arguments": {},
+        "result": {
+          "ticket": {
+            "title": "第6阶段Skill验收 0fca8722",
+            "description": "RelayDesk 1.1 本次隔离实验报告 RD_CONFIG_INVALID。请只读本次观测调查，证据不足保持未决。",
+            "product": "relaydesk",
+            "product_version": "1.1",
+            "environment": "local_lab",
+            "source_type": "synthetic_case",
+            "ticket_id": "98f76657-5385-4229-92ed-246b248d1b12",
+            "created_at": "2026-10-06T07:09:21.027660Z",
+            "intake_status": "ready_for_intake",
+            "missing_fields": [],
+            "persisted": true
+          },
+          "evidence": [],
+          "source_type": "ticket_statement"
+        },
+        "result_sha256": "2992478cf559092259849f769a9ace79b85a7cb468336d87ef1b9d21db5f6a39"
+      },
+      {
+        "call_id": "f4a13e47-b165-44bb-ad44-da87f1ea5f1b",
+        "tool": "read_startup_diagnostic",
+        "arguments": {},
+        "result": {
+          "evidence": [
+            {
+              "evidence_id": "live:1f8171f5-1aa6-4f9b-bfa3-23782c6a5990:00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+              "kind": "log",
+              "product_version": "1.1",
+              "text": "{\"exit_code\":2,\"observation\":{\"cache_generation\":null,\"cache_target\":null,\"checked_out\":null,\"database\":null,\"db_generation\":null,\"db_target\":null,\"delay_ms\":null,\"effective_config\":null,\"elapsed_ms\":0.03,\"error_code\":\"RD_CONFIG_INVALID\",\"event\":\"config_checked\",\"invalid_keys\":[\"downstream_timeout_ms\"],\"observed_at\":\"2026-10-06T07:09:20.404332Z\",\"phase\":\"failure\",\"product_version\":\"1.1\",\"request_id\":\"c224afb8-db8a-49f0-b18c-c2dec4d42d78\",\"service\":\"boot\",\"status\":422,\"target\":null}}",
+              "reference_url": "/api/investigations/3f471210-5c15-4af9-821d-fe5c56c79d1d/evidence/live:1f8171f5-1aa6-4f9b-bfa3-23782c6a5990:00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+              "source": {
+                "source_type": "current_startup_diagnostic",
+                "lab_run_id": "1f8171f5-1aa6-4f9b-bfa3-23782c6a5990",
+                "run_id": "0fca8722-3336-47ba-bfec-ca115a1e1a3c",
+                "instance_id": "778f7629-d564-49b3-ad2c-094427d2a869",
+                "receiver_instance_id": null,
+                "captured_at": "2026-10-06T07:09:32.870681+00:00",
+                "registration_sha256": "01bd2af65fb8ac640122884c1137b9d752de80f41da94ae9d2cd1813a35ff64f",
+                "ordinal": 0,
+                "snapshot_sha256": "60c4973243ffe2825d3a708c1d1f648b033d04ecd888fbdfe1e2d2cd9a22c507"
+              },
+              "text_verified": true,
+              "support_verified": false
+            }
+          ],
+          "snapshot": {
+            "source_type": "current_startup_diagnostic",
+            "lab_run_id": "1f8171f5-1aa6-4f9b-bfa3-23782c6a5990",
+            "run_id": "0fca8722-3336-47ba-bfec-ca115a1e1a3c",
+            "instance_id": "778f7629-d564-49b3-ad2c-094427d2a869",
+            "receiver_instance_id": null,
+            "captured_at": "2026-10-06T07:09:32.870681+00:00",
+            "registration_sha256": "01bd2af65fb8ac640122884c1137b9d752de80f41da94ae9d2cd1813a35ff64f",
+            "sha256": "60c4973243ffe2825d3a708c1d1f648b033d04ecd888fbdfe1e2d2cd9a22c507",
+            "content_sha256": "89b4038a94850d8cbf378bf26258ca11c43425acc7b38137057f46811a75fc00"
+          }
+        },
+        "result_sha256": "296269e913a35f0eec492ba7f1495aff7fd5d961dce440383d98025918cc7f98"
+      }
+    ],
+    "evidence": [
+      {
+        "evidence_id": "live:1f8171f5-1aa6-4f9b-bfa3-23782c6a5990:00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+        "kind": "log",
+        "product_version": "1.1",
+        "text": "{\"exit_code\":2,\"observation\":{\"cache_generation\":null,\"cache_target\":null,\"checked_out\":null,\"database\":null,\"db_generation\":null,\"db_target\":null,\"delay_ms\":null,\"effective_config\":null,\"elapsed_ms\":0.03,\"error_code\":\"RD_CONFIG_INVALID\",\"event\":\"config_checked\",\"invalid_keys\":[\"downstream_timeout_ms\"],\"observed_at\":\"2026-10-06T07:09:20.404332Z\",\"phase\":\"failure\",\"product_version\":\"1.1\",\"request_id\":\"c224afb8-db8a-49f0-b18c-c2dec4d42d78\",\"service\":\"boot\",\"status\":422,\"target\":null}}",
+        "reference_url": "/api/investigations/3f471210-5c15-4af9-821d-fe5c56c79d1d/evidence/live:1f8171f5-1aa6-4f9b-bfa3-23782c6a5990:00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+        "source": {
+          "source_type": "current_startup_diagnostic",
+          "lab_run_id": "1f8171f5-1aa6-4f9b-bfa3-23782c6a5990",
+          "run_id": "0fca8722-3336-47ba-bfec-ca115a1e1a3c",
+          "instance_id": "778f7629-d564-49b3-ad2c-094427d2a869",
+          "receiver_instance_id": null,
+          "captured_at": "2026-10-06T07:09:32.870681+00:00",
+          "registration_sha256": "01bd2af65fb8ac640122884c1137b9d752de80f41da94ae9d2cd1813a35ff64f",
+          "ordinal": 0,
+          "snapshot_sha256": "60c4973243ffe2825d3a708c1d1f648b033d04ecd888fbdfe1e2d2cd9a22c507"
+        },
+        "text_verified": true,
+        "support_verified": false
+      }
+    ],
+    "contexts": [
+      {
+        "context_id": "live:1f8171f5-1aa6-4f9b-bfa3-23782c6a5990:00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+        "anchor_evidence_ids": [
+          "live:1f8171f5-1aa6-4f9b-bfa3-23782c6a5990:00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8"
+        ],
+        "text": "{\"exit_code\":2,\"observation\":{\"cache_generation\":null,\"cache_target\":null,\"checked_out\":null,\"database\":null,\"db_generation\":null,\"db_target\":null,\"delay_ms\":null,\"effective_config\":null,\"elapsed_ms\":0.03,\"error_code\":\"RD_CONFIG_INVALID\",\"event\":\"config_checked\",\"invalid_keys\":[\"downstream_timeout_ms\"],\"observed_at\":\"2026-10-06T07:09:20.404332Z\",\"phase\":\"failure\",\"product_version\":\"1.1\",\"request_id\":\"c224afb8-db8a-49f0-b18c-c2dec4d42d78\",\"service\":\"boot\",\"status\":422,\"target\":null}}",
+        "text_sha256": "00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8",
+        "text_verified": true,
+        "kind": "log",
+        "source": {
+          "source_type": "current_startup_diagnostic",
+          "lab_run_id": "1f8171f5-1aa6-4f9b-bfa3-23782c6a5990",
+          "run_id": "0fca8722-3336-47ba-bfec-ca115a1e1a3c",
+          "instance_id": "778f7629-d564-49b3-ad2c-094427d2a869",
+          "receiver_instance_id": null,
+          "captured_at": "2026-10-06T07:09:32.870681+00:00",
+          "registration_sha256": "01bd2af65fb8ac640122884c1137b9d752de80f41da94ae9d2cd1813a35ff64f",
+          "ordinal": 0,
+          "snapshot_sha256": "60c4973243ffe2825d3a708c1d1f648b033d04ecd888fbdfe1e2d2cd9a22c507"
+        }
+      }
+    ],
+    "usage": {
+      "calls": [
+        {
+          "stage": "plan",
+          "requested_model": "qwen3.7-plus",
+          "returned_model": "qwen3.7-plus",
+          "input_tokens": 3650,
+          "output_tokens": 391,
+          "latency_ms": 9920,
+          "parameters": {
+            "temperature": 0,
+            "max_tokens": 3000,
+            "enable_thinking": false
+          },
+          "timeout_seconds": 60.0,
+          "cost_cny": null
+        },
+        {
+          "stage": "plan",
+          "requested_model": "qwen3.7-plus",
+          "returned_model": "qwen3.7-plus",
+          "input_tokens": 5459,
+          "output_tokens": 472,
+          "latency_ms": 11470,
+          "parameters": {
+            "temperature": 0,
+            "max_tokens": 3000,
+            "enable_thinking": false
+          },
+          "timeout_seconds": 60.0,
+          "cost_cny": null
+        },
+        {
+          "stage": "generate",
+          "requested_model": "qwen3.7-plus",
+          "returned_model": "qwen3.7-plus",
+          "input_tokens": 2149,
+          "output_tokens": 644,
+          "latency_ms": 13193,
+          "parameters": {
+            "temperature": 0,
+            "max_tokens": 2200,
+            "enable_thinking": false
+          },
+          "timeout_seconds": 60.0,
+          "cost_cny": null
+        },
+        {
+          "stage": "review",
+          "requested_model": "qwen3.7-plus",
+          "returned_model": "qwen3.7-plus",
+          "input_tokens": 4186,
+          "output_tokens": 308,
+          "latency_ms": 8606,
+          "parameters": {
+            "temperature": 0,
+            "max_tokens": 2000,
+            "enable_thinking": false
+          },
+          "timeout_seconds": 60.0,
+          "cost_cny": null
+        }
+      ],
+      "known_model_calls": 4,
+      "unknown_model_calls": 0,
+      "input_tokens": 15444,
+      "output_tokens": 1815,
+      "cost_cny": null
+    },
+    "mcp": {
+      "transport": "stdio",
+      "initialization": {
+        "meta": null,
+        "protocolVersion": "2025-11-25",
+        "capabilities": {
+          "experimental": {},
+          "logging": null,
+          "prompts": null,
+          "resources": null,
+          "tools": {
+            "listChanged": false
+          },
+          "completions": null,
+          "tasks": null
+        },
+        "serverInfo": {
+          "name": "supportops-hypothesis-readonly",
+          "title": null,
+          "version": "1.0",
+          "websiteUrl": null,
+          "icons": null
+        },
+        "instructions": null
+      },
+      "tools": [
+        {
+          "name": "get_ticket",
+          "description": "读取固定工单陈述，陈述不是实测事实。",
+          "inputSchema": {
+            "additionalProperties": false,
+            "properties": {},
+            "title": "NoArguments",
+            "type": "object"
+          },
+          "annotations": {
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          }
+        },
+        {
+          "name": "search_knowledge",
+          "description": "固定同版本文档 / 案例 BM25，最多三段；资料不能证明本次根因。",
+          "inputSchema": {
+            "additionalProperties": false,
+            "properties": {
+              "query": {
+                "maxLength": 2000,
+                "minLength": 1,
+                "title": "Query",
+                "type": "string"
+              }
+            },
+            "required": [
+              "query"
+            ],
+            "title": "SearchArguments",
+            "type": "object"
+          },
+          "annotations": {
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          }
+        },
+        {
+          "name": "read_runtime_state",
+          "description": "固定登记实例的当前配置与连接池占用、接收器状态；仅在线运行。",
+          "inputSchema": {
+            "additionalProperties": false,
+            "properties": {},
+            "title": "NoArguments",
+            "type": "object"
+          },
+          "annotations": {
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          }
+        },
+        {
+          "name": "read_current_observations",
+          "description": "读取本次固定运行 / 请求 / 时间窗口内的异常观测；仅在线运行。",
+          "inputSchema": {
+            "additionalProperties": false,
+            "properties": {},
+            "title": "NoArguments",
+            "type": "object"
+          },
+          "annotations": {
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          }
+        },
+        {
+          "name": "read_startup_diagnostic",
+          "description": "读取明确登记的本次启动诊断与退出码；没有在线服务，不能代替在线状态。",
+          "inputSchema": {
+            "additionalProperties": false,
+            "properties": {},
+            "title": "NoArguments",
+            "type": "object"
+          },
+          "annotations": {
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          }
+        }
+      ],
+      "schema_sha256": "62faf5109240e80cd09f38cfc9d80aa50d5c798666eae9b4a5d589ece8a2f628"
+    },
+    "limitation": "本次隔离实验的只读假设调查；原句与来源由代码核对，支持 / 反驳语义由模型评审，尚未人工复核。没有修复后因果验证。",
+    "current_incident_verified": false,
+    "human_reviewed": false,
+    "has_current_evidence": true,
+    "skills": {
+      "selection_version": "symptom-match.v1",
+      "catalog": {
+        "schema_version": "skill-catalog.v1",
+        "catalog_sha256": "5d9605f3e88a544a7957a98f7426eb4e6a8c530e2cdda548c7515fbde0733074",
+        "items": [
+          {
+            "skill_id": "configuration-investigation",
+            "version": "1.0.0",
+            "title": "配置与版本排查",
+            "summary": "核对版本键、单位和启动诊断。",
+            "product_versions": [
+              "1.0",
+              "1.1",
+              "2.0"
+            ],
+            "modes": [
+              "startup",
+              "online"
+            ],
+            "signals": [
+              "RD_CONFIG_INVALID",
+              "配置",
+              "启动失败"
+            ],
+            "body_sha256": "474f60cc36d90d71589cdabe83121002bf487ea9e24551e2c9b56c3f25d63f81",
+            "human_semantic_reviewed": false,
+            "source_count": 3
+          },
+          {
+            "skill_id": "pool-investigation",
+            "version": "1.0.0",
+            "title": "连接池等待排查",
+            "summary": "核对连接占用与本次请求等待。",
+            "product_versions": [
+              "1.0",
+              "1.1",
+              "2.0"
+            ],
+            "modes": [
+              "online"
+            ],
+            "signals": [
+              "RD_POOL_WAIT",
+              "连接池",
+              "连接等待"
+            ],
+            "body_sha256": "6b81b9a6097a64fd493f51f076f3cd0726a6e483ae9e28249485f66d833c37ed",
+            "human_semantic_reviewed": false,
+            "source_count": 3
+          },
+          {
+            "skill_id": "cache-investigation",
+            "version": "1.0.0",
+            "title": "缓存目标与代次排查",
+            "summary": "比较本次目标、缓存与代次。",
+            "product_versions": [
+              "1.0",
+              "1.1",
+              "2.0"
+            ],
+            "modes": [
+              "online"
+            ],
+            "signals": [
+              "RD_CACHE_STALE",
+              "缓存",
+              "旧值"
+            ],
+            "body_sha256": "6ac00bd444675f85d0c354dcb9716c9939878b2280d9dd44bce821753b7efe4d",
+            "human_semantic_reviewed": false,
+            "source_count": 3
+          },
+          {
+            "skill_id": "downstream-investigation",
+            "version": "1.0.0",
+            "title": "下游超时排查",
+            "summary": "核对有效超时和实际响应链路。",
+            "product_versions": [
+              "1.0",
+              "1.1",
+              "2.0"
+            ],
+            "modes": [
+              "online"
+            ],
+            "signals": [
+              "RD_TIMEOUT",
+              "下游",
+              "超时"
+            ],
+            "body_sha256": "6f204091027abd97a004b03845a4f3c9a04ac158684d5d4b44a18ad55a889408",
+            "human_semantic_reviewed": false,
+            "source_count": 3
+          }
+        ],
+        "source_type": "project_release",
+        "effectiveness_evaluated": false
+      },
+      "loaded": [
+        {
+          "skill_id": "configuration-investigation",
+          "version": "1.0.0",
+          "title": "配置与版本排查",
+          "summary": "核对版本键、单位和启动诊断。",
+          "product_versions": [
+            "1.0",
+            "1.1",
+            "2.0"
+          ],
+          "modes": [
+            "startup",
+            "online"
+          ],
+          "signals": [
+            "RD_CONFIG_INVALID",
+            "配置",
+            "启动失败"
+          ],
+          "body_sha256": "474f60cc36d90d71589cdabe83121002bf487ea9e24551e2c9b56c3f25d63f81",
+          "sources": [
+            {
+              "path": "data/relaydesk/1.1/configuration.md",
+              "product_version": "1.1",
+              "sha256": "253769700546a06e2e43c50326337b9e5d4dae0d97e0952f4a577d3b9f5ece0b",
+              "source_type": "self_authored_design",
+              "license": "CC0-1.0"
+            }
+          ],
+          "human_semantic_reviewed": false,
+          "body": "# 配置与版本排查\n\n适用 RelayDesk 1.0 / 1.1 / 2.0，在线异常或明确登记的启动失败。症状词只用于选择方法，不能证明原因。\n\n1. 检索本次版本的配置规则，分别核对实际键名、单位、配置来源与版本。不能从文档默认值推出现场实际值。\n2. startup 读取 read_startup_diagnostic；它记录已经发生的启动校验与退出码，没有在线服务，不安排在线状态工具。\n3. online 读取 read_runtime_state 和 read_current_observations。只从本次记录判定发生了什么。\n4. invalid_keys 只能说明哪些键被拒绝；没有值或类型的观测，不能推成“值超范围”。缺失事件不能反驳假设。\n5. 引用同版本原文与本次证据；条件不足时保持未决，说明需要补充的配置与复测。\n\n此方法是自建演示资料的人工编写流程，未完成人工语义审定或成对效果评测。它不授予工具权限，不批准动作，也不是本次原因证据。控制动作只沿用应用的独立人工批准入口。\n",
+          "body_verified": true,
+          "sources_verified": true,
+          "selected_product_version": "1.1",
+          "selected_mode": "startup",
+          "catalog_sha256": "5d9605f3e88a544a7957a98f7426eb4e6a8c530e2cdda548c7515fbde0733074",
+          "role": "planning_guidance_only",
+          "matched_signals": [
+            "RD_CONFIG_INVALID"
+          ]
+        }
+      ],
+      "selection_limited": false,
+      "selection_reason": "matched",
+      "max_loaded": 2,
+      "role": "planning_guidance_only"
+    },
+    "duration_ms": 45880,
+    "tool_calls": 2,
+    "model_calls": 4
+  },
+  "reference_digests": {
+    "live:1f8171f5-1aa6-4f9b-bfa3-23782c6a5990:00d2e409876b1a01adfff1764a6bbb565127ae786c0fe3b982a0aa083d40b3e8": "a84366f97ee42a1a82d9975938fa82b4ccf33c7acb470374dd4c81429a999671"
+  },
+  "cross_organization_status": 404,
+  "checks": "passed",
+  "restart_readback": {
+    "snapshot_unchanged": true,
+    "references_unchanged": true,
+    "frozen_entries_unchanged": 502,
+    "model_calls": 0
+  }
+}

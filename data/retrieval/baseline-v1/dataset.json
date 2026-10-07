@@ -1,0 +1,775 @@
+{
+  "schema_version": "supportops.retrieval-dataset.v1",
+  "index_id": "f984102c-a670-41f5-841e-e23a060c6163",
+  "corpus_sha256": "c1dc75dfb01a114c9986bc1e8876ca90cd7b608c95f8cb2466b78badfe363ebc",
+  "tasks": [
+    {
+      "task_id": "doc-configuration-1.0-0",
+      "source_group": "configuration",
+      "split": "dev",
+      "request": {
+        "query": "启动报 RD_CONFIG_INVALID，应该核对哪些配置信息？",
+        "product_version": "1.0",
+        "source_kinds": [
+          "document"
+        ],
+        "document_ids": [],
+        "experiment_ids": [],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "doc-configuration-1.0-1",
+      "source_group": "configuration",
+      "split": "dev",
+      "request": {
+        "query": "超时参数的键名或单位不匹配时如何排查？",
+        "product_version": "1.0",
+        "source_kinds": [
+          "document"
+        ],
+        "document_ids": [],
+        "experiment_ids": [],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "doc-pool-1.0-0",
+      "source_group": "pool",
+      "split": "dev",
+      "request": {
+        "query": "连接获取一直等待，出现 RD_POOL_WAIT，需要哪些证据？",
+        "product_version": "1.0",
+        "source_kinds": [
+          "document"
+        ],
+        "document_ids": [],
+        "experiment_ids": [],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "doc-pool-1.0-1",
+      "source_group": "pool",
+      "split": "dev",
+      "request": {
+        "query": "数据库连接池耗尽时应该核对占用、等待还是直接加连接？",
+        "product_version": "1.0",
+        "source_kinds": [
+          "document"
+        ],
+        "document_ids": [],
+        "experiment_ids": [],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "doc-cache-1.0-0",
+      "source_group": "cache",
+      "split": "holdout",
+      "request": {
+        "query": "目标配置更新后仍读旧值，RD_CACHE_STALE 应核对什么？",
+        "product_version": "1.0",
+        "source_kinds": [
+          "document"
+        ],
+        "document_ids": [],
+        "experiment_ids": [],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "doc-cache-1.0-1",
+      "source_group": "cache",
+      "split": "holdout",
+      "request": {
+        "query": "缓存和数据库目标或代次不一致时如何调查？",
+        "product_version": "1.0",
+        "source_kinds": [
+          "document"
+        ],
+        "document_ids": [],
+        "experiment_ids": [],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "doc-downstream-1.0-0",
+      "source_group": "downstream",
+      "split": "dev",
+      "request": {
+        "query": "投递返回 RD_TIMEOUT，下游链路应该如何取证？",
+        "product_version": "1.0",
+        "source_kinds": [
+          "document"
+        ],
+        "document_ids": [],
+        "experiment_ids": [],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "doc-downstream-1.0-1",
+      "source_group": "downstream",
+      "split": "dev",
+      "request": {
+        "query": "怎样区分下游实际延迟和有效超时配置，能只凭错误码认定根因吗？",
+        "product_version": "1.0",
+        "source_kinds": [
+          "document"
+        ],
+        "document_ids": [],
+        "experiment_ids": [],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "doc-configuration-1.1-0",
+      "source_group": "configuration",
+      "split": "dev",
+      "request": {
+        "query": "启动报 RD_CONFIG_INVALID，应该核对哪些配置信息？",
+        "product_version": "1.1",
+        "source_kinds": [
+          "document"
+        ],
+        "document_ids": [],
+        "experiment_ids": [],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "doc-configuration-1.1-1",
+      "source_group": "configuration",
+      "split": "dev",
+      "request": {
+        "query": "超时参数的键名或单位不匹配时如何排查？",
+        "product_version": "1.1",
+        "source_kinds": [
+          "document"
+        ],
+        "document_ids": [],
+        "experiment_ids": [],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "doc-pool-1.1-0",
+      "source_group": "pool",
+      "split": "dev",
+      "request": {
+        "query": "连接获取一直等待，出现 RD_POOL_WAIT，需要哪些证据？",
+        "product_version": "1.1",
+        "source_kinds": [
+          "document"
+        ],
+        "document_ids": [],
+        "experiment_ids": [],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "doc-pool-1.1-1",
+      "source_group": "pool",
+      "split": "dev",
+      "request": {
+        "query": "数据库连接池耗尽时应该核对占用、等待还是直接加连接？",
+        "product_version": "1.1",
+        "source_kinds": [
+          "document"
+        ],
+        "document_ids": [],
+        "experiment_ids": [],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "doc-cache-1.1-0",
+      "source_group": "cache",
+      "split": "holdout",
+      "request": {
+        "query": "目标配置更新后仍读旧值，RD_CACHE_STALE 应核对什么？",
+        "product_version": "1.1",
+        "source_kinds": [
+          "document"
+        ],
+        "document_ids": [],
+        "experiment_ids": [],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "doc-cache-1.1-1",
+      "source_group": "cache",
+      "split": "holdout",
+      "request": {
+        "query": "缓存和数据库目标或代次不一致时如何调查？",
+        "product_version": "1.1",
+        "source_kinds": [
+          "document"
+        ],
+        "document_ids": [],
+        "experiment_ids": [],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "doc-downstream-1.1-0",
+      "source_group": "downstream",
+      "split": "dev",
+      "request": {
+        "query": "投递返回 RD_TIMEOUT，下游链路应该如何取证？",
+        "product_version": "1.1",
+        "source_kinds": [
+          "document"
+        ],
+        "document_ids": [],
+        "experiment_ids": [],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "doc-downstream-1.1-1",
+      "source_group": "downstream",
+      "split": "dev",
+      "request": {
+        "query": "怎样区分下游实际延迟和有效超时配置，能只凭错误码认定根因吗？",
+        "product_version": "1.1",
+        "source_kinds": [
+          "document"
+        ],
+        "document_ids": [],
+        "experiment_ids": [],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "doc-configuration-2.0-0",
+      "source_group": "configuration",
+      "split": "dev",
+      "request": {
+        "query": "启动报 RD_CONFIG_INVALID，应该核对哪些配置信息？",
+        "product_version": "2.0",
+        "source_kinds": [
+          "document"
+        ],
+        "document_ids": [],
+        "experiment_ids": [],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "doc-configuration-2.0-1",
+      "source_group": "configuration",
+      "split": "dev",
+      "request": {
+        "query": "超时参数的键名或单位不匹配时如何排查？",
+        "product_version": "2.0",
+        "source_kinds": [
+          "document"
+        ],
+        "document_ids": [],
+        "experiment_ids": [],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "doc-pool-2.0-0",
+      "source_group": "pool",
+      "split": "dev",
+      "request": {
+        "query": "连接获取一直等待，出现 RD_POOL_WAIT，需要哪些证据？",
+        "product_version": "2.0",
+        "source_kinds": [
+          "document"
+        ],
+        "document_ids": [],
+        "experiment_ids": [],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "doc-pool-2.0-1",
+      "source_group": "pool",
+      "split": "dev",
+      "request": {
+        "query": "数据库连接池耗尽时应该核对占用、等待还是直接加连接？",
+        "product_version": "2.0",
+        "source_kinds": [
+          "document"
+        ],
+        "document_ids": [],
+        "experiment_ids": [],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "doc-cache-2.0-0",
+      "source_group": "cache",
+      "split": "holdout",
+      "request": {
+        "query": "目标配置更新后仍读旧值，RD_CACHE_STALE 应核对什么？",
+        "product_version": "2.0",
+        "source_kinds": [
+          "document"
+        ],
+        "document_ids": [],
+        "experiment_ids": [],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "doc-cache-2.0-1",
+      "source_group": "cache",
+      "split": "holdout",
+      "request": {
+        "query": "缓存和数据库目标或代次不一致时如何调查？",
+        "product_version": "2.0",
+        "source_kinds": [
+          "document"
+        ],
+        "document_ids": [],
+        "experiment_ids": [],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "doc-downstream-2.0-0",
+      "source_group": "downstream",
+      "split": "dev",
+      "request": {
+        "query": "投递返回 RD_TIMEOUT，下游链路应该如何取证？",
+        "product_version": "2.0",
+        "source_kinds": [
+          "document"
+        ],
+        "document_ids": [],
+        "experiment_ids": [],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "doc-downstream-2.0-1",
+      "source_group": "downstream",
+      "split": "dev",
+      "request": {
+        "query": "怎样区分下游实际延迟和有效超时配置，能只凭错误码认定根因吗？",
+        "product_version": "2.0",
+        "source_kinds": [
+          "document"
+        ],
+        "document_ids": [],
+        "experiment_ids": [],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "log-af735157-3620-4ed5-ba2b-ff0af5fb6a02",
+      "source_group": "configuration",
+      "split": "dev",
+      "request": {
+        "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+        "product_version": "1.0",
+        "source_kinds": [
+          "log"
+        ],
+        "document_ids": [],
+        "experiment_ids": [
+          "491f20cc-250a-4625-88cd-8375830420ce"
+        ],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "log-910864b2-910c-4985-b199-4dc559108b6e",
+      "source_group": "configuration",
+      "split": "dev",
+      "request": {
+        "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+        "product_version": "1.0",
+        "source_kinds": [
+          "log"
+        ],
+        "document_ids": [],
+        "experiment_ids": [
+          "1032f2e7-21d4-48f8-a044-5f4096a2504a"
+        ],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "log-6e867664-abcd-4989-9dcd-cb4b6edff4ad",
+      "source_group": "configuration",
+      "split": "dev",
+      "request": {
+        "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+        "product_version": "1.1",
+        "source_kinds": [
+          "log"
+        ],
+        "document_ids": [],
+        "experiment_ids": [
+          "1ea82ead-b1b2-4b07-be45-142b168f4f62"
+        ],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "log-921df27c-a3e6-4b94-a564-e7be3041f676",
+      "source_group": "configuration",
+      "split": "dev",
+      "request": {
+        "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+        "product_version": "1.1",
+        "source_kinds": [
+          "log"
+        ],
+        "document_ids": [],
+        "experiment_ids": [
+          "1c7a230c-1116-450d-94b8-92bc674ff20d"
+        ],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "log-9ce5ec49-d5ea-4b3b-aa6a-344395039f23",
+      "source_group": "configuration",
+      "split": "dev",
+      "request": {
+        "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+        "product_version": "2.0",
+        "source_kinds": [
+          "log"
+        ],
+        "document_ids": [],
+        "experiment_ids": [
+          "c9b8026a-7718-4c68-af1a-067856ec9c97"
+        ],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "log-3b8ad79f-0b40-4e7b-8e98-01583e380902",
+      "source_group": "configuration",
+      "split": "dev",
+      "request": {
+        "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+        "product_version": "2.0",
+        "source_kinds": [
+          "log"
+        ],
+        "document_ids": [],
+        "experiment_ids": [
+          "f9a6087f-b975-4d16-8c5a-ec6a2fb3370e"
+        ],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "log-5821449e-d5ae-4727-8934-5ef53eb32c96",
+      "source_group": "pool",
+      "split": "dev",
+      "request": {
+        "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+        "product_version": "1.0",
+        "source_kinds": [
+          "log"
+        ],
+        "document_ids": [],
+        "experiment_ids": [
+          "e5ee15d1-b8f0-44c7-bdbe-c30a2391d936"
+        ],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "log-9dab3421-d625-497f-9276-cb4b440ec650",
+      "source_group": "pool",
+      "split": "dev",
+      "request": {
+        "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+        "product_version": "1.0",
+        "source_kinds": [
+          "log"
+        ],
+        "document_ids": [],
+        "experiment_ids": [
+          "b128cf36-23cd-4481-b148-986860c4a773"
+        ],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "log-ab028ff1-0902-4c6f-aee5-9f0e24e3280a",
+      "source_group": "pool",
+      "split": "dev",
+      "request": {
+        "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+        "product_version": "1.1",
+        "source_kinds": [
+          "log"
+        ],
+        "document_ids": [],
+        "experiment_ids": [
+          "1c487eb7-4871-4b33-b146-3c77a82dec97"
+        ],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "log-2a3c4fb7-4001-4704-a0fb-7c24ba2f29cd",
+      "source_group": "pool",
+      "split": "dev",
+      "request": {
+        "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+        "product_version": "1.1",
+        "source_kinds": [
+          "log"
+        ],
+        "document_ids": [],
+        "experiment_ids": [
+          "3cf5b28c-c316-4149-9ed6-bf517f7bf03c"
+        ],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "log-b27a4642-a669-46a9-8c00-c1e2a044ccb8",
+      "source_group": "pool",
+      "split": "dev",
+      "request": {
+        "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+        "product_version": "2.0",
+        "source_kinds": [
+          "log"
+        ],
+        "document_ids": [],
+        "experiment_ids": [
+          "74af05cf-edb8-4514-bd15-d4e3f5888972"
+        ],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "log-2631e2ac-22be-460d-968a-f8631b0ad7f0",
+      "source_group": "pool",
+      "split": "dev",
+      "request": {
+        "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+        "product_version": "2.0",
+        "source_kinds": [
+          "log"
+        ],
+        "document_ids": [],
+        "experiment_ids": [
+          "d1e5cdfb-3cc7-4771-91cc-061cac685947"
+        ],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "log-ee7faf54-c1e3-4313-ab66-cd1522eaf9a4",
+      "source_group": "cache",
+      "split": "holdout",
+      "request": {
+        "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+        "product_version": "1.0",
+        "source_kinds": [
+          "log"
+        ],
+        "document_ids": [],
+        "experiment_ids": [
+          "b5443508-a047-407f-80fd-9ce70535bdeb"
+        ],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "log-e6d4344f-bbcb-45e7-8e70-ed37112c7059",
+      "source_group": "cache",
+      "split": "holdout",
+      "request": {
+        "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+        "product_version": "1.0",
+        "source_kinds": [
+          "log"
+        ],
+        "document_ids": [],
+        "experiment_ids": [
+          "7c97c4a4-2c71-4207-9096-33e7fc9c9b1f"
+        ],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "log-79f855fd-450d-4704-b162-46129258e333",
+      "source_group": "cache",
+      "split": "holdout",
+      "request": {
+        "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+        "product_version": "1.1",
+        "source_kinds": [
+          "log"
+        ],
+        "document_ids": [],
+        "experiment_ids": [
+          "27c765e5-def8-4e89-8308-d3ade2a02ba4"
+        ],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "log-a4d96f0d-f68e-427f-ba0d-8d0d15ca4c71",
+      "source_group": "cache",
+      "split": "holdout",
+      "request": {
+        "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+        "product_version": "1.1",
+        "source_kinds": [
+          "log"
+        ],
+        "document_ids": [],
+        "experiment_ids": [
+          "c9ece0b9-dfc6-4e3e-81e1-3054d58bef27"
+        ],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "log-180ed9bf-139e-4a22-bf91-2f7fce784848",
+      "source_group": "cache",
+      "split": "holdout",
+      "request": {
+        "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+        "product_version": "2.0",
+        "source_kinds": [
+          "log"
+        ],
+        "document_ids": [],
+        "experiment_ids": [
+          "a1792b34-4f9f-447c-a3a6-e30e2568a174"
+        ],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "log-99614cad-7278-4cdb-ad28-3226be2b7e9a",
+      "source_group": "cache",
+      "split": "holdout",
+      "request": {
+        "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+        "product_version": "2.0",
+        "source_kinds": [
+          "log"
+        ],
+        "document_ids": [],
+        "experiment_ids": [
+          "14e97e01-46aa-4217-bb7b-8a810ae8e929"
+        ],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "log-84616ac8-88c0-4db8-9d93-85ddb4a88767",
+      "source_group": "downstream",
+      "split": "dev",
+      "request": {
+        "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+        "product_version": "1.0",
+        "source_kinds": [
+          "log"
+        ],
+        "document_ids": [],
+        "experiment_ids": [
+          "d3c00a30-94bd-428b-82c9-1a3db0d6c75d"
+        ],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "log-b17edc72-5f03-4bd4-a38e-4046b52b95a8",
+      "source_group": "downstream",
+      "split": "dev",
+      "request": {
+        "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+        "product_version": "1.0",
+        "source_kinds": [
+          "log"
+        ],
+        "document_ids": [],
+        "experiment_ids": [
+          "ef394002-0d38-441e-b82c-23b37f9ee252"
+        ],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "log-84b1666c-6174-45d9-b875-3674b6a0bc50",
+      "source_group": "downstream",
+      "split": "dev",
+      "request": {
+        "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+        "product_version": "1.1",
+        "source_kinds": [
+          "log"
+        ],
+        "document_ids": [],
+        "experiment_ids": [
+          "11a99448-8cbe-4e38-a156-4ffc6029bd8a"
+        ],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "log-e8d34916-0940-419d-ad88-cbdb0f1d65eb",
+      "source_group": "downstream",
+      "split": "dev",
+      "request": {
+        "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+        "product_version": "1.1",
+        "source_kinds": [
+          "log"
+        ],
+        "document_ids": [],
+        "experiment_ids": [
+          "ed522015-c968-4b1b-8889-0703ee199f15"
+        ],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "log-c83763cc-8867-4d2f-88e2-435a0b0d53a8",
+      "source_group": "downstream",
+      "split": "dev",
+      "request": {
+        "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+        "product_version": "2.0",
+        "source_kinds": [
+          "log"
+        ],
+        "document_ids": [],
+        "experiment_ids": [
+          "895c2303-9915-4753-87c2-651cda90a65a"
+        ],
+        "top_k": 5
+      }
+    },
+    {
+      "task_id": "log-ce2eeb86-9c5f-4dea-a69c-ddbb85e92474",
+      "source_group": "downstream",
+      "split": "dev",
+      "request": {
+        "query": "查找本次启动或投递失败的原始终态，包括状态、错误码与实测耗时。",
+        "product_version": "2.0",
+        "source_kinds": [
+          "log"
+        ],
+        "document_ids": [],
+        "experiment_ids": [
+          "69cb5467-bd4b-4cd8-8913-8fde6c3613f0"
+        ],
+        "top_k": 5
+      }
+    }
+  ]
+}

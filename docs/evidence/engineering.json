@@ -1,0 +1,50 @@
+{
+  "verified_on": "2026-10-07",
+  "scope": "Same Windows host, source exported from actual Git index, independent Docker project/network/PostgreSQL volume, locked dependencies, zero-model engineering verification",
+  "backend": {
+    "full_passed": 662,
+    "paid_skipped": 3,
+    "duration_seconds": 255.76,
+    "real_postgresql": true,
+    "publication_tests_after_final_auditor_update": 12,
+    "host_publication_and_powershell_tests": 18
+  },
+  "frontend": {
+    "passed": 12,
+    "format": "passed after explicit LF checkout attributes",
+    "types": "passed",
+    "build": "passed"
+  },
+  "browser": {
+    "engine": "Chromium",
+    "passed": 1,
+    "scope": "Login, persisted input validation, refresh, organization isolation, private credential-file protection, 390px viewport"
+  },
+  "http": {
+    "sources": 6,
+    "chunks": 43,
+    "records": 51,
+    "formats": ["Markdown", "JSON", "PDF"],
+    "versions": ["1.1", "2.0"],
+    "api_restart_readback": "passed",
+    "stack_restart_readback": "passed"
+  },
+  "original_demo_readback": {
+    "records": 32,
+    "references": 122,
+    "index_entries": 502,
+    "unchanged": true
+  },
+  "preserved_failures": [
+    "Initial frontend export: 76 format findings caused by CRLF checkout. Explicit frontend LF attributes fixed export; no business-logic replacement.",
+    "Host test attempt under a different Windows user: 12 temporary-directory permission errors, 6 passed. New explicit private temporary directory then passed 18; original errors retained locally.",
+    "Initial standard Docker command resolved multiple applications on this host; explicit docker.exe command then succeeded. No alternate install or automatic port selection."
+  ],
+  "runtime": {"python": "3.12.12", "node": "24.21.0"},
+  "model_calls": 0,
+  "remote_actions_executed_in_this_validation": false,
+  "second_machine_verified": false,
+  "public_application_deployed": false,
+  "historical_model_quality_rerun": false,
+  "private_logs_published": false
+}
